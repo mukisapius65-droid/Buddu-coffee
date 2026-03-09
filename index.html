@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+    <title>BUDDU Coffee Platform</title>
+    <!-- Font Awesome 6 (icons) & Google Font for readability -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVIGATION BAR (Red & Green theme) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-seedling" style="color: #8B4513;"></i>
+                <span>BUDDU<span class="highlight">COFFEE</span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li data-page="home" class="active"><i class="fas fa-home"></i> <span>Home</span></li>
+                <li data-page="signup"><i class="fas fa-user-plus"></i> <span>Signup</span></li>
+                <li data-page="dashboard"><i class="fas fa-chart-line"></i> <span>Dashboard</span></li>
+                <li data-page="settings"><i class="fas fa-cog"></i> <span>Settings</span></li>
+                <li data-page="profile"><i class="fas fa-id-card"></i> <span>Profile</span></li>
+                <li data-page="role"><i class="fas fa-users"></i> <span>Role</span></li>
+            </ul>
+            <!-- Role tabs (Farmer/Trader/Processor) integrated in nav for quick access -->
+            <div class="role-tabs">
+                <button class="role-btn active" data-role="farmer"><i class="fas fa-tractor"></i> Farmer</button>
+                <button class="role-btn" data-role="trader"><i class="fas fa-handshake"></i> Trader</button>
+                <button class="role-btn" data-role="processor"><i class="fas fa-industry"></i> Processor</button>
+            </div>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT – all "pages" are sections hidden/shown via JS -->
+    <main>
+        <!-- HERO SECTION (part of Home, but visible on all pages? We'll place it inside home) -->
+        <!-- HOME PAGE -->
+        <section id="home" class="page active">
+            <div class="hero" style="background-image: url('https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="animate-up">Welcome to <span class="brown">BUDDU</span> Coffee</h1>
+                    <p class="animate-up delay-1">Connecting Farmers, Traders & Processors in Uganda</p>
+                    <div class="hero-buttons animate-up delay-2">
+                        <button class="btn-primary" onclick="switchPage('signup')">Join now <i class="fas fa-arrow-right"></i></button>
+                        <button class="btn-secondary" onclick="switchPage('role')">Learn roles</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CURRENT COFFEE PRICES (large cards, easy to read) -->
+            <div class="price-section">
+                <h2><i class="fas fa-chart-simple"></i> Today's Coffee Prices (UGX/kg)</h2>
+                <div class="price-cards">
+                    <div class="price-card" style="border-top: 5px solid #8B4513;">
+                        <i class="fas fa-seedling" style="color: #8B4513;"></i>
+                        <h3>Ripe Fresh</h3>
+                        <p class="price">5,500 UGX</p>
+                        <small>per kg</small>
+                    </div>
+                    <div class="price-card" style="border-top: 5px solid #2E7D32;">
+                        <i class="fas fa-sun" style="color: #2E7D32;"></i>
+                        <h3>Dried</h3>
+                        <p class="price">12,000 UGX</p>
+                        <small>per kg</small>
+                    </div>
+                    <div class="price-card" style="border-top: 5px solid #C62828;">
+                        <i class="fas fa-fire" style="color: #C62828;"></i>
+                        <h3>Pre-processed</h3>
+                        <p class="price">18,500 UGX</p>
+                        <small>per kg</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COFFEE IMAGES FROM FARMERS -->
+            <div class="gallery-section">
+                <h2><i class="fas fa-images"></i> Fresh from our Farmers</h2>
+                <div class="gallery">
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coffee cherries" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Drying coffee" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coffee farm" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Processed beans" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- SIGNUP PAGE -->
+        <section id="signup" class="page">
+            <div class="form-container">
+                <h2><i class="fas fa-user-plus"></i> Join BUDDU Cooperative</h2>
+                <form id="signupForm">
+                    <label><i class="fas fa-user"></i> Full name</label>
+                    <input type="text" placeholder="e.g. Okello John" required>
+
+                    <label><i class="fas fa-phone"></i> Phone (for WhatsApp)</label>
+                    <input type="tel" placeholder="+256 7XX XXX XXX" required>
+
+                    <label><i class="fas fa-tag"></i> I am a</label>
+                    <select required>
+                        <option value="">Select role</option>
+                        <option value="farmer">Farmer</option>
+                        <option value="trader">Trader</option>
+                        <option value="processor">Processor</option>
+                    </select>
+
+                    <label><i class="fas fa-envelope"></i> Email (optional)</label>
+                    <input type="email" placeholder="you@example.com">
+
+                    <label><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" placeholder="********" required>
+
+                    <button type="submit" class="btn-primary btn-block">Register <i class="fas fa-check"></i></button>
+                </form>
+                <p class="legal-note">By joining you agree to our <a href="#" onclick="openModal('tos')">Terms</a> and <a href="#" onclick="openModal('pp')">Privacy</a>.</p>
+            </div>
+        </section>
+
+        <!-- DASHBOARD PAGE (role‑based content) -->
+        <section id="dashboard" class="page">
+            <h2><i class="fas fa-chart-pie"></i> Your Dashboard</h2>
+            <div class="role-message" id="dashboard-msg">Welcome, Farmer! Here is your farm summary.</div>
+            <div class="dashboard-cards">
+                <div class="stat-card"><i class="fas fa-weight-hanging"></i> <span class="stat-label">Total Coffee (kg)</span> <span class="stat-value" id="stat1">1,200</span></div>
+                <div class="stat-card"><i class="fas fa-coins"></i> <span class="stat-label">Estimated Income</span> <span class="stat-value" id="stat2">6,600,000 UGX</span></div>
+                <div class="stat-card"><i class="fas fa-truck"></i> <span class="stat-label">Orders</span> <span class="stat-value" id="stat3">8</span></div>
+            </div>
+            <div class="recent-activity">
+                <h3>Recent activity</h3>
+                <ul id="activity-list">
+                    <li><i class="fas fa-check-circle green"></i> Sold 50kg dried coffee - 2 days ago</li>
+                    <li><i class="fas fa-check-circle green"></i> New buyer inquiry - yesterday</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SETTINGS PAGE -->
+        <section id="settings" class="page">
+            <h2><i class="fas fa-sliders"></i> Settings</h2>
+            <div class="settings-group">
+                <label><i class="fas fa-bell"></i> Notifications</label>
+                <input type="checkbox" checked> Receive WhatsApp alerts
+                <br><br>
+                <label><i class="fas fa-globe"></i> Language</label>
+                <select>
+                    <option>English (simple)</option>
+                    <option>Luganda (audio support soon)</option>
+                </select>
+                <br><br>
+                <label><i class="fas fa-mobile-alt"></i> Display size</label>
+                <div class="font-size-btns">
+                    <button class="btn-small" onclick="document.body.style.fontSize='16px'">A</button>
+                    <button class="btn-small" onclick="document.body.style.fontSize='20px'">A+</button>
+                    <button class="btn-small" onclick="document.body.style.fontSize='24px'">A++</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROFILE PAGE (role‑based) -->
+        <section id="profile" class="page">
+            <h2><i class="fas fa-id-badge"></i> Your Profile</h2>
+            <div class="profile-card">
+                <div class="profile-avatar"><i class="fas fa-user-circle"></i></div>
+                <div class="profile-info" id="profile-info">
+                    <p><strong>Name:</strong> Okello John (Farmer)</p>
+                    <p><strong>Phone:</strong> +256 701 234567</p>
+                    <p><strong>Member since:</strong> 2025</p>
+                    <p><strong>Verified:</strong> <i class="fas fa-check-circle green"></i></p>
+                </div>
+                <button class="btn-primary">Edit profile</button>
+            </div>
+        </section>
+
+        <!-- ROLE PAGE (explains each role) -->
+        <section id="role" class="page">
+            <h2><i class="fas fa-users-between-lines"></i> Roles in our platform</h2>
+            <div class="role-grid">
+                <div class="role-card">
+                    <i class="fas fa-tractor fa-3x brown"></i>
+                    <h3>Farmer</h3>
+                    <p>Sell your fresh or dried coffee directly to trusted traders and processors. Get fair prices and timely payments.</p>
+                </div>
+                <div class="role-card">
+                    <i class="fas fa-handshake fa-3x green"></i>
+                    <h3>Trader</h3>
+                    <p>Source quality coffee from farmers across Uganda. Connect with processors and expand your business.</p>
+                </div>
+                <div class="role-card">
+                    <i class="fas fa-industry fa-3x red"></i>
+                    <h3>Processor</h3>
+                    <p>Find reliable supply of fresh or dried coffee. Streamline your processing with pre‑negotiated contracts.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER with TOS/PP/FAQ modals, contacts, WhatsApp, other platform -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>BUDDU Coffee</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Masaka, Uganda</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+256700123456">+256 700 123456</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/256700123456" target="_blank">Chat on WhatsApp</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Info</h4>
+                <a href="#" onclick="openModal('tos')"><i class="fas fa-file-contract"></i> Terms of Service</a>
+                <a href="#" onclick="openModal('pp')"><i class="fas fa-shield"></i> Privacy Policy</a>
+                <a href="#" onclick="openModal('faq')"><i class="fas fa-question-circle"></i> FAQs</a>
+            </div>
+            <div class="footer-section">
+                <h4>Our other platform</h4>
+                <a href="https://pfg-chapati.vercel.app" target="_blank"><i class="fas fa-external-link-alt"></i> pfg-chapati.vercel.app</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 BUDDU Farmers, Traders & Processors Association. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- MODALS for ToS, PP, FAQ -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
