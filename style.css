@@ -455,8 +455,8 @@ footer {
 }
 
 .footer-section a:hover {
-    color: #C62828;
-    transform: translateX(5px);
+    color: #ffb74d;
+    transform: translateX(10px) scale(1.03);
 }
 
 .footer-bottom {
