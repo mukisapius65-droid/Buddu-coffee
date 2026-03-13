@@ -196,7 +196,7 @@ body {
 }
 .btn-secondary:hover {
     background: var(--brown);
-    color: white;
+    color: var(--red);
 }
 /* animations */
 .animate-up {
