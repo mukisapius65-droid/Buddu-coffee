@@ -453,9 +453,12 @@ footer {
     margin: 0.5rem 0;
     font-size: 1.2rem;
 }
+
 .footer-section a:hover {
-    text-decoration: underline;
+    color: white;
+    transform: translateX(5px);
 }
+
 .footer-bottom {
     text-align: center;
     padding: 2rem 0 0;
