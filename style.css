@@ -135,7 +135,7 @@ body {
   position: absolute;
   bottom: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(50%);
   
   /* Your custom styles */
   background: #333;
@@ -159,10 +159,10 @@ body {
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(50%);
   border: 6px solid transparent;
   border-top-color: #4CAF50;
-  margin-bottom: -10px;
+  margin-bottom: 10px;
   z-index: 1001;
   opacity: 0;
   animation: fadeIn 0.3s ease forwards;
