@@ -162,7 +162,7 @@ body {
   transform: translateX(-50%);
   border: 6px solid transparent;
   border-top-color: #4CAF50;
-  margin-top: -4px;
+  margin-top: -10px;
   z-index: 1001;
   opacity: 0;
   animation: fadeIn 0.3s ease forwards;
@@ -174,7 +174,7 @@ body {
 
 /* Different positions */
 [data-title="top"]:hover::after {
-  bottom: 100%;
+  top: 100%;
   margin-bottom: 10px;
 }
 
