@@ -125,6 +125,74 @@ body {
     display: block;
 }
 
+[data-title] {
+  position: relative;
+  cursor: help;
+}
+
+[data-title]:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* Your custom styles */
+  background: #333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  border: 2px solid #4CAF50;
+  z-index: 1000;
+  
+  /* Animation */
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+[data-title]:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #4CAF50;
+  margin-bottom: -6px;
+  z-index: 1001;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Different positions */
+[data-title="top"]:hover::after {
+  bottom: 100%;
+  margin-bottom: 10px;
+}
+
+[data-title="bottom"]:hover::after {
+  top: 100%;
+  bottom: auto;
+  margin-top: 10px;
+}
+
+[data-title="bottom"]:hover::before {
+  top: 100%;
+  bottom: auto;
+  border-top-color: transparent;
+  border-bottom-color: #4CAF50;
+  margin-top: -12px;
+}
+
+
 /* hero */
 .hero {
     position: relative;
