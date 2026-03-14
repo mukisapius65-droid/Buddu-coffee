@@ -24,26 +24,6 @@ body {
 }
 
 /* navbar */
-[data-tooltip] {
-  position: relative;
-  cursor: help;
-}
-
-[data-tooltip]:hover:before {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 5px 10px;
-  background: #4CAF50;
-  color: white;
-  border-radius: 4px;
-  font-size: 12px;
-  white-space: nowrap;
-  margin-bottom: 5px;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 .navbar {
     background: var(--white);
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
