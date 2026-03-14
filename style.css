@@ -72,7 +72,7 @@ body {
     font-size: 1.2rem;
 }
 .nav-menu li.active {
-    background: linear-gradient(45deg, rgba(198,40,40,0.7), rgba(46,125,50,0.6));
+    background: var(--brown);
     color: white;
 }
 .nav-menu li.active i {
