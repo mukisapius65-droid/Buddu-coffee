@@ -231,6 +231,31 @@ body {
 .brown {
     color: #d2691e; /* lighter brown to stand out */
 }
+  @keyframes slideLeftAndFade {
+            0% {
+                transform: translateX(100%);
+                opacity: 1;
+            }
+            70% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+
+        .our-vision {
+            font-size: 2rem;
+            white-space: nowrap;       /* keep text in one line */
+            animation: slideLeftAndFade 10s ease-in-out infinite;
+            /* Optional: set a background to see the fade better */
+            padding: 10px;
+            display: inline-block;     /* needed for transform */
+        }
+.our-vision p {
+        }
+
 .hero-buttons {
     display: flex;
     gap: 1rem;
