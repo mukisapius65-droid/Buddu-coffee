@@ -127,3 +127,165 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
 window.addEventListener('load', function() {
     // Additional animation triggers if needed
 });
+  // ===== CONFIGURATION - CHANGE THESE =====
+        const WEBSOCKET_URL = 'ws://localhost:8000/ws';  // Your server URL
+        const ROOM_NAME = 'support';                      // Channel/room name
+        const USERNAME = 'visitor_' + Math.random().toString(36).substring(7); // Unique visitor ID
+        
+        // ===== GLOBAL VARIABLES =====
+        let socket = null;
+        let reconnectAttempts = 0;
+        const maxReconnectAttempts = 5;
+        
+        // ===== UI ELEMENTS =====
+        const chatwithDiv = document.getElementById('chatwith');
+        const textarea = document.getElementById('Chat');
+        const sendBtn = document.getElementById('SendBtn');
+        const container = document.getElementById('container');
+        const chatBtn = document.getElementById('ChatBtn');
+        const sentBtn = document.getElementById('SentBtn');
+
+        // ===== CHAT FUNCTIONS =====
+        function openChat() {
+            container.style.display = 'block';
+            chatBtn.style.display = 'none';
+            sentBtn.style.display = 'inline-block';
+            textarea.focus();
+            
+            // Connect WebSocket when chat opens
+            connectWebSocket();
+        }
+
+        function closeChat() {
+            container.style.display = 'none';
+            chatBtn.style.display = 'block';
+            
+            // Disconnect WebSocket when chat closes
+            if (socket) {
+                socket.close();
+                socket = null;
+            }
+        }
+
+        function addMessage(text, sender) {
+            const bubble = document.createElement('div');
+            bubble.className = sender === 'user' ? 'user-message' : 'admin-message';
+            bubble.textContent = text;
+            chatwithDiv.appendChild(bubble);
+            chatwithDiv.scrollTop = chatwithDiv.scrollHeight;
+        }
+
+        function addSystemMessage(text) {
+            const system = document.createElement('div');
+            system.className = 'system-info';
+            system.textContent = text;
+            chatwithDiv.appendChild(system);
+            chatwithDiv.scrollTop = chatwithDiv.scrollHeight;
+        }
+
+        // ===== WEBSOCKET CONNECTION =====
+        function connectWebSocket() {
+            try {
+                socket = new WebSocket(`${WEBSOCKET_URL}/${ROOM_NAME}?username=${USERNAME}`);
+                
+                socket.onopen = function() {
+                    console.log('Connected to chat server');
+                    addSystemMessage('✅ Connected to support');
+                    reconnectAttempts = 0;
+                };
+                
+                socket.onmessage = function(event) {
+                    let data;
+                    try {
+                        data = JSON.parse(event.data);
+                    } catch (e) {
+                        // If not JSON, treat as plain text
+                        addMessage(event.data, 'admin');
+                        return;
+                    }
+                    
+                    // Handle different message formats
+                    if (data.type === 'text' || data.message) {
+                        addMessage(data.message || data.text, 'admin');
+                    } else if (data.username && data.message) {
+                        // Format: {username: "admin", message: "hello"}
+                        addMessage(data.message, 'admin');
+                    } else {
+                        // Fallback
+                        addMessage(JSON.stringify(data), 'admin');
+                    }
+                };
+                
+                socket.onerror = function(error) {
+                    console.error('WebSocket error:', error);
+                    addSystemMessage('❌ Connection error');
+                };
+                
+                socket.onclose = function() {
+                    console.log('Disconnected from chat server');
+                    
+                    // Attempt to reconnect if chat is still open
+                    if (container.style.display === 'block' && reconnectAttempts < maxReconnectAttempts) {
+                        reconnectAttempts++;
+                        addSystemMessage(`🔄 Reconnecting... (${reconnectAttempts}/${maxReconnectAttempts})`);
+                        setTimeout(connectWebSocket, 3000);
+                    } else if (reconnectAttempts >= maxReconnectAttempts) {
+                        addSystemMessage('❌ Unable to connect. Please refresh.');
+                    }
+                };
+                
+            } catch (error) {
+                console.error('Failed to create WebSocket:', error);
+                addSystemMessage('❌ Failed to connect');
+            }
+        }
+
+        // ===== SEND MESSAGE =====
+        function sendMessage() {
+            const msg = textarea.value.trim();
+            if (!msg) return;
+            
+            // Display user message immediately
+            addMessage(msg, 'user');
+            
+            // Send to server if connected
+            if (socket && socket.readyState === WebSocket.OPEN) {
+                // Format depends on your server - adjust as needed
+                const messageObj = {
+                    type: 'text',
+                    message: msg,
+                    username: USERNAME,
+                    timestamp: new Date().toISOString()
+                };
+                socket.send(JSON.stringify(messageObj));
+            } else {
+                addSystemMessage('⚠️ Not connected - message not sent');
+                // Try to reconnect
+                if (!socket || socket.readyState === WebSocket.CLOSED) {
+                    connectWebSocket();
+                }
+            }
+            
+            // Clear input
+            textarea.value = '';
+        }
+
+        // ===== EVENT LISTENERS =====
+        sendBtn.onclick = function(e) {
+            e.preventDefault();
+            sendMessage();
+        };
+
+        textarea.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // Clean up on page unload
+        window.addEventListener('beforeunload', function() {
+            if (socket) {
+                socket.close();
+            }
+        });
