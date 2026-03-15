@@ -6,6 +6,7 @@
     <title>BUDDU RURAL COFFEE GROWERS, TRADERS AND PROCESSORS ASSOCIATION</title>
     <!-- Font Awesome 6 (icons) & Google Font for readability -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -201,6 +202,22 @@
         </section>
     </main>
 
+      <div class="chat-btn">
+        <button id="ChatBtn" onclick="openChat()">
+            <i class='fas fa-comment' style='font-size:36px; color:#C62828; display:block;'></i>
+            <span style="font-size:14px; color:#2E7D32; font-weight:900;">CHAT</span>
+        </button>
+    </div>
+
+    <div class="container" id="container">
+        <div id="chatwith">
+            <div class="system-info">🔴 you · 🟢 admin (connecting...)</div>
+        </div>
+        <textarea id="Chat" placeholder="type your message..."></textarea>
+        <button class="send-btn" id="SendBtn">send 💬</button>
+        <button class="sent-btn" id="SentBtn" onclick="closeChat()">close ✕</button>
+    </div>
+    
     <!-- FOOTER with TOS/PP/FAQ modals, contacts, WhatsApp, other platform -->
     <footer>
         <div class="footer-content">
