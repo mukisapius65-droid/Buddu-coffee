@@ -49,6 +49,9 @@ body {
     font-weight: 700;
     color: var(--brown);
 }
+.logo-container {
+    border: 1px solid black;
+}
  .i-container {
     padding: 5px;
     border-radius: 50%;
