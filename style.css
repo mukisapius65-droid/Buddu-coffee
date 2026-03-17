@@ -60,7 +60,7 @@ body {
 .logo .highlight {
     font-size: 2.2rem;
     font-weight: 300;
-    margin-top:-2rem;
+    margin-top:-10rem;
     color: var(--green);
 }
 .nav-menu {
