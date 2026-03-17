@@ -55,7 +55,7 @@ body {
     border: 1px solid transparent;
     height: 10rem;
     width: 10rem;
-    background-color: black;
+    background-color: transparent;
 }
 .logo .highlight {
     color: var(--green);
