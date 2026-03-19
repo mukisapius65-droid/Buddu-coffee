@@ -25,12 +25,13 @@ body {
 
 /* navbar */
 .navbar {
-    background: transparent;
+    background: rgba(8, 114, 40, 0.226);
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 3px solid var(--green);
+    border-bottom: 3px solid rgba(8, 114, 40, 0.226);
+    backdrop-filter: blur(10px)
 }
 .nav-container {
     max-width: 1400px;
@@ -209,7 +210,6 @@ body {
 /* hero */
 .hero {
     position: relative;
-    min-height: 500px;
     background-size: cover;
     background-position: center;
     border-radius: 0 0 50px 50px;
