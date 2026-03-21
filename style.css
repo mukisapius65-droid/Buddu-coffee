@@ -187,7 +187,7 @@ body {
 
         /* ----- MAIN ABOUT CONTENT CONTAINER ----- */
         .about-container {
-    display: none;
+    display: block;
     padding: 20px;
     font-family: 'Segoe UI', sans-serif;
     background-color: white;
