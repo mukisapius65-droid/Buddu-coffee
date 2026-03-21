@@ -1,4 +1,4 @@
-// script.js
+  // script.js
 
 // ========== PAGE NAVIGATION ==========
 const pages = document.querySelectorAll('.page');
@@ -18,7 +18,11 @@ function switchPage(pageId) {
 }
 
 navItems.forEach(item => {
-    item.addEventListener('click', () => switchPage(item.dataset.page));
+    item.addEventListener('click', () => {
+        if (item.dataset.page) {          // only if data-page exists
+            switchPage(item.dataset.page);
+        }
+    });
 });
 
 hamburger.addEventListener('click', () => {
@@ -88,6 +92,118 @@ roleBtns.forEach(btn => {
 
 // Initialize default role
 updateRole('farmer');
+
+document.addEventListener('DOMContentLoaded', function() {
+    const bgContainer = document.getElementById('pulse-bg');
+    const columns = document.querySelectorAll('.team-column');
+    
+    if (!bgContainer || columns.length === 0) return;
+    
+    // Store the original background image (the inline style)
+    const originalBg = bgContainer.style.backgroundImage;
+    
+    // Preload all hover images to avoid flickering
+    columns.forEach(column => {
+        const imgUrl = column.getAttribute('data-bg');
+        if (imgUrl) {
+            const img = new Image();
+            img.src = imgUrl;
+        }
+    });
+    
+    // Hover events
+    columns.forEach(column => {
+        column.addEventListener('mouseenter', () => {
+            const newBg = column.getAttribute('data-bg');
+            if (newBg) {
+                bgContainer.style.backgroundImage = `url('${newBg}')`;
+            }
+        });
+        
+        column.addEventListener('mouseleave', () => {
+            bgContainer.style.backgroundImage = originalBg;
+        });
+    });
+});
+
+// Newsletter form submission (demo)
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('newsletterForm');
+    const successDiv = document.getElementById('formSuccess');
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Basic validation
+            const firstname = document.getElementById('firstname').value.trim();
+            const lastname = document.getElementById('lastname').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            if (!firstname || !lastname || !email) {
+                alert('Please fill all required fields (*)');
+                return;
+            }
+
+            // Simulate success (replace with actual backend later)
+            successDiv.style.display = 'block';
+            form.reset();
+
+            // Optionally hide success message after 5 seconds
+            setTimeout(() => {
+                successDiv.style.display = 'none';
+            }, 5000);
+        });
+    }
+});
+
+// Animate each price meter when its card scrolls into view
+function animateMeter(meterElement) {
+    if (meterElement.dataset.animated === 'true') return;
+    meterElement.dataset.animated = 'true';
+
+    const targetPrice = parseFloat(meterElement.dataset.target);
+    const priceSpan = meterElement.querySelector('.price-number');
+    // Get the fill bar element (the div inside .meter-bar)
+    const fillBar = meterElement.querySelector('.meter-bar > div');
+
+    // Set fill bar background to match the card's border-top color
+    const card = meterElement.closest('.price-card');
+    if (card) {
+        const borderColor = getComputedStyle(card).borderTopColor;
+        fillBar.style.backgroundColor = borderColor;
+    }
+
+    let current = 0;
+    const duration = 2000; // 2 seconds
+    const stepTime = 20;
+    const steps = duration / stepTime;
+    const increment = targetPrice / steps;
+
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= targetPrice) {
+            current = targetPrice;
+            clearInterval(timer);
+        }
+        priceSpan.innerText = Math.floor(current);
+        const percent = (current / targetPrice) * 100;
+        fillBar.style.width = percent + '%';
+    }, stepTime);
+}
+
+// Set up Intersection Observer for each meter
+const meters = document.querySelectorAll('.price-meter');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateMeter(entry.target);
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+meters.forEach(meter => observer.observe(meter));
 
 // ========== MODALS for ToS, PP, FAQ ==========
 const modal = document.getElementById('modal');
@@ -289,3 +405,54 @@ window.addEventListener('load', function() {
                 socket.close();
             }
         });
+        //REVEAL ABOUT US PAGE
+        // Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    const aboutSection = document.getElementById('about-section');
+    const dropdownLinks = document.querySelectorAll('.dropdown-content a');
+    const closeButton = document.getElementById('close-about');
+
+    // Reveal and scroll when a dropdown link is clicked
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();                     // stop instant jump
+            const targetId = this.getAttribute('href');  // e.g. "#mission-vision"
+            const targetEl = document.querySelector(targetId);
+
+            if (targetEl) {
+                // Show the about section (if hidden)
+                aboutSection.style.display = 'block';
+
+                // Smooth scroll to the target
+                targetEl.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Main ABOUT US button (the dropbtn) – reveal about section and scroll to top
+const mainAboutBtn = document.getElementById('about-main-btn');
+if (mainAboutBtn) {
+    mainAboutBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const aboutSection = document.getElementById('about-section');
+        if (aboutSection) {
+            aboutSection.style.display = 'block';
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+}
+
+    // Hide the about section when the close button is clicked
+    if (closeButton) {
+        closeButton.addEventListener('click', function() {
+            aboutSection.style.display = 'none';
+        });
+    }
+});
+function showAboutSection() {
+    const aboutSection = document.getElementById('about-section');
+    if (aboutSection) {
+        aboutSection.style.display = 'block';
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
