@@ -197,6 +197,43 @@
         <!-- Optional close button (can be removed) -->
         <button id="close-about">Hide About</button>
     </div>
+
+    <!-- FOOTER with TOS/PP/FAQ modals, contacts, WhatsApp, other platform -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>BUDDU COFFEE</h4>
+                <p><i class="fas fa-map-marker-alt"></i>  Butega, Uganda</p>
+                <p><a href="tel:+256751545436"><i class="fas fa-phone"></i>  Call Now</a></p>
+                <p><a href="https://wa.me/256700123456" target="_blank"><i class="fab fa-whatsapp"></i>  WhatsApp</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Info</h4>
+                <a href="#" onclick="openModal('tos')"><i class="fas fa-file-contract"></i> Terms of Service</a>
+                <a href="#" onclick="openModal('pp')"><i class="fas fa-shield"></i> Privacy Policy</a>
+                <a href="#" onclick="openModal('faq')"><i class="fas fa-question-circle"></i> FAQs</a>
+            </div>
+            <div class="footer-section">
+                <h4>Our other platform</h4>
+                                <a href="https://ekfoundation.org" target="_blank"><i class="fas fa-external-link-alt"></i> EK FOUNDATION</a>
+                <a href="https://pfg-chapati.vercel.app" target="_blank"><i class="fas fa-external-link-alt"></i> PFG</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 BUDDU RURAL COFFEE GROWERS, TRADERS & PROCESSORS ASSOCIATION.
+            <p>All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- MODALS for ToS, PP, FAQ -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    
     <script scr ="script.js"></script>
 </body>
 </html>
