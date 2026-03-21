@@ -349,14 +349,14 @@ body {
         }
 
         /* placeholder images (replace with real photos) */
-        .img1 { background-image: url('https://res.cloudinary.com/dxd5hibh7/image/upload/v1774115806/Namwanje_Proscovia_fcxgqi.jpg'); }
-        .img2 { background-image: url('https://randomuser.me/api/portraits/men/32.jpg'); }
-        .img3 { background-image: url('https://randomuser.me/api/portraits/women/68.jpg'); }
-        .img4 { background-image: url('https://randomuser.me/api/portraits/men/75.jpg'); }
-        .img5 { background-image: url('https://randomuser.me/api/portraits/women/90.jpg'); }
-        .img6 { background-image: url('https://randomuser.me/api/portraits/men/62.jpg'); }
-        .img7 { background-image: url('https://randomuser.me/api/portraits/women/33.jpg'); }
-        .img8 { background-image: url('https://randomuser.me/api/portraits/men/41.jpg'); }
+        .img1 { background-image: url('https://res.cloudinary.com/dxd5hibh7/image/upload/v1774115786/Kazibwe_Essien-General_Secretary_dg7ct8.jpg'); }
+        .img2 { background-image: url('https://res.cloudinary.com/dxd5hibh7/image/upload/v1774115785/Hajji_Musoke_Twaha_enqyil.jpg'); }
+        .img3 { background-image: url('https://res.cloudinary.com/dxd5hibh7/image/upload/v1774115806/Namwanje_Proscovia_fcxgqi.jpg'); }
+        .img4 { background-image: url('https://res.cloudinary.com/dxd5hibh7/image/upload/v1774115785/Kakooza_Sadi_ijpzxb.jpg'); }
+        .img5 { background-image: url('https://res.cloudinary.com/dxd5hibh7/image/upload/v1774115802/Kikomeko_Dawuda_Katumba_uifqn2.jpg'); }
+        .img6 { background-image: url('https://res.cloudinary.com/dxd5hibh7/image/upload/v1774115803/Kiyimba_Andrew_schgx0.jpg'); }
+        .img7 { background-image: url('https://res.cloudinary.com/dxd5hibh7/image/upload/v1774115813/Walugembe_Meddie_yptwch.jpg'); }
+        .img8 { background-image: url('https://res.cloudinary.com/dxd5hibh7/image/upload/v1774115785/Anonymous_epjbpd.jpg'); }
 
         .team-member h4, .board-member h4 {
             color: var(--red);
