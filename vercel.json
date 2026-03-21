@@ -1,22 +1,8 @@
 {
   "rewrites": [
-    { "source": "/about", "destination": "/about.html" }
-  ]
-}
-
-{
-  "rewrites": [
-    { "source": "/our-work", "destination": "/our-work.html" }
-  ]
-}
-{
-  "rewrites": [
-    { "source": "/impact-insights", "destination": "/impact-insights.html" }
-  ]
-}
-
-{
-  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/our-work", "destination": "/our-work.html" },
+    { "source": "/impact-insights", "destination": "/impact-insights.html" },
     { "source": "/roles", "destination": "/roles.html" }
   ]
 }
