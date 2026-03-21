@@ -3,6 +3,7 @@
     { "source": "/about", "destination": "/about.html" },
     { "source": "/our-work", "destination": "/our-work.html" },
     { "source": "/impact-insights", "destination": "/impact-insights.html" },
-    { "source": "/roles", "destination": "/roles.html" }
+    { "source": "/roles", "destination": "/roles.html" },
+    { "source": "/news-resources", "destination": "/news-resources.html" },
   ]
 }
