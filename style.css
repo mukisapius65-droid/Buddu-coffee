@@ -14,6 +14,13 @@ body {
     transition: font-size 0.2s;
     overflow-x: hidden;
 }
+.body-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 100%;
+}
 
 /* colors: red #C62828, green #2E7D32, white #ffffff, brown #8B4513 */
 :root {
