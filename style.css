@@ -12,6 +12,7 @@ body {
     line-height: 1.6;
     font-size: 18px; /* large base for readability */
     transition: font-size 0.2s;
+    overflow-x: hidden;
 }
 
 /* colors: red #C62828, green #2E7D32, white #ffffff, brown #8B4513 */
@@ -1797,3 +1798,34 @@ footer {
             .container { right: 10px; bottom: 100px; max-width: 280px; }
             .chat-btn button { right: 15px; bottom: 15px; width: 75px; height: 75px; }
         }
+@media (max-width: 768px) {
+    .page,
+    .hero-content,
+    .about-hero,
+    .our-team-content,
+    .about-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        padding: 1rem !important;
+    }
+    .hero-content h1 {
+        font-size: 2rem !important;
+    }
+    .hero-content p {
+        font-size: 1rem !important;
+    }
+    .our-vision {
+        font-size: 1.2rem !important;
+        white-space: normal !important; /* allow wrapping */
+        animation: none !important;      /* optional: disable animation on mobile */
+    }
+    .team-columns {
+        flex-direction: column;
+    }
+    .team-column {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.4);
+        flex: auto;
+    }
+}
