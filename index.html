@@ -12,37 +12,6 @@
 </head>
 <body>
 
-    <!-- Sidebar (off-canvas menu) -->
-<div class="sidebar" id="sidebar">
-    <div class="sidebar-header">
-        <div class="sidebar-logo">
-            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773772410/BUDDU-RURAL_COFFEE_GROWERS_TRADERS_PROCESSORS_ASSOCIATION_LTD_bmiiyi.png" alt="Buddu Coffee Logo">
-            <span>Buddu Coffee</span>
-        </div>
-        <button class="close-sidebar" id="closeSidebar">&times;</button>
-    </div>
-    <ul class="sidebar-menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="/our-work">Our Work ▿</a></li>
-        <li><a href="/impact-insights">Impact & Insights ▿</a></li>
-        <li><a href="/about">About Us ▿</a></li>
-        <li><a href="/role">Roles</a></li>
-        <li><a href="/signup">Newsletter</a></li>
-    </ul>
-    <div class="sidebar-footer">
-        <p>📞 <a href="tel:+256751545436">Call Now</a></p>
-        <p>💬 <a href="https://wa.me/256700123456" target="_blank">WhatsApp</a></p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-    </div>
-</div>
-
-<!-- Overlay for when sidebar is open -->
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
-
 <!-- NAVIGATION BAR (Red & Green theme) -->
     <nav class="navbar">
         <div class="nav-container">
@@ -171,6 +140,224 @@
             </a>
             <a href="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" class="blog-item">
                 <div class="blog-card">
+                    <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Blog 4">
+                    <div class="blog-overlay">
+                        <span class="blog-sticker">📷 PHOTO</span>
+                        <h4>Market Trends for Ugandan Coffee</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    </div>
+    
+    <!-- CURRENT COFFEE PRICES (large cards, easy to read) -->
+            <div class="price-section">
+    <h2><i class="fas fa-chart-simple"></i> TODAY'S COFFEE PRICES (UGX/kg)</h2>
+    <div class="price-cards">
+        <!-- Card 1: Ripe Fresh -->
+        <div class="price-card" style="border-top: 5px solid #C62828;">
+            <i class="fas fa-seedling" style="color: #C62828;"></i>
+            <h3>Ripe Fresh</h3>
+            <div class="price-meter" data-target="4500">
+                <div class="price-value">
+                    <span class="price-number">0</span> <h3>UGX</h3>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill-1"></div>
+                </div>
+                <Small>per kg</small>
+            </div>
+        </div>
+
+        <!-- Card 2: Dried -->
+        <div class="price-card" style="border-top: 5px solid #8B4513;">
+            <i class="fas fa-sun" style="color: #8B4513;"></i>
+            <h3>Dried</h3>
+            <div class="price-meter" data-target="8500">
+                <div class="price-value">
+                    <span class="price-number">0</span> <h3>UGX</h3>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill-2"></div>
+                </div>
+                <Small>per kg</small>
+            </div>
+        </div>
+
+        <!-- Card 3: Pre‑processed -->
+        <div class="price-card" style="border-top: 5px solid #2E7D32;">
+            <i class="fas fa-fire" style="color: #2E7D32;"></i>
+            <h3>Pre-processed</h3>
+            <div class="price-meter" data-target="15000">
+                <div class="price-value">
+                    <span class="price-number">0</span> <h3>UGX</h3>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill-3"></div>
+                </div>
+                <Small>per kg</small>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<section class="pulse-section" id="pulse-section">
+    <div class="pulse" id="pulse-bg" style="background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+        <div class="team-columns">
+            <!-- Column 1 (Mission) – wider -->
+            <div class="team-column mission-column" data-bg="https://images.unsplash.com/photo-1559056199-5a47f60c5053?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80">
+                <div class="column-overlay"></div>
+                <div class="column-content">
+                    <h3>DIGITAL EMPOREMENT</h3>
+                    <p class="quote">
+                        We equip coffee farmers, traders, and processors with timely insights and resources to make informed decisions.
+                    </p>
+                    <button class="btn-secondary col-btn" onclick="alert('Mission action')">Discover NUDGES →</button>
+                </div>
+            </div>
+            <!-- Column 2 (Vision) -->
+            <div class="team-column vision-column" data-bg="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80">
+                <div class="column-overlay"></div>
+                <div class="column-content">
+                    <h3>SKILLED,RESPECTFUL TOUCH</h3>
+                    <p class="quote">
+                        We train frontline providers to ensure best advice for every member.
+                    </p>
+                    <button class="btn-secondary col-btn" onclick="alert('Vision action')">Discover MENTORS →</button>
+                </div>
+            </div>
+            <!-- Column 3 (Values) -->
+            <div class="team-column values-column" data-bg="https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80">
+                <div class="column-overlay"></div>
+                <div class="column-content">
+                    <h3>DATA-DRIVEN IMPROVEMENT</h3>
+                    <p class="quote">
+                        We harness real‑time data and research to improve productivity.
+                    </p>
+                    <button class="btn-secondary col-btn" onclick="alert('Values action')">Discover PULSE →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+             <section class="about-section" id="mission-vision" style="justify-content: center; align-items: center; text-align: center;">
+            <h2 style="font-size: 3.5rem; color: black; font-weight: 800;">Impact at a Glance</h2>
+            <div class="mission-block">
+                    <P style="font-size: 1rem; margin-top: 4rem;">We drive impact by empowering coffee farmers, the cooperatives and extension agents who serve them, and the<br>governments that sustain the policies and systems that support them. We rely on real‑time data, human<br>insights, and a growing body of evidence to expand market access, improve productivity, and strengthen the resilience of coffee communities in different regions of Uganda.</P>
+                     
+            </div>
+
+                    <button class="btn-secondary" onclick="switchPage('impact')" style="margin-top: 2rem;">OUR IMPACT →</button>
+
+             <div class="price-section" style= "text-align: center;">
+    <h2><i class="fas fa-chart-simple"></i>BUDDU FARMERS, TRADERS AND PROCESSORS</h2>
+    <div class="price-cards">
+        <!-- Card 1: Ripe Fresh -->
+        <div class="price-card" style="border-top: 5px solid #C62828;">
+            <i class="fas fa-tractor fa-3x" style="color: #C62828;"></i>
+            <h3>OUR FARMERS</h3>
+            <div class="price-meter" data-target="4500">
+                <div class="price-value">
+                    <span class="price-number">0</span>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Dried -->
+        <div class="price-card" style="border-top: 5px solid #8B4513;">
+            <i class="fas fa-handshake fa-3x" style="color: #8B4513;"></i>
+            <h3>OUR TRADERS</h3>
+            <div class="price-meter" data-target="8500">
+                <div class="price-value">
+                    <span class="price-number">0</span>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Pre‑processed -->
+        <div class="price-card" style="border-top: 5px solid #2E7D32;">
+            <i class="fas fa-industry fa-3x" style="color: #2E7D32;"></i>
+            <h3>OUR PROCESSORS</h3>
+            <div class="price-meter" data-target="15000">
+                <div class="price-value">
+                    <span class="price-number">0</span>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </section>
+
+         <!-- WHERE WE WORK -->
+        <section class="about-section" id="our-team">
+            <div class="our-team" style="background-image: url('https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                <div class="our-team-overlay"></div>
+                <div class="our-team-content">
+                    <p class="animate-up"><span class="team">WHERE WE WORK</span><br>Our mission is to transform prosperity and resilience for all coffee farmers, traders, and processors across Uganda.</p>
+                    <p style="font-size: 1.1rem; font-weight: 300;">We partner with government agencies, district local governments, and community‑based organizations to support coffee farmers, traders, and processors in accessing markets, finance, and sustainable production practices across diverse contexts and geographies. Our roots are in Uganda, where we have strengthened the coffee value chain in partnership with 22 district local governments and the national Ministry of Agriculture, Animal Industry and Fisheries. More recently, our impact has attracted interest from other coffee‑producing countries, including Rwanda and Ethiopia, paving the way for future scale‑up across Africa.</p>
+                   <div class="hero-buttons animate-up delay-2">
+                        <button class="btn-secondary" onclick="switchPage('work')" style="margin-left: -1rem;">WHERE WE WORK →</button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="about-section" id="mission-vision">
+            <h2 style="font-size: 5rem; margin-top: 2.2rem; color: black;">News and <span class="green">Resources</span></h2>
+            <div class="mission-block">
+                <p style="font-size: 1.5rem;">
+                    Our latest research, toolkits, stories from the field, and other updates from across the organization.
+                </p>
+            </div>
+
+            <div class="blog-grid">
+    <!-- Featured blog (full height on left) -->
+    <a href="/blog/featured-post" class="blog-featured">
+        <div class="blog-card">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Featured blog">
+            <div class="blog-overlay">
+                <span class="blog-sticker">📰 BLOG</span>
+                <h3>How Digital Tools Are Transforming Coffee Farming</h3>
+                <p>Discover how farmers are using our platform to increase yields...</p>
+            </div>
+        </div>
+    </a>
+
+    <!-- Right side: two columns, each with two stacked blogs -->
+    <div class="blog-columns">
+        <div class="blog-col">
+            <a href="/blog/post-1" class="blog-item">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blog 1">
+                    <div class="blog-overlay">
+                        <span class="blog-sticker">📰 BLOG</span>
+                        <h4>Drying Coffee: Best Practices</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="/blog/post-2" class="blog-item">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blog 2">
+                    <div class="blog-overlay">
+                        <span class="blog-sticker">📰 BLOG</span>
+                        <h4>Sustainable Coffee Farm Management</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="blog-col">    <div class="blog-card">
                     <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Blog 4">
                     <div class="blog-overlay">
                         <span class="blog-sticker">📷 PHOTO</span>
