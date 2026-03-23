@@ -608,7 +608,7 @@ body {
     color: white;
     text-align: center;
     padding: 2rem;
-    max-width: 100%;
+    max-width: 900px;
 }
 .hero-content h1 {
     font-size: 3.5rem;
