@@ -24,40 +24,8 @@ navItems.forEach(item => {
         }
     });
 
-// ========== SIDEBAR TOGGLE ==========
-const hamburger = document.querySelector('.hamburger');
-const sidebar = document.getElementById('sidebar');
-const closeSidebar = document.getElementById('closeSidebar');
-const overlay = document.getElementById('sidebarOverlay');
-
-function openSidebar() {
-    sidebar.classList.add('open');
-    overlay.classList.add('active');
-    document.body.classList.add('sidebar-open');
-}
-
-function closeSidebarFunc() {
-    sidebar.classList.remove('open');
-    overlay.classList.remove('active');
-    document.body.classList.remove('sidebar-open');
-}
-
-if (hamburger) {
-    hamburger.addEventListener('click', openSidebar);
-}
-
-if (closeSidebar) {
-    closeSidebar.addEventListener('click', closeSidebarFunc);
-}
-
-if (overlay) {
-    overlay.addEventListener('click', closeSidebarFunc);
-}
-
-// Close sidebar when any link inside it is clicked
-const sidebarLinks = document.querySelectorAll('.sidebar-menu a');
-sidebarLinks.forEach(link => {
-    link.addEventListener('click', closeSidebarFunc);
+hamburger.addEventListener('click', () => {
+    navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
 });
 
 // ========== ROLE SWITCHER ==========
