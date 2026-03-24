@@ -6,7 +6,6 @@
     <title>BUDDU RURAL COFFEE GROWERS, TRADERS AND PROCESSORS ASSOCIATION</title>
     <!-- Font Awesome 6 (icons) & Google Font for readability -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -24,10 +23,10 @@
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <div class="dropdown">
-                <a href="https://buddu-coffee.vercel.app" class="dropbtn" id="about-main-btn"><span>HOME</span></a>
+                <a href="index.html" class="dropbtn" id="about-main-btn"><span>HOME</span></a>
                 </div>
                 <div class="dropdown">
-                <a href="/our-work" class="dropbtn" id="about-main-btn"><span>OUR WORK ▿</span></a>
+                <a href="our-work.html" class="dropbtn" id="about-main-btn"><span>OUR WORK ▿</span></a>
                 <div class="dropdown-content">
                     <a href="/our-work#our-model">OUR MODEL</a>
                     <a href="/our-work#sustainability">SUSTAINABILITY</a>
@@ -36,7 +35,7 @@
                 </div>
             </div>
                 <div class="dropdown">
-                <a href="/impact-insights" class="dropbtn" id="about-main-btn"><span>IMPACT & INSIGHTS ▿</span></a>
+                <a href="/impact-insights.html" class="dropbtn" id="about-main-btn"><span>IMPACT & INSIGHTS ▿</span></a>
                 <div class="dropdown-content">
                     <a href="/impact-insights#">Web Design</a>
                     <a href="/impact-insights#">Development</a>
@@ -45,7 +44,7 @@
                 </div>
             </div>
                 <div class="dropdown">
-                <a href="/about" class="dropbtn" id="about-main-btn"><span>ABOUT US ▿</span></a>
+                <a href="about.html" class="dropbtn" id="about-main-btn"><span>ABOUT US ▿</span></a>
                 <div class="dropdown-content">
                     <a href="/about#mission-vision-01">MISSION & VISION</a>
                     <a href="/about#our-team-01">OUR TEAM</a>
@@ -59,8 +58,8 @@
                 <li data-page="signup" title= "Join Our Cooperative" style= "display:none"><i class="fas fa-user-plus"></i> <span>Signup</span></li>
                 <li data-page="settings" title= "Configure Notifications And Font-size" style= "display:none"><i class="fas fa-cog"></i> <span>Settings</span></li>
                 <li data-page="profile" title= "View And Edit Profile" style= "display:none"><i class="fas fa-id-card"></i> <span>Profile</span></li>
-                <button class="btn-secondary" onclick="switchPage('role')">ROLES</button>
-                <button class="btn-primary" onclick="switchPage('signup')">NEWSLETTER</button>
+                <a class="btn-secondary" href="role.html">ROLES</a>
+                <a class="btn-primary" href="#newsletter">NEWSLETTER</a>
             </ul>
             <!-- Role tabs (Farmer/Trader/Processor) integrated in nav for quick access -->
             <div class="role-tabs" style= "display:none">
@@ -75,7 +74,39 @@
     <!-- MAIN CONTENT – all "pages" are sections hidden/shown via JS -->
     <main>
         <!-- HERO SECTION (part of Home, but visible on all pages? We'll place it inside home) -->
+
         <!-- HOME PAGE -->
+
+        <!-- Sidebar (off-canvas menu) -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-logo">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773772410/BUDDU-RURAL_COFFEE_GROWERS_TRADERS_PROCESSORS_ASSOCIATION_LTD_bmiiyi.png" alt="Buddu Coffee Logo">
+            <span>Buddu Coffee</span>
+        </div>
+        <button class="close-sidebar" id="closeSidebar">&times;</button>
+    </div>
+    <ul class="sidebar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-work.html">Our Work ▿</a></li>
+        <li><a href="impact-insights.html">Impact & Insights ▿</a></li>
+        <li><a href="about.html">About Us ▿</a></li>
+        <li><a href="role.html">Roles</a></li>
+        <li><a href="news-resources.html">Newsletter</a></li>
+    </ul>
+    <div class="sidebar-footer">
+        <p>📞 <a href="tel:+256751545436">Call Now</a></p>
+        <p>💬 <a href="https://wa.me/256701715505" target="_blank">WhatsApp</a></p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- Overlay for when sidebar is open -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <div>
            <section class="welcome-section" id="welcome-section">
@@ -373,7 +404,7 @@
                     <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Blog 4">
                     <div class="blog-overlay">
                         <span class="blog-sticker">📰 BLOG</span>
-                        <h4>Market Trends for Ugandan Coffee</h4>
+                        <h4 id="newsletter">Market Trends for Ugandan Coffee</h4>
                     </div>
                 </div>
             </a>
