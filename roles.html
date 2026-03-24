@@ -6,7 +6,6 @@
     <title>BUDDU RURAL COFFEE GROWERS, TRADERS AND PROCESSORS ASSOCIATION</title>
     <!-- Font Awesome 6 (icons) & Google Font for readability -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -24,10 +23,10 @@
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <div class="dropdown">
-                <a href= "https://buddu-coffee.vercel.app" class="dropbtn" id="about-main-btn"><span>HOME</span></a>
+                <a href="index.html" class="dropbtn" id="about-main-btn" style= "display:none"><span>HOME</span></a>
                 </div>
                 <div class="dropdown">
-                <a href="/our-work" class="dropbtn" id="about-main-btn"><span>OUR WORK ▿</span></a>
+                <a href="our-work.html" class="dropbtn" id="about-main-btn" style= "display:none"><span>OUR WORK ▿</span></a>
                 <div class="dropdown-content">
                     <a href="/our-work#our-model">OUR MODEL</a>
                     <a href="/our-work#sustainability">SUSTAINABILITY</a>
@@ -36,7 +35,7 @@
                 </div>
             </div>
                 <div class="dropdown">
-                <a href="/impact-insights" class="dropbtn" id="about-main-btn"><span>IMPACT & INSIGHTS ▿</span></a>
+                <a href="/impact-insights.html" class="dropbtn" id="about-main-btn" style= "display:none"><span>IMPACT & INSIGHTS ▿</span></a>
                 <div class="dropdown-content">
                     <a href="/impact-insights#">Web Design</a>
                     <a href="/impact-insights#">Development</a>
@@ -45,7 +44,7 @@
                 </div>
             </div>
                 <div class="dropdown">
-                <a href="/about" class="dropbtn" id="about-main-btn"><span>ABOUT US ▿</span></a>
+                <a href="about.html" class="dropbtn" id="about-main-btn" style= "display:none"><span>ABOUT US ▿</span></a>
                 <div class="dropdown-content">
                     <a href="/about#mission-vision-01">MISSION & VISION</a>
                     <a href="/about#our-team-01">OUR TEAM</a>
@@ -54,11 +53,12 @@
                     <a href="/about#partners">PARTNERS</a>
                 </div>
             </div>
-                <li data-page="home" class="active" style= "display:none"><i class="fas fa-home"></i> <span>Home</span></li>
+                <li data-page="home" class="active"><i class="fas fa-home"></i> <span>Home</span></li>
                 <li data-page="dashboard" title= "Preview Your Networth"><i class="fas fa-chart-line"></i> <span>Dashboard</span></li>
-                <li data-page="signup" title= "Join Our Cooperative" style= "display:none"><i class="fas fa-user-plus"></i> <span>Signup</span></li>
-                <li data-page="settings" title= "Configure Notifications And Font-size" style= "display:none"><i class="fas fa-cog"></i> <span>Settings</span></li>
+                <li data-page="signup" title= "Join Our Cooperative"><i class="fas fa-user-plus"></i> <span>Signup</span></li>
+                <li data-page="settings" title= "Configure Notifications And Font-size"><i class="fas fa-cog"></i> <span>Settings</span></li>
                 <li data-page="profile" title= "View And Edit Profile"><i class="fas fa-id-card"></i> <span>Profile</span></li>
+                <a class="btn-primary" href="#newsletter" style= "display:none">NEWSLETTER</a>
             </ul>
             <!-- Role tabs (Farmer/Trader/Processor) integrated in nav for quick access -->
             <div class="role-tabs">
@@ -70,13 +70,30 @@
         </div>
     </nav>
 
-<!-- Main content container -->
-    <div class="about-container" id="about-section">
-        <div class="about-hero">
-        <h1>Roles at Buddu Coffee</h1><span id="mission-vision-01"></span> <!-- our mission place here for jump fit-->
-    </div>
+    <!-- MAIN CONTENT – all "pages" are sections hidden/shown via JS -->
+    <main>
+        <!-- HERO SECTION (part of Home, but visible on all pages? We'll place it inside home) -->
+        <!-- HOME PAGE -->
+         <!-- DASHBOARD PAGE (role‑based content) -->
 
-    <!-- ROLE PAGE (explains each role) -->
+        <section id="dashboard" class="page">
+            <h2><i class="fas fa-chart-pie"></i> Your Dashboard</h2>
+            <div class="role-message" id="dashboard-msg">Welcome, Farmer! Here is your farm summary.</div>
+            <div class="dashboard-cards">
+                <div class="stat-card"><i class="fas fa-weight-hanging"></i> <span class="stat-label">Total Coffee (kg)</span> <span class="stat-value" id="stat1">1,200</span></div>
+                <div class="stat-card"><i class="fas fa-coins"></i> <span class="stat-label">Estimated Income</span> <span class="stat-value" id="stat2">6,600,000 UGX</span></div>
+                <div class="stat-card"><i class="fas fa-truck"></i> <span class="stat-label">Orders</span> <span class="stat-value" id="stat3">8</span></div>
+            </div>
+            <div class="recent-activity">
+                <h3>Recent activity</h3>
+                <ul id="activity-list">
+                    <li><i class="fas fa-check-circle green"></i> Sold 50kg dried coffee - 2 days ago</li>
+                    <li><i class="fas fa-check-circle green"></i> New buyer inquiry - yesterday</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ROLE PAGE (explains each role) -->
         <section id="role" class="page">
             <h2><i class="fas fa-users-between-lines"></i> Roles in our platform</h2>
             <div class="role-grid">
@@ -98,7 +115,45 @@
             </div>
         </section>
 
-     <!-- DASHBOARD PAGE (role‑based content) -->
+                <!-- SETTINGS PAGE -->
+        <section id="settings" class="page">
+            <h2><i class="fas fa-sliders"></i> Settings</h2>
+            <div class="settings-group">
+                <label><i class="fas fa-bell"></i> Notifications</label>
+                <input type="checkbox" checked> Receive WhatsApp alerts
+                <br><br>
+                <label><i class="fas fa-globe"></i> Language</label>
+                <select>
+                    <option>English (simple)</option>
+                    <option>Luganda (audio support soon)</option>
+                </select>
+                <br><br>
+                <label><i class="fas fa-mobile-alt"></i> Display size</label>
+                <div class="font-size-btns">
+                    <button class="btn-small" onclick="document.body.style.fontSize='16px'">Small</button>
+                    <button class="btn-small" onclick="document.body.style.fontSize='20px'">Medium</button>
+                    <button class="btn-small" onclick="document.body.style.fontSize='24px'">Large</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROFILE PAGE (role‑based) -->
+        <section id="profile" class="page">
+            <h2><i class="fas fa-id-badge"></i> Your Profile</h2>
+            <div class="profile-card">
+                <div class="profile-avatar"><i class="fas fa-user-circle"></i></div>
+                <div class="profile-info" id="profile-info">
+                    <p><strong>Name:</strong> Okello John (Farmer)</p>
+                    <p><strong>Phone:</strong> +256 701 234567</p>
+                    <p><strong>Member since:</strong> 2025</p>
+                    <p><strong>Verified:</strong> <i class="fas fa-check-circle green"></i></p>
+                </div>
+                <button class="btn-primary">Edit profile</button>
+            </div>
+        </section>
+
+        
+        <!-- DASHBOARD PAGE (role‑based content) -->
         <section id="dashboard" class="page">
             <h2><i class="fas fa-chart-pie"></i> Your Dashboard</h2>
             <div class="role-message" id="dashboard-msg">Welcome, Farmer! Here is your farm summary.</div>
@@ -114,8 +169,203 @@
                     <li><i class="fas fa-check-circle green"></i> New buyer inquiry - yesterday</li>
                 </ul>
             </div>
-        </section>   
+        </section>
 
+
+        <!-- SIGNUP PAGE -->
+        <section id="signup" class="page">
+            <div class="form-container">
+                <p style="color:#2E7D32;"><i class="fas fa-user-plus"></i> Join BUDDU RURAL COFFEE GROWERS, TRADERS & PROCESSORS COOPERATIVE</P>
+                <form id="signupForm">
+                    <label><i class="fas fa-user"></i> Full name</label>
+                    <input type="text" placeholder="Enter Full Name" required>
+
+                    <label><i class="fas fa-phone"></i> Phone (for WhatsApp)</label>
+                    <input type="tel" placeholder="+256 7XX XXX XXX" required>
+
+                    <label><i class="fas fa-tag"></i> I am a</label>
+                    <select required>
+                        <option value="">Select role</option>
+                        <option value="farmer">Farmer</option>
+                        <option value="trader">Trader</option>
+                        <option value="processor">Processor</option>
+                    </select>
+
+                    <label><i class="fas fa-envelope"></i> Email (optional)</label>
+                    <input type="email" placeholder="you@example.com">
+
+                    <label><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" placeholder="********" required>
+
+                    <button type="submit" class="btn-primary btn-block">Register <i class="fas fa-check"></i></button>
+                </form>
+                <p class="legal-note">By joining you agree to our <a href="#" onclick="openModal('tos')">Terms</a> and <a href="#" onclick="openModal('pp')">Privacy</a>.</p>
+            </div>
+        </section>
+
+        <!-- Sidebar (off-canvas menu) -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-logo">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773772410/BUDDU-RURAL_COFFEE_GROWERS_TRADERS_PROCESSORS_ASSOCIATION_LTD_bmiiyi.png" alt="Buddu Coffee Logo">
+            <span>Buddu Coffee</span>
+        </div>
+        <button class="close-sidebar" id="closeSidebar">&times;</button>
+    </div>
+    <ul class="sidebar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-work.html">Our Work ▿</a></li>
+        <li><a href="impact-insights.html">Impact & Insights ▿</a></li>
+        <li><a href="about.html">About Us ▿</a></li>
+        <li><a href="role.html">Roles</a></li>
+        <li><a href="news-resources.html">Newsletter</a></li>
+    </ul>
+    <div class="sidebar-footer">
+        <p>📞 <a href="tel:+256751545436">Call Now</a></p>
+        <p>💬 <a href="https://wa.me/256701715505" target="_blank">WhatsApp</a></p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- Overlay for when sidebar is open -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div>
+         
+    <!-- CURRENT COFFEE PRICES (large cards, easy to read) -->
+            <div class="price-section">
+    <h2><i class="fas fa-chart-simple"></i> TODAY'S COFFEE PRICES (UGX/kg)</h2>
+    <div class="price-cards">
+        <!-- Card 1: Ripe Fresh -->
+        <div class="price-card" style="border-top: 5px solid #C62828;">
+            <i class="fas fa-seedling" style="color: #C62828;"></i>
+            <h3>Ripe Fresh</h3>
+            <div class="price-meter" data-target="4500">
+                <div class="price-value">
+                    <span class="price-number">0</span> <h3>UGX</h3>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill-1"></div>
+                </div>
+                <Small>per kg</small>
+            </div>
+        </div>
+
+        <!-- Card 2: Dried -->
+        <div class="price-card" style="border-top: 5px solid #8B4513;">
+            <i class="fas fa-sun" style="color: #8B4513;"></i>
+            <h3>Dried</h3>
+            <div class="price-meter" data-target="8500">
+                <div class="price-value">
+                    <span class="price-number">0</span> <h3>UGX</h3>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill-2"></div>
+                </div>
+                <Small>per kg</small>
+            </div>
+        </div>
+
+        <!-- Card 3: Pre‑processed -->
+        <div class="price-card" style="border-top: 5px solid #2E7D32;">
+            <i class="fas fa-fire" style="color: #2E7D32;"></i>
+            <h3>Pre-processed</h3>
+            <div class="price-meter" data-target="15000">
+                <div class="price-value">
+                    <span class="price-number">0</span> <h3>UGX</h3>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill-3"></div>
+                </div>
+                <Small>per kg</small>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+                 <!-- OUR CURRENT  FARMERS, TRADERS AND PROCESSORS -->
+
+             <div class="price-section" style= "text-align: center;">
+    <h2><i class="fas fa-chart-simple"></i>BUDDU FARMERS, TRADERS AND PROCESSORS</h2>
+    <div class="price-cards">
+        <!-- Card 1: Ripe Fresh -->
+        <div class="price-card" style="border-top: 5px solid #C62828;">
+            <i class="fas fa-tractor fa-3x" style="color: #C62828;"></i>
+            <h3>OUR FARMERS</h3>
+            <div class="price-meter" data-target="4500">
+                <div class="price-value">
+                    <span class="price-number">0</span>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Dried -->
+        <div class="price-card" style="border-top: 5px solid #8B4513;">
+            <i class="fas fa-handshake fa-3x" style="color: #8B4513;"></i>
+            <h3>OUR TRADERS</h3>
+            <div class="price-meter" data-target="8500">
+                <div class="price-value">
+                    <span class="price-number">0</span>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Pre‑processed -->
+        <div class="price-card" style="border-top: 5px solid #2E7D32;">
+            <i class="fas fa-industry fa-3x" style="color: #2E7D32;"></i>
+            <h3>OUR PROCESSORS</h3>
+            <div class="price-meter" data-target="15000">
+                <div class="price-value">
+                    <span class="price-number">0</span>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </section>
+
+      
+          
+
+     
+
+        </section>
+       
+    </main>
+
+      <div class="chat-btn">
+        <button id="ChatBtn" onclick="openChat()">
+            <i class='fas fa-comment' style='font-size:36px; color:#C62828; display:block;'></i>
+            <span style="font-size:14px; color:#2E7D32; font-weight:900;">CHAT</span>
+        </button>
+    </div>
+
+    <div class="container" id="container">
+        <div id="chatwith">
+            <div class="system-info">🔴 you · 🟢 admin (connecting...)</div>
+        </div>
+        <textarea id="Chat" placeholder="type your message..."></textarea>
+        <button class="send-btn" id="SendBtn">send 💬</button>
+        <button class="sent-btn" id="SentBtn" onclick="closeChat()">close ✕</button>
+    </div>
+    
+</section>
+    
     <!-- FOOTER with TOS/PP/FAQ modals, contacts, WhatsApp, other platform -->
     <footer>
         <div class="footer-content">
@@ -150,9 +400,6 @@
             <div id="modal-body"></div>
         </div>
     </div>
-
-    
-    <script scr ="script.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
-</html>
+    </html>
