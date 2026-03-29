@@ -1,1 +1,433 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+    <title>BUDDU RURAL COFFEE GROWERS, TRADERS AND PROCESSORS ASSOCIATION</title>
+    <!-- Font Awesome 6 (icons) & Google Font for readability -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION BAR (Red & Green theme) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="i-container" style= "background-image: url(https://res.cloudinary.com/dxd5hibh7/image/upload/v1773772410/BUDDU-RURAL_COFFEE_GROWERS_TRADERS_PROCESSORS_ASSOCIATION_LTD_bmiiyi.png);"></i>
+                <div class= "logo-container">
+                <p><span>BUDDU</span></p>
+                <p><span class="highlight">COFFEE</span></p>
+                </div>    
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <div class="dropdown">
+                <a href="index.html" class="dropbtn" id="about-main-btn"><span>HOME</span></a>
+                </div>
+                <div class="dropdown">
+                <a href="our-work.html" class="dropbtn" id="about-main-btn"><span>OUR WORK ▿</span></a>
+                <div class="dropdown-content">
+                    <a href="/our-work#our-model">OUR MODEL</a>
+                    <a href="/our-work#sustainability">SUSTAINABILITY</a>
+                    <a href="/our-work#where-we-work">WHERE WE WORK</a>
+                    <a href="/our-work#consulting">CONSULTING</a>
+                </div>
+            </div>
+                <div class="dropdown">
+                <a href="/impact-insights.html" class="dropbtn" id="about-main-btn"><span>IMPACT & INSIGHTS ▿</span></a>
+                <div class="dropdown-content">
+                    <a href="/impact-insights#">Web Design</a>
+                    <a href="/impact-insights#">Development</a>
+                    <a href="/impact-insights#">SEO</a>
+                    <a href="/impact-insights#">Consulting</a>
+                </div>
+            </div>
+                <div class="dropdown">
+                <a href="about.html" class="dropbtn" id="about-main-btn"><span>ABOUT US ▿</span></a>
+                <div class="dropdown-content">
+                    <a href="/about#mission-vision-01">MISSION & VISION</a>
+                    <a href="/about#our-team-01">OUR TEAM</a>
+                    <a href="/about#leadership-team">LEADERSHIP TEAM</a>
+                    <a href="/about#board-of-directors">BOARD OF DIRECTORS</a>
+                    <a href="/about#partners">PARTNERS</a>
+                </div>
+            </div>
+                <li data-page="home" class="active" style= "display:none"><i class="fas fa-home"></i> <span>Home</span></li>
+                <li data-page="dashboard" title= "Preview Your Networth" style= "display:none"><i class="fas fa-chart-line"></i> <span>Dashboard</span></li>
+                <li data-page="signup" title= "Join Our Cooperative" style= "display:none"><i class="fas fa-user-plus"></i> <span>Signup</span></li>
+                <li data-page="settings" title= "Configure Notifications And Font-size" style= "display:none"><i class="fas fa-cog"></i> <span>Settings</span></li>
+                <li data-page="profile" title= "View And Edit Profile" style= "display:none"><i class="fas fa-id-card"></i> <span>Profile</span></li>
+                <a class="btn-secondary" href="role.html">ROLES</a>
+                <a class="btn-primary" href="#newsletter">NEWSLETTER</a>
+            </ul>
+            <!-- Role tabs (Farmer/Trader/Processor) integrated in nav for quick access -->
+            <div class="role-tabs" style= "display:none">
+                <button class="role-btn active" data-role="farmer"><i class="fas fa-tractor"></i> Farmer</button>
+                <button class="role-btn" data-role="trader"><i class="fas fa-handshake"></i> Trader</button>
+                <button class="role-btn" data-role="processor"><i class="fas fa-industry"></i> Processor</button>
+            </div>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT – all "pages" are sections hidden/shown via JS -->
+    <main>
+        <!-- HERO SECTION (part of Home, but visible on all pages? We'll place it inside home) -->
+
+        <section class="about-section" id="our-team">
+            <div class="our-team" style="background-image: url('https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                <div class="our-team-overlay"></div>
+                <div class="our-team-content">
+                    <p class="animate-up"><span class="team"></span>Scalable solutions to improve coffee value chain</p>
+                        <div class="hero-buttons animate-up delay-2" style= "display:none">
+                        <a class="btn-secondary" href="about.html">WHO WE'RE →</a>
+                    </div>
+                </div>
+            </div>
+        <!-- HOME PAGE -->
+
+        <!-- Sidebar (off-canvas menu) -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-logo">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773772410/BUDDU-RURAL_COFFEE_GROWERS_TRADERS_PROCESSORS_ASSOCIATION_LTD_bmiiyi.png" alt="Buddu Coffee Logo">
+            <span>Buddu Coffee</span>
+        </div>
+        <button class="close-sidebar" id="closeSidebar">&times;</button>
+    </div>
+    <ul class="sidebar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-work.html">Our Work ▿</a></li>
+        <li><a href="impact-insights.html">Impact & Insights ▿</a></li>
+        <li><a href="about.html">About Us ▿</a></li>
+        <li><a href="role.html">Roles</a></li>
+        <li><a href="news-resources.html">Newsletter</a></li>
+    </ul>
+    <div class="sidebar-footer">
+        <p>📞 <a href="tel:+256751545436">Call Now</a></p>
+        <p>💬 <a href="https://wa.me/256701715505" target="_blank">WhatsApp</a></p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@buddururalcoffee"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- Overlay for when sidebar is open -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div>
+           <!-- Mission & Vision (with anchor id) -->
+        <section class="about-section" id="mission-vision-011"> <!-- our mission id changed intentionally -->
+            <h2 style="font-size: 2.5rem;">Our Model</h2>
+            <div class="mission-block">
+                    <strong style="font-size: 1.3rem; margin-top: 3rem;">Our package of solutions is designed to support and empower coffee farmers, traders, and processors across their<br><span style="color: #C62828;">journey—from seedling to sustainable market access.</span></strong>
+                <p style="font-size: 0.8rem;">
+                    We developed our package of solutions to address a twin challenge impacting outcomes for coffee farmers, traders, and processors within Uganda’s agricultural systems: delays in accessing markets and adopting sustainable practices, and gaps in the quality of post‑harvest handling and value addition.
+
+Our model is built around a simple Theory of Change: that coffee growers adopt climate‑smart practices and reach markets at the right time with high‑quality produce – which in turn drives better incomes, stronger cooperatives, and more resilient, sustainable coffee value chains. We co‑design these solutions with farmers, local cooperatives, and our government partners so that they are responsive, context‑appropriate, and comprehensively tackle the barriers that have long kept smallholder communities from thriving.
+                </p><span id="our-team-01"></span>
+            </div>
+        </section>
+    </div>
+
+    <section class="flow-section">
+    <div class="flow-steps">
+        <!-- Step 1: Digital Empowerment -->
+        <div class="step-card">
+            <div class="step-photo">
+                <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1774620838/farmer-tractor_er0lhv.jpg" alt="Farmer using smartphone">
+            </div>
+            <h3>Digital Empowerment</h3>
+            <p>Real‑time market alerts, price transparency, and direct buyer connections – putting information in farmers' hands.</p>
+            <div class="step-tag"><i class="fas fa-chart-line"></i> GROW</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <!-- Step 2: Skilled, Sustainable Practices -->
+        <div class="step-card">
+            <div class="step-photo">
+                <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1743123457/training_abc123.jpg" alt="Training session on sustainable coffee">
+            </div>
+            <h3>Skilled, Sustainable Practices</h3>
+            <p>Training cooperatives and extension agents in post‑harvest handling, quality, and climate‑smart farming.</p>
+            <div class="step-tag"><i class="fas fa-leaf"></i> FIELDS</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <!-- Step 3: Data‑Driven Insights -->
+        <div class="step-card">
+            <div class="step-photo">
+                <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1743123458/data_dashboard_abc123.jpg" alt="Data analytics dashboard">
+            </div>
+            <h3>Data‑Driven Insights</h3>
+            <p>Analytics for government and industry partners to improve market infrastructure, financing, and policy.</p>
+            <div class="step-tag"><i class="fas fa-waveform"></i> PULSE</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <!-- Step 5: Better Outcomes -->
+        <div class="step-card outcome-card" style="border: transparent;">
+            <h3>Better Outcomes</h3>
+            <p>Higher incomes, resilient farms, and thriving coffee communities across Uganda.</p>
+        </div>
+    </div>
+    <div class="our-work-btn" style="margin-top: 2rem; display: absolute;">
+                <a class="btn-primary" href="#newsletter">GROW→</a>
+                <a class="btn-secondary" href="role.html">FIELDS→</a>
+                <a class="btn-secondary" href="role.html">PULSE→</a>
+    </div>
+</section>
+    
+          <section class="split-section">
+    <div class="split-container">
+        <div class="split-text">
+            <h2><i class="fas fa-chart-line"></i> GROW</h2>
+            <p class="lead">Farmers access markets at the right time and place, and receive targeted support if quality or yield risks are identified.</p>
+            <p><strong>GROW</strong> empowers farmers with real‑time market intelligence via SMS and mobile alerts to make informed choices about when to sell, how to improve quality, and what sustainable practices to adopt. Through two‑way communication, farmers can ask questions, report issues, and receive targeted support or referral to extension services and buyers when a risk is detected during the growing or post‑harvest phase.</p>
+            <div class="split-cta">
+                <button class="btn-newsletter" onclick="switchPage('signup')">Join our GROW network →</button>
+            </div>
+        </div>
+        <div class="split-image">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Farmer using mobile phone in coffee garden" loading="lazy">
+        </div>
+    </div>
+</section>
+
+       <!-- Mission & Vision (with anchor id) -->
+        <section class="about-section" id="mission-vision-011"> <!-- our mission id changed intentionally -->
+            <h2 style="font-size: 1rem;">SUSTAINABILITY</h2>
+            <div class="mission-block">
+                    <strong style="font-size: 1.3rem; margin-top: 3rem;">Our government partners—along with district local governments and farmer cooperatives <span style="color: #C62828;">co‑own, co‑design, and co‑finance</span> our solutions, creating a strong foundation for scale and sustainability across Uganda’s coffee value chain.</strong>
+                <p style="font-size: 0.8rem;">
+                    Our vision of an “end game” at scale is our government partners—along with district local governments and farmer cooperatives—leading and sustainably financing cost‑effective innovations within Uganda’s coffee value chain and agricultural systems. Over time, BUDDU has earned trust and buy‑in from a network of farmer groups, district governments, and national ministry partners by involving them in the design process, demonstrating measurable impact, and building affordable solutions that sustainably integrate into resource‑constrained government budgets and the broader coffee sector.
+
+Our model is built around a simple Theory of Change: that coffee growers adopt climate‑smart practices and reach markets at the right time with high‑quality produce – which in turn drives better incomes, stronger cooperatives, and more resilient, sustainable coffee value chains. We co‑design these solutions with farmers, local cooperatives, and our government partners so that they are responsive, context‑appropriate, and comprehensively tackle the barriers that have long kept smallholder communities from thriving.
+                </p><span id="our-team-01"></span>
+            </div>
+        </section>
+
+        <section class="split-section">
+    <div class="split-container">
+        <div class="split-text">
+            <h2><i class="fas fa-chart-line"></i></h2>
+            <p class="lead">Partnered with county governments</p>
+            <p>We partner with 5 Ugandan county governments to deploy solutions</p>
+
+            
+            <h2><i class="fas fa-chart-line"></i></h2>
+            <p class="lead">Endorsed governments</p>
+            <p>Endorsed for scale by MAAIF</p>
+            
+            
+            <h2><i class="fas fa-chart-line"></i></h2>
+            <p class="lead">Supported by government Budgets</p>
+            <p>County governments are sharing 60% of the running costs of MENTORS</p>
+
+            <div class="split-cta">
+                <button class="btn-newsletter" onclick="switchPage('signup')">SUSTAINABILITY OF SERVICES →</button>
+            </div>
+        </div>
+        <div class="split-image">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Farmer using mobile phone in coffee garden" loading="lazy">
+        </div>
+    </div>
+</section>
+
+          <section class="split-section">
+    <div class="split-container">
+        <div class="split-text">
+            <h2>WHERE WE WORK</h2>
+            <p class="lead">We have Ugandan roots and global ambitions</p>
+            <p><strong>GROW</strong>Since 2020, BUDDU has worked with district local governments and the Ministry of Agriculture, Animal Industry and Fisheries to improve productivity, quality, and market access for coffee farmers in Uganda’s coffee‑growing regions. Guided by a mission to reach every coffee farmer, trader, and processor, our focus is on scaling further within Uganda while adapting our model and capitalizing on our learnings to serve coffee communities in new geographies. We currently partner with district governments in Rwenzori and Elgon regions to test and adapt our solutions to support national coffee priorities, with ambitious plans to grow our footprint across East Africa in the coming years.</p>
+        </div>
+        <div class="split-image">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Farmer using mobile phone in coffee garden" loading="lazy">
+        </div>
+    </div>
+</section> 
+
+       <section class="country-section">
+    <div class="country-container">
+        <!-- Left: Kampala aerial night photo -->
+        <div class="country-photo">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1774634224/kampala_at_night_cfbwgu.jpg" alt="Aerial night view of Kampala, Uganda" loading="lazy">
+        </div>
+
+        <!-- Right: country selector + dynamic info -->
+        <div class="country-info">
+            <div class="country-tabs">
+                <button class="country-btn active" data-country="uganda">Uganda</button>
+                <button class="country-btn" data-country="rwanda">Rwanda</button>
+                <button class="country-btn" data-country="ethiopia">Ethiopia</button>
+            </div>
+
+            <div class="country-details" id="countryDetails">
+                <!-- content will be filled by JS -->
+                <h3><i class="fas fa-map-marker-alt"></i> <span id="countryName">Uganda</span></h3>
+                <p id="countryDescription">
+                    BUDDU partners with district local governments and the Ministry of Agriculture, Animal Industry and Fisheries to improve productivity, quality, and market access for coffee farmers. We co‑design scalable solutions that integrate into public agricultural systems.
+                </p>
+                <a href="#" id="countryButton" class="btn-country">Our Work in Uganda →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </section>
+</section>
+
+        </section>
+
+
+        <!-- SIGNUP PAGE -->
+        <section id="signup" class="page">
+            <div class="form-container">
+                <p style="color:#2E7D32;"><i class="fas fa-user-plus"></i> Join BUDDU RURAL COFFEE GROWERS, TRADERS & PROCESSORS COOPERATIVE</P>
+                <form id="signupForm">
+                    <label><i class="fas fa-user"></i> Full name</label>
+                    <input type="text" placeholder="Enter Full Name" required>
+
+                    <label><i class="fas fa-phone"></i> Phone (for WhatsApp)</label>
+                    <input type="tel" placeholder="+256 7XX XXX XXX" required>
+
+                    <label><i class="fas fa-tag"></i> I am a</label>
+                    <select required>
+                        <option value="">Select role</option>
+                        <option value="farmer">Farmer</option>
+                        <option value="trader">Trader</option>
+                        <option value="processor">Processor</option>
+                    </select>
+
+                    <label><i class="fas fa-envelope"></i> Email (optional)</label>
+                    <input type="email" placeholder="you@example.com">
+
+                    <label><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" placeholder="********" required>
+
+                    <button type="submit" class="btn-primary btn-block">Register <i class="fas fa-check"></i></button>
+                </form>
+                <p class="legal-note">By joining you agree to our <a href="#" onclick="openModal('tos')">Terms</a> and <a href="#" onclick="openModal('pp')">Privacy</a>.</p>
+            </div>
+        </section>
+
+        <!-- DASHBOARD PAGE (role‑based content) -->
+        <section id="dashboard" class="page">
+            <h2><i class="fas fa-chart-pie"></i> Your Dashboard</h2>
+            <div class="role-message" id="dashboard-msg">Welcome, Farmer! Here is your farm summary.</div>
+            <div class="dashboard-cards">
+                <div class="stat-card"><i class="fas fa-weight-hanging"></i> <span class="stat-label">Total Coffee (kg)</span> <span class="stat-value" id="stat1">1,200</span></div>
+                <div class="stat-card"><i class="fas fa-coins"></i> <span class="stat-label">Estimated Income</span> <span class="stat-value" id="stat2">6,600,000 UGX</span></div>
+                <div class="stat-card"><i class="fas fa-truck"></i> <span class="stat-label">Orders</span> <span class="stat-value" id="stat3">8</span></div>
+            </div>
+            <div class="recent-activity">
+                <h3>Recent activity</h3>
+                <ul id="activity-list">
+                    <li><i class="fas fa-check-circle green"></i> Sold 50kg dried coffee - 2 days ago</li>
+                    <li><i class="fas fa-check-circle green"></i> New buyer inquiry - yesterday</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SETTINGS PAGE -->
+        <section id="settings" class="page">
+            <h2><i class="fas fa-sliders"></i> Settings</h2>
+            <div class="settings-group">
+                <label><i class="fas fa-bell"></i> Notifications</label>
+                <input type="checkbox" checked> Receive WhatsApp alerts
+                <br><br>
+                <label><i class="fas fa-globe"></i> Language</label>
+                <select>
+                    <option>English (simple)</option>
+                    <option>Luganda (audio support soon)</option>
+                </select>
+                <br><br>
+                <label><i class="fas fa-mobile-alt"></i> Display size</label>
+                <div class="font-size-btns">
+                    <button class="btn-small" onclick="document.body.style.fontSize='16px'">Small</button>
+                    <button class="btn-small" onclick="document.body.style.fontSize='20px'">Medium</button>
+                    <button class="btn-small" onclick="document.body.style.fontSize='24px'">Large</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROFILE PAGE (role‑based) -->
+        <section id="profile" class="page">
+            <h2><i class="fas fa-id-badge"></i> Your Profile</h2>
+            <div class="profile-card">
+                <div class="profile-avatar"><i class="fas fa-user-circle"></i></div>
+                <div class="profile-info" id="profile-info">
+                    <p><strong>Name:</strong> Okello John (Farmer)</p>
+                    <p><strong>Phone:</strong> +256 701 234567</p>
+                    <p><strong>Member since:</strong> 2025</p>
+                    <p><strong>Verified:</strong> <i class="fas fa-check-circle green"></i></p>
+                </div>
+                <button class="btn-primary">Edit profile</button>
+            </div>
+        </section>
+       <!-- learn roles right here--->>
+    </main>
+
+      <div class="chat-btn">
+        <button id="ChatBtn" onclick="openChat()">
+            <i class='fas fa-comment' style='font-size:36px; color:#C62828; display:block;'></i>
+            <span style="font-size:14px; color:#2E7D32; font-weight:900;">CHAT</span>
+        </button>
+    </div>
+
+    <div class="container" id="container">
+        <div id="chatwith">
+            <div class="system-info">🔴 you · 🟢 admin (connecting...)</div>
+        </div>
+        <textarea id="Chat" placeholder="type your message..."></textarea>
+        <button class="send-btn" id="SendBtn">send 💬</button>
+        <button class="sent-btn" id="SentBtn" onclick="closeChat()">close ✕</button>
+    </div>
+    
+</section>
+    
+    <!-- FOOTER with TOS/PP/FAQ modals, contacts, WhatsApp, other platform -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>BUDDU COFFEE</h4>
+                <p><i class="fas fa-map-marker-alt"></i>  Butega, Uganda</p>
+                <p><a href="tel:+256751545436"><i class="fas fa-phone"></i>  Call Now</a></p>
+                <p><a href="https://wa.me/256700123456" target="_blank"><i class="fab fa-whatsapp"></i>  WhatsApp</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Info</h4>
+                <a href="#" onclick="openModal('tos')"><i class="fas fa-file-contract"></i> Terms of Service</a>
+                <a href="#" onclick="openModal('pp')"><i class="fas fa-shield"></i> Privacy Policy</a>
+                <a href="#" onclick="openModal('faq')"><i class="fas fa-question-circle"></i> FAQs</a>
+            </div>
+            <div class="footer-section">
+                <h4>Our other platform</h4>
+                                <a href="https://ekfoundation.org" target="_blank"><i class="fas fa-external-link-alt"></i> EK FOUNDATION</a>
+                <a href="https://pfg-chapati.vercel.app" target="_blank"><i class="fas fa-external-link-alt"></i> PFG</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 BUDDU RURAL COFFEE GROWERS, TRADERS & PROCESSORS ASSOCIATION.
+            <p>All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- MODALS for ToS, PP, FAQ -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+    </html>
