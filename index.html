@@ -618,6 +618,22 @@
         </section>
        <!-- learn roles right here--->>
     </main>
+
+      <div class="chat-btn">
+        <button id="ChatBtn" onclick="openChat()">
+            <i class='fas fa-comment' style='font-size:36px; color:#C62828; display:block;'></i>
+            <span style="font-size:14px; color:#2E7D32; font-weight:900;">CHAT</span>
+        </button>
+    </div>
+
+    <div class="container" id="container">
+        <div id="chatwith">
+            <div class="system-info">🔴 you · 🟢 admin (connecting...)</div>
+        </div>
+        <textarea id="Chat" placeholder="type your message..."></textarea>
+        <button class="send-btn" id="SendBtn">send 💬</button>
+        <button class="sent-btn" id="SentBtn" onclick="closeChat()">close ✕</button>
+    </div>
     
 </section>
     
@@ -659,7 +675,7 @@
         </div>
     </div>
 
-       <!--Start of Tawk.to Script-->
+         <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
@@ -671,7 +687,7 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
-<!--End of Tawk.to Script-->  
+<!--End of Tawk.to Script-->
 
     <script src="script.js"></script>
 </body>
