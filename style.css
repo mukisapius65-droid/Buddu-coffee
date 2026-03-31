@@ -6,9 +6,7 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 body {
     background-color: #fefefe;
     color: #2c2c2c;
@@ -2490,5 +2488,365 @@ body.sidebar-open {
     }
     .country-details h3 {
         justify-content: center;
+    }
+}
+.impact-area-section {
+    margin: 4rem 0;
+    background: #fff9f0;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.impact-area-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem;
+    flex-wrap: wrap;
+}
+
+/* When the class "image-left" is present, the image is on the left (default) */
+.impact-area-container.image-left {
+    flex-direction: row;   /* image left, text right */
+}
+
+.area-image {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+
+.area-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 30px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    object-fit: cover;
+}
+
+.area-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.area-text h2 {
+    font-size: 2.8rem;
+    color: var(--brown, #8B4513);
+    margin-bottom: 1rem;
+}
+
+.area-text .lead {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #4a3a28;
+    margin-bottom: 1rem;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+    .impact-area-container {
+        flex-direction: column !important;
+        padding: 2rem;
+    }
+    .area-text {
+        text-align: center;
+    }
+}
+
+/* Insights Section */
+.insights-section {
+    margin: 5rem 0;
+    background: #fef9ef;
+    border-radius: 50px;
+    padding: 3rem 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.insights-section h2 {
+    font-size: 2.5rem;
+    color: #8B4513;
+    margin-bottom: 1rem;
+}
+.insights-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #4a3a28;
+    margin-bottom: 2rem;
+}
+.insights-interactive {
+    position: relative;
+    margin-top: 2rem;
+}
+.insights-background {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.2);
+}
+.insights-background img {
+    width: 100%;
+    display: block;
+    border-radius: 30px;
+    transition: transform 0.3s;
+}
+.insights-background:hover img {
+    transform: scale(1.02);
+}
+.dots-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.dot {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: rgba(198,40,40,0.8);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgba(198,40,40,0.4);
+    animation: pulseScale 2s infinite ease-in-out;
+    transition: transform 0.2s;
+    z-index: 2;
+}
+.dot:hover {
+    transform: scale(1.3);
+    background-color: #2E7D32;
+}
+@keyframes pulseScale {
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.4); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.7; }
+}
+
+/* Tooltip that appears near the dot */
+.dot-tooltip {
+    position: absolute;
+    background: white;
+    color: #2c2c2c;
+    border-left: 5px solid #C62828;
+    border-radius: 12px;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-width: 280px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 10;
+    white-space: normal;
+    word-wrap: break-word;
+    pointer-events: auto;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.dot-tooltip::after {
+    content: '';
+    position: absolute;
+    border: 8px solid transparent;
+    pointer-events: none;
+}
+.dot-tooltip.right::after {
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-right-color: white;
+}
+.dot-tooltip.left::after {
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left-color: white;
+}
+.dot-tooltip.top::after {
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-color: white;
+}
+.dot-tooltip.bottom::after {
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-color: white;
+}
+
+.close-tooltip {
+    float: right;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #C62828;
+}
+.close-tooltip:hover {
+    color: #8B4513;
+}
+
+.insights-note {
+    background: white;
+    border-left: 6px solid #C62828;
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #8B4513;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Dot positions – adjust these to match your image */
+.dot:nth-child(1) { top: 22%; left: 18%; }
+.dot:nth-child(2) { top: 35%; left: 48%; }
+.dot:nth-child(3) { top: 52%; left: 28%; }
+.dot:nth-child(4) { top: 68%; left: 62%; }
+.dot:nth-child(5) { top: 82%; left: 42%; }
+
+@media (max-width: 768px) {
+    .dot { width: 12px; height: 12px; }
+    .dot:nth-child(1) { top: 20%; left: 15%; }
+    .dot:nth-child(2) { top: 32%; left: 45%; }
+    .dot:nth-child(3) { top: 48%; left: 25%; }
+    .dot:nth-child(4) { top: 64%; left: 60%; }
+    .dot:nth-child(5) { top: 78%; left: 40%; }
+}
+
+/* Full‑width card carousel */
+.fullwidth-carousel {
+    margin: 4rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.carousel-header h2 {
+    font-size: 2.5rem;
+    color: var(--brown, #8B4513);
+    margin-bottom: 1rem;
+}
+
+.carousel-header p {
+    font-size: 1.1rem;
+    color: #5a4a2e;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+}
+
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-container {
+    flex: 1;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.carousel-card {
+    flex: 0 0 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.2);
+    margin: 0;
+}
+
+.card-overlay {
+    background: rgba(0, 0, 0, 0.55); /* opaque overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.card-content {
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 40px;
+    backdrop-filter: blur(4px);
+    color: white;
+}
+
+.card-content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.card-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.8rem;
+}
+
+.card-btn {
+    background: var(--red, #C62828);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 1rem;
+}
+
+.card-btn:hover {
+    background: var(--green, #2E7D32);
+    transform: scale(1.03);
+}
+
+.carousel-nav {
+    background: var(--brown, #8B4513);
+    color: white;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 2;
+    margin: 0 10px;
+}
+
+.carousel-nav:hover {
+    background: var(--red, #C62828);
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-card {
+        min-height: 450px;
+    }
+    .card-content {
+        padding: 1.2rem;
+    }
+    .card-content h3 {
+        font-size: 1.6rem;
+    }
+    .carousel-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
     }
 }
