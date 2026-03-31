@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +14,6 @@
 <!-- NAVIGATION BAR (Red & Green theme) -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
                 <i class="i-container" style= "background-image: url(https://res.cloudinary.com/dxd5hibh7/image/upload/v1773772410/BUDDU-RURAL_COFFEE_GROWERS_TRADERS_PROCESSORS_ASSOCIATION_LTD_bmiiyi.png);"></i>
                 <div class= "logo-container">
                 <p><span>BUDDU</span></p>
@@ -29,29 +27,29 @@
                 <div class="dropdown">
                 <a href="our-work.html" class="dropbtn" id="about-main-btn"><span>OUR WORK ▿</span></a>
                 <div class="dropdown-content">
-                    <a href="/our-work#our-model">OUR MODEL</a>
-                    <a href="/our-work#sustainability">SUSTAINABILITY</a>
-                    <a href="/our-work#where-we-work">WHERE WE WORK</a>
-                    <a href="/our-work#consulting">CONSULTING</a>
+                    <a href="our-work.html#our-model">OUR MODEL</a>
+                    <a href="our-work.html#sustainability">SUSTAINABILITY</a>
+                    <a href="our-work.html#where-we-work">WHERE WE WORK</a>
+
                 </div>
             </div>
                 <div class="dropdown">
-                <a href="/impact-insights.html" class="dropbtn" id="about-main-btn"><span>IMPACT & INSIGHTS ▿</span></a>
+                <a href="impact-insights.html" class="dropbtn" id="about-main-btn"><span>IMPACT & INSIGHTS ▿</span></a>
                 <div class="dropdown-content">
-                    <a href="/impact-insights#">Web Design</a>
-                    <a href="/impact-insights#">Development</a>
-                    <a href="/impact-insights#">SEO</a>
-                    <a href="/impact-insights#">Consulting</a>
+                    <a href="impact-insights.html#impact-at-a-glance">IMPACT AT A GLANCE</a>
+                    <a href="impact-insights.html#impact-by-area">IMPACT BY AREA</a>
+                    <a href="impact-insights.html#data-driven-impact">DATA-DRIVEN IMPACT</a>
+                    <a href="impact-insights.html#impact-reports">IMPACT REPORTS</a>
                 </div>
             </div>
                 <div class="dropdown">
                 <a href="about.html" class="dropbtn" id="about-main-btn"><span>ABOUT US ▿</span></a>
                 <div class="dropdown-content">
-                    <a href="/about#mission-vision-01">MISSION & VISION</a>
-                    <a href="/about#our-team-01">OUR TEAM</a>
-                    <a href="/about#leadership-team">LEADERSHIP TEAM</a>
-                    <a href="/about#board-of-directors">BOARD OF DIRECTORS</a>
-                    <a href="/about#partners">PARTNERS</a>
+                    <a href="about.html#mission-vision-01">MISSION & VISION</a>
+                    <a href="about.html#our-team-01">OUR TEAM</a>
+                    <a href="about.html#leadership-team">LEADERSHIP TEAM</a>
+                    <a href="about.html#board-of-directors">BOARD OF DIRECTORS</a>
+                    <a href="about.html#partners">PARTNERS</a>
                 </div>
             </div>
                 <li data-page="home" class="active" style= "display:none"><i class="fas fa-home"></i> <span>Home</span></li>
@@ -123,7 +121,7 @@
 <div>
            <!-- Mission & Vision (with anchor id) -->
         <section class="about-section" id="mission-vision-011"> <!-- our mission id changed intentionally -->
-            <h2 style="font-size: 2.5rem;">Our Model</h2>
+            <h2 style="font-size: 2.5rem;" id="our-model">Our Model</h2>
             <div class="mission-block">
                     <strong style="font-size: 1.3rem; margin-top: 3rem;">Our package of solutions is designed to support and empower coffee farmers, traders, and processors across their<br><span style="color: #C62828;">journey—from seedling to sustainable market access.</span></strong>
                 <p style="font-size: 0.8rem;">
@@ -140,7 +138,7 @@ Our model is built around a simple Theory of Change: that coffee growers adopt c
         <!-- Step 1: Digital Empowerment -->
         <div class="step-card">
             <div class="step-photo">
-                <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1774620838/farmer-tractor_er0lhv.jpg" alt="Farmer using smartphone">
+                <img src="download.jpg" alt="Farmer using smartphone">
             </div>
             <h3>Digital Empowerment</h3>
             <p>Real‑time market alerts, price transparency, and direct buyer connections – putting information in farmers' hands.</p>
@@ -199,6 +197,7 @@ Our model is built around a simple Theory of Change: that coffee growers adopt c
         <div class="split-image">
             <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Farmer using mobile phone in coffee garden" loading="lazy">
         </div>
+        <span id="sustainability"></span>
     </div>
 </section>
 
@@ -233,7 +232,8 @@ Our model is built around a simple Theory of Change: that coffee growers adopt c
             <p>County governments are sharing 60% of the running costs of MENTORS</p>
 
             <div class="split-cta">
-                <button class="btn-newsletter" onclick="switchPage('signup')">SUSTAINABILITY OF SERVICES →</button>
+                <!--❌❌❌-->
+                <button  id="where-we-work" class="btn-newsletter" onclick="switchPage('signup')">SUSTAINABILITY OF SERVICES →</button>
             </div>
         </div>
         <div class="split-image">
