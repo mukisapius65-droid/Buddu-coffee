@@ -34,12 +34,16 @@ function updateRole(role) {
         btn.classList.toggle('active', btn.dataset.role === role);
     });
 
-    // Update dashboard content based on role
     const dashboardMsg = document.getElementById('dashboard-msg');
     const stat1 = document.getElementById('stat1');
     const stat2 = document.getElementById('stat2');
     const stat3 = document.getElementById('stat3');
     const activityList = document.getElementById('activity-list');
+    const profileInfo = document.getElementById('profile-info');
+
+    if (!dashboardMsg || !stat1 || !stat2 || !stat3 || !activityList || !profileInfo) {
+        return;
+    }
 
     if (role === 'farmer') {
         dashboardMsg.innerHTML = 'Welcome, Farmer! Here is your farm summary.';
@@ -70,8 +74,6 @@ function updateRole(role) {
         `;
     }
 
-    // Update profile info (simple)
-    const profileInfo = document.getElementById('profile-info');
     if (role === 'farmer') {
         profileInfo.innerHTML = '<p><strong>Name:</strong> Okello John (Farmer)</p><p><strong>Phone:</strong> +256 701 234567</p><p><strong>Member since:</strong> 2025</p><p><strong>Verified:</strong> <i class="fas fa-check-circle green"></i></p>';
     } else if (role === 'trader') {
@@ -81,12 +83,14 @@ function updateRole(role) {
     }
 }
 
-roleBtns.forEach(btn => {
-    btn.addEventListener('click', () => updateRole(btn.dataset.role));
-});
+if (roleBtns.length > 0) {
+    roleBtns.forEach(btn => {
+        btn.addEventListener('click', () => updateRole(btn.dataset.role));
+    });
 
-// Initialize default role
-updateRole('farmer');
+    // Initialize default role only on pages that have role buttons
+    updateRole('farmer');
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     const bgContainer = document.getElementById('pulse-bg');
@@ -400,57 +404,6 @@ window.addEventListener('load', function() {
                 socket.close();
             }
         });
-        //REVEAL ABOUT US PAGE
-        // Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    const aboutSection = document.getElementById('about-section');
-    const dropdownLinks = document.querySelectorAll('.dropdown-content a');
-    const closeButton = document.getElementById('close-about');
-
-    // Reveal and scroll when a dropdown link is clicked
-    dropdownLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();                     // stop instant jump
-            const targetId = this.getAttribute('href');  // e.g. "#mission-vision"
-            const targetEl = document.querySelector(targetId);
-
-            if (targetEl) {
-                // Show the about section (if hidden)
-                aboutSection.style.display = 'block';
-
-                // Smooth scroll to the target
-                targetEl.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-
-    // Main ABOUT US button (the dropbtn) – reveal about section and scroll to top
-const mainAboutBtn = document.getElementById('about-main-btn');
-if (mainAboutBtn) {
-    mainAboutBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        const aboutSection = document.getElementById('about-section');
-        if (aboutSection) {
-            aboutSection.style.display = 'block';
-            aboutSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-}
-
-    // Hide the about section when the close button is clicked
-    if (closeButton) {
-        closeButton.addEventListener('click', function() {
-            aboutSection.style.display = 'none';
-        });
-    }
-});
-function showAboutSection() {
-    const aboutSection = document.getElementById('about-section');
-    if (aboutSection) {
-        aboutSection.style.display = 'block';
-        aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
-}
 
  // ========== SIDEBAR TOGGLE ==========
 const hamburger = document.querySelector('.hamburger');
