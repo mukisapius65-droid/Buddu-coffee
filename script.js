@@ -543,3 +543,228 @@ btns.forEach(btn => {
 
 // Set default (Uganda)
 setCountry('uganda');
+
+// Interactive Dots – Tooltip on click
+(function() {
+    const overlay = document.getElementById('dotsOverlay');
+    if (!overlay) return;
+
+    function removeTooltip() {
+        const existing = document.querySelector('.dot-tooltip');
+        if (existing) existing.remove();
+    }
+
+    function showTooltip(dot, question) {
+        removeTooltip();
+
+        const dotRect = dot.getBoundingClientRect();
+        const overlayRect = overlay.getBoundingClientRect();
+
+        const tooltip = document.createElement('div');
+        tooltip.className = 'dot-tooltip';
+        tooltip.innerHTML = `<span class="close-tooltip">&times;</span> ${question}`;
+        overlay.appendChild(tooltip);
+
+        const tooltipRect = tooltip.getBoundingClientRect();
+
+        const spaceRight = overlayRect.right - dotRect.right;
+        const spaceLeft = dotRect.left - overlayRect.left;
+        const spaceBottom = overlayRect.bottom - dotRect.bottom;
+
+        let leftPos = 0, topPos = 0, placement = '';
+
+        if (spaceRight >= tooltipRect.width + 10) {
+            leftPos = dotRect.left - overlayRect.left + dotRect.width + 8;
+            topPos = dotRect.top - overlayRect.top + (dotRect.height / 2) - (tooltipRect.height / 2);
+            placement = 'right';
+        } else if (spaceLeft >= tooltipRect.width + 10) {
+            leftPos = dotRect.left - overlayRect.left - tooltipRect.width - 8;
+            topPos = dotRect.top - overlayRect.top + (dotRect.height / 2) - (tooltipRect.height / 2);
+            placement = 'left';
+        } else {
+            if (spaceBottom >= tooltipRect.height + 10) {
+                topPos = dotRect.top - overlayRect.top + dotRect.height + 8;
+                leftPos = dotRect.left - overlayRect.left + (dotRect.width / 2) - (tooltipRect.width / 2);
+                placement = 'bottom';
+            } else {
+                topPos = dotRect.top - overlayRect.top - tooltipRect.height - 8;
+                leftPos = dotRect.left - overlayRect.left + (dotRect.width / 2) - (tooltipRect.width / 2);
+                placement = 'top';
+            }
+        }
+
+        tooltip.style.left = `${leftPos}px`;
+        tooltip.style.top = `${topPos}px`;
+        tooltip.classList.add(placement);
+
+        const closeBtn = tooltip.querySelector('.close-tooltip');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                removeTooltip();
+            });
+        }
+
+        function closeOnClickOutside(e) {
+            if (!tooltip.contains(e.target) && !dot.contains(e.target)) {
+                removeTooltip();
+                document.removeEventListener('click', closeOnClickOutside);
+            }
+        }
+        setTimeout(() => {
+            document.addEventListener('click', closeOnClickOutside);
+        }, 0);
+    }
+
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach(dot => {
+        dot.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const question = this.getAttribute('data-question');
+            if (question) showTooltip(this, question);
+        });
+    });
+})();
+
+// Full‑width card carousel with drag/swipe support
+(function() {
+    const track = document.getElementById('carouselTrack');
+    const cards = Array.from(track.children);
+    const prevBtn = document.querySelector('.carousel-nav.prev');
+    const nextBtn = document.querySelector('.carousel-nav.next');
+
+    if (!track || !cards.length) return;
+
+    let currentIndex = 0;
+    let startX = 0;
+    let startTranslate = 0;
+    let isDragging = false;
+    let dragDistance = 0;
+
+    // Clone first and last cards for infinite illusion
+    const firstClone = cards[0].cloneNode(true);
+    const lastClone = cards[cards.length - 1].cloneNode(true);
+    track.appendChild(firstClone);
+    track.insertBefore(lastClone, cards[0]);
+
+    // Update track width and initial position
+    const allCards = Array.from(track.children);
+    const cardWidth = cards[0].offsetWidth;
+    track.style.transform = `translateX(-${cardWidth}px)`;
+    currentIndex = 1; // start at the first real card
+
+    function updateTransform() {
+        const offset = -currentIndex * cardWidth;
+        track.style.transform = `translateX(${offset}px)`;
+    }
+
+    function moveToIndex(index) {
+        currentIndex = index;
+        updateTransform();
+
+        // Handle infinite loop after transition
+        setTimeout(() => {
+            if (currentIndex === 0) {
+                // jumped to clone of last real card
+                currentIndex = cards.length;
+                track.style.transition = 'none';
+                updateTransform();
+                setTimeout(() => track.style.transition = '', 20);
+            } else if (currentIndex === allCards.length - 1) {
+                // jumped to clone of first real card
+                currentIndex = 1;
+                track.style.transition = 'none';
+                updateTransform();
+                setTimeout(() => track.style.transition = '', 20);
+            }
+        }, 300);
+    }
+
+    function nextCard() {
+        moveToIndex(currentIndex + 1);
+    }
+
+    function prevCard() {
+        moveToIndex(currentIndex - 1);
+    }
+
+    // Arrow navigation
+    nextBtn.addEventListener('click', () => nextCard());
+    prevBtn.addEventListener('click', () => prevCard());
+
+    // Drag/swipe
+    track.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.pageX;
+        startTranslate = currentIndex * cardWidth;
+        track.style.cursor = 'grabbing';
+        e.preventDefault();
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const deltaX = e.pageX - startX;
+        dragDistance = deltaX;
+        const newTranslate = startTranslate - deltaX;
+        track.style.transition = 'none';
+        track.style.transform = `translateX(-${newTranslate}px)`;
+    });
+
+    window.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        track.style.cursor = '';
+        track.style.transition = 'transform 0.5s ease-in-out';
+
+        if (Math.abs(dragDistance) > 50) {
+            if (dragDistance > 0) {
+                prevCard();
+            } else {
+                nextCard();
+            }
+        } else {
+            // snap back
+            updateTransform();
+        }
+        dragDistance = 0;
+    });
+
+    // Touch events for mobile
+    track.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        startX = e.touches[0].pageX;
+        startTranslate = currentIndex * cardWidth;
+        track.style.transition = 'none';
+    });
+
+    track.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const deltaX = e.touches[0].pageX - startX;
+        dragDistance = deltaX;
+        const newTranslate = startTranslate - deltaX;
+        track.style.transform = `translateX(-${newTranslate}px)`;
+    });
+
+    track.addEventListener('touchend', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        track.style.transition = 'transform 0.5s ease-in-out';
+
+        if (Math.abs(dragDistance) > 50) {
+            if (dragDistance > 0) {
+                prevCard();
+            } else {
+                nextCard();
+            }
+        } else {
+            updateTransform();
+        }
+        dragDistance = 0;
+    });
+
+    // Ensure card width updates on resize
+    window.addEventListener('resize', () => {
+        const newWidth = cards[0].offsetWidth;
+        updateTransform();
+    });
+})();
