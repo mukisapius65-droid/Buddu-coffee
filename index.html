@@ -26,7 +26,8 @@
                 <a href="index.html" class="dropbtn" id="about-main-btn"><span>HOME</span></a>
                 </div>
                 <div class="dropdown">
-                <a href="our-work.html" class="dropbtn" id="about-main-btn"><span>OUR WORK ▿</span></a>
+
+                    <a href="our-work.html" class="dropbtn" id="about-main-btn"><span>OUR WORK ▿</span></a>
                 <div class="dropdown-content">
                     <a href="our-work.html#our-model">OUR MODEL</a>
                     <a href="our-work.html#sustainability">SUSTAINABILITY</a>
@@ -76,50 +77,19 @@
     <main>
         <!-- HERO SECTION (part of Home, but visible on all pages? We'll place it inside home) -->
 
-        <section class="about-section" id="our-team">
-            <div class="our-team" style="background-image: url('https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
-                <div class="our-team-overlay"></div>
-                <div class="our-team-content">
-                    <p class="animate-up"><span class="team">Welcome to</span><br>BUDDU RURAL COFFEE GROWERS, TRADERS,<br>AND PROCESSORS</p>
-                    <p style="font-size: 1.1rem; font-weight: 300;">FOR DEVELOPMENT, PROSPERITY, AND WEALTH CREATION</p>
+        <section class="hero-section" id="hero">
+            <div class="hero" style="background-image: url('https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="animate-up"><span class="yellow">Welcome to</span><br>BUDDU RURAL COFFEE GROWERS, TRADERS, AND PROCESSORS</h1>
+                    <p>FOR DEVELOPMENT, PROSPERITY, AND WEALTH CREATION</p>
                    <div class="hero-buttons animate-up delay-2">
                         <a class="btn-secondary" href="about.html">WHO WE'RE →</a>
                     </div>
                 </div>
             </div>
-        <!-- HOME PAGE -->
 
-        <!-- Sidebar (off-canvas menu) -->
-<div class="sidebar" id="sidebar">
-    <div class="sidebar-header">
-        <div class="sidebar-logo">
-            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773772410/BUDDU-RURAL_COFFEE_GROWERS_TRADERS_PROCESSORS_ASSOCIATION_LTD_bmiiyi.png" alt="Buddu Coffee Logo">
-            <span>Buddu Coffee</span>
-        </div>
-        <button class="close-sidebar" id="closeSidebar">&times;</button>
-    </div>
-    <ul class="sidebar-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="our-work.html">Our Work ▿</a></li>
-        <li><a href="impact-insights.html">Impact & Insights ▿</a></li>
-        <li><a href="about.html">About Us ▿</a></li>
-        <li><a href="role.html">Roles</a></li>
-        <li><a href="news-resources.html">Newsletter</a></li>
-    </ul>
-    <div class="sidebar-footer">
-        <p>📞 <a href="tel:+256751545436">Call Now</a></p>
-        <p>💬 <a href="https://wa.me/256701715505" target="_blank">WhatsApp</a></p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@buddururalcoffee"><i class="fa-brands fa-tiktok"></i></a>
-        </div>
-    </div>
-</div>
 
-<!-- Overlay for when sidebar is open -->
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <div>
            <section class="welcome-section" id="welcome-section">
@@ -136,6 +106,146 @@
 </div>
         </section>
     </div>
+
+    <!-- Glass Icons Section – Copy and paste this block -->
+<div class="glass-icons-wrapper">
+  <div class="icon-btns">
+    <button class="icon-btn" data-color="blue">
+      <span class="icon-btn__back"></span>
+      <span class="icon-btn__front">
+        <span class="icon-btn__icon">☕</span>
+      </span>
+      <span class="icon-btn__label">Coffee</span>
+    </button>
+    <button class="icon-btn" data-color="green">
+      <span class="icon-btn__back"></span>
+      <span class="icon-btn__front">
+        <span class="icon-btn__icon"><i class="fas fa-tractor"></i></span>
+      </span>
+      <span class="icon-btn__label">Farmers</span>
+    </button>
+    <button class="icon-btn" data-color="orange">
+      <span class="icon-btn__back"></span>
+      <span class="icon-btn__front">
+        <span class="icon-btn__icon">📊</span>
+      </span>
+      <span class="icon-btn__label">Market</span>
+    </button>
+    <button class="icon-btn" data-color="purple">
+      <span class="icon-btn__back"></span>
+      <span class="icon-btn__front">
+        <span class="icon-btn__icon"><i class="fas fa-handshake"></i></span>
+      </span>
+      <span class="icon-btn__label">Partners</span>
+    </button>
+    <button class="icon-btn" data-color="red">
+      <span class="icon-btn__back"></span>
+      <span class="icon-btn__front">
+        <span class="icon-btn__icon">📈</span>
+      </span>
+      <span class="icon-btn__label">Impact</span>
+    </button>
+    <button class="icon-btn" data-color="indigo">
+      <span class="icon-btn__back"></span>
+      <span class="icon-btn__front">
+        <span class="icon-btn__icon">📞</span>
+      </span>
+      <span class="icon-btn__label">Contact</span>
+    </button>
+  </div>
+</div>
+
+<style>
+/* ---------- Glass Icons CSS ---------- */
+.icon-btns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 100px));
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  perspective: 200px;
+  outline: none;
+  margin: 0 auto;
+}
+
+.icon-btn__back,
+.icon-btn__front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transition: transform 0.3s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.icon-btn__back {
+  background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transform: rotate(10deg);
+}
+
+.icon-btn__front {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.icon-btn__label {
+  position: absolute;
+  bottom: -1.8rem;
+  left: 0;
+  right: 0;
+  font-size: 0.75rem;
+  color: #4a3a28;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  text-align: center;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.icon-btn:hover .icon-btn__back {
+  transform: rotate(15deg) translate(3px, 3px);
+}
+
+.icon-btn:hover .icon-btn__front {
+  transform: translateZ(20px);
+}
+
+.icon-btn:hover .icon-btn__label {
+  opacity: 1;
+  transform: translateY(5px);
+}
+
+/* Gradient backgrounds for each color (customise as you like) */
+.icon-btn[data-color="blue"] .icon-btn__back { background: linear-gradient(135deg, #2563eb, #1e3a8a); }
+.icon-btn[data-color="green"] .icon-btn__back { background: linear-gradient(135deg, #16a34a, #14532d); }
+.icon-btn[data-color="orange"] .icon-btn__back { background: linear-gradient(135deg, #ea580c, #9a3412); }
+.icon-btn[data-color="purple"] .icon-btn__back { background: linear-gradient(135deg, #9333ea, #4c1d95); }
+.icon-btn[data-color="red"] .icon-btn__back { background: linear-gradient(135deg, #dc2626, #991b1b); }
+.icon-btn[data-color="indigo"] .icon-btn__back { background: linear-gradient(135deg, #4f46e5, #312e81); }
+
+@media (max-width: 640px) {
+  .icon-btn { width: 70px; height: 70px; }
+  .icon-btn__front { font-size: 1.8rem; }
+}
+</style>
 
     <div class="blog-grid">
     <!-- Featured blog (full height on left) -->
@@ -290,13 +400,13 @@
              <section class="about-section" id="mission-vision" style="justify-content: center; align-items: center; text-align: center;">
             <h2 style="font-size: 3.5rem; color: black; font-weight: 800;">Impact at a Glance</h2>
             <div class="mission-block">
-                    <P style="font-size: 1rem; margin-top: 4rem;">We drive impact by empowering coffee farmers, the cooperatives and extension agents who serve them, and the<br>governments that sustain the policies and systems that support them. We rely on real‑time data, human<br>insights, and a growing body of evidence to expand market access, improve productivity, and strengthen the resilience of coffee communities in different regions of Uganda.</P>
+                    <p style="font-size: 1rem; margin-top: 4rem;">We drive impact by empowering coffee farmers, the cooperatives and extension agents who serve them, and the<br>governments that sustain the policies and systems that support them. We rely on real‑time data, human<br>insights, and a growing body of evidence to expand market access, improve productivity, and strengthen the resilience of coffee communities in different regions of Uganda.</p>
                      
             </div>
 
                     <button class="btn-secondary" onclick="switchPage('impact')" style="margin-top: 2rem;">OUR IMPACT →</button>
 
-             <div class="price-section" style= "text-align: center;">
+             <div class="price-section"> <!--LINE 1457-->
     <h2><i class="fas fa-chart-simple"></i>BUDDU FARMERS, TRADERS AND PROCESSORS</h2>
     <div class="price-cards">
         <!-- Card 1: Ripe Fresh -->
@@ -305,7 +415,7 @@
             <h3>OUR FARMERS</h3>
             <div class="price-meter" data-target="20000">
                 <div class="price-value">
-                    <span class="price-number">0</span>
+                    <span class="price-number">0</span><span>+</span>
                 </div>
                 <div class="meter-bar">
                     <div class="meter-fill-1"></div>
@@ -319,7 +429,7 @@
             <h3>OUR TRADERS</h3>
             <div class="price-meter" data-target="5500">
                 <div class="price-value">
-                    <span class="price-number">0</span>
+                    <span class="price-number">0</span><span>+</span>
                 </div>
                 <div class="meter-bar">
                     <div class="meter-fill-2"></div>
@@ -331,9 +441,9 @@
         <div class="price-card" style="border-top: 5px solid #2E7D32;">
             <i class="fas fa-industry fa-3x" style="color: #2E7D32;"></i>
             <h3>OUR PROCESSORS</h3>
-            <div class="price-meter" data-target="3550"><span>+</span>
+            <div class="price-meter" data-target="3550">
                 <div class="price-value">
-                    <span class="price-number">0</span>
+                    <span class="price-number">0</span><span>+</span>
                 </div>
                 <div class="meter-bar">
                     <div class="meter-fill-3"></div>
@@ -617,56 +727,75 @@
                 <button class="btn-primary">Edit profile</button>
             </div>
         </section>
-       <!-- learn roles right here--->>
+       <!-- learn roles right here--->
     </main>
-
-      <div class="chat-btn">
-        <button id="ChatBtn" onclick="openChat()">
-            <i class='fas fa-comment' style='font-size:36px; color:#C62828; display:block;'></i>
-            <span style="font-size:14px; color:#2E7D32; font-weight:900;">CHAT</span>
-        </button>
-    </div>
-
-    <div class="container" id="container">
-        <div id="chatwith">
-            <div class="system-info">🔴 you · 🟢 admin (connecting...)</div>
-        </div>
-        <textarea id="Chat" placeholder="type your message..."></textarea>
-        <button class="send-btn" id="SendBtn">send 💬</button>
-        <button class="sent-btn" id="SentBtn" onclick="closeChat()">close ✕</button>
-    </div>
     
 </section>
+
+<!-- Sidebar (off-canvas menu) -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-logo">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773772410/BUDDU-RURAL_COFFEE_GROWERS_TRADERS_PROCESSORS_ASSOCIATION_LTD_bmiiyi.png" alt="Buddu Coffee Logo">
+            <span>Buddu Coffee</span>
+        </div>
+        <button class="close-sidebar" id="closeSidebar">&times;</button>
+    </div>
+    <ul class="sidebar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-work.html">Our Work ▿</a></li>
+        <li><a href="impact-insights.html">Impact & Insights ▿</a></li>
+        <li><a href="about.html">About Us ▿</a></li>
+        <li><a href="role.html">Roles</a></li>
+        <li><a href="news-resources.html">Newsletter</a></li>
+    </ul>
+    <div class="sidebar-footer">
+        <p>📞 <a href="tel:+256751545436">Call Now</a></p>
+        <p>💬 <a href="https://wa.me/256701715505" target="_blank">WhatsApp</a></p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@buddururalcoffee"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- Overlay for when sidebar is open -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
     
-    <!-- FOOTER with TOS/PP/FAQ modals, contacts, WhatsApp, other platform -->
     <footer>
-         <div class="logo">
-                <i class="i-container" style= "background-image: url(https://res.cloudinary.com/dxd5hibh7/image/upload/v1773772410/BUDDU-RURAL_COFFEE_GROWERS_TRADERS_PROCESSORS_ASSOCIATION_LTD_bmiiyi.png);"></i>   
-            </div>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>BUDDU COFFEE</h4>
-                <p><i class="fas fa-map-marker-alt"></i>  Butega, Uganda</p>
-                <p><a href="tel:+256751545436"><i class="fas fa-phone"></i>  Call Now</a></p>
-                <p><a href="https://wa.me/256700123456" target="_blank"><i class="fab fa-whatsapp"></i>  WhatsApp</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Info</h4>
-                <a href="#" onclick="openModal('tos')"><i class="fas fa-file-contract"></i> Terms of Service</a>
-                <a href="#" onclick="openModal('pp')"><i class="fas fa-shield"></i> Privacy Policy</a>
-                <a href="#" onclick="openModal('faq')"><i class="fas fa-question-circle"></i> FAQs</a>
-            </div>
-            <div class="footer-section">
-                <h4>Our other platform</h4>
-                                <a href="https://ekfoundation.org" target="_blank"><i class="fas fa-external-link-alt"></i> EK FOUNDATION</a>
-                <a href="https://pfg-chapati.vercel.app" target="_blank"><i class="fas fa-external-link-alt"></i> PFG</a>
+    <div class="logo">
+        <i class="i-container" style="background-image: url(https://res.cloudinary.com/dxd5hibh7/image/upload/v1773772410/BUDDU-RURAL_COFFEE_GROWERS_TRADERS_PROCESSORS_ASSOCIATION_LTD_bmiiyi.png);"></i>
+    </div>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>BUDDU COFFEE<BR><i class="fas fa-map-marker-alt"></i> Butega, Uganda</h4>
+            <div class="social-links">
+                <a href="#" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="tel:+256751545436" class="social-icon" target="_blank"><i class="fas fa-phone"></i></a>
+                <a href="https://wa.me/256700123456" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
-        <div class="footer-bottom">
-            &copy; 2026 BUDDU RURAL COFFEE GROWERS, TRADERS & PROCESSORS ASSOCIATION.
-            <p>All rights reserved.</p>
+        <div class="footer-section">
+            <h4>Info</h4>
+            <a href="#" onclick="openModal('tos')"><i class="fas fa-file-contract"></i> Terms of Service</a>
+            <a href="#" onclick="openModal('pp')"><i class="fas fa-shield"></i> Privacy Policy</a>
+            <a href="#" onclick="openModal('faq')"><i class="fas fa-question-circle"></i> FAQs</a>
         </div>
-    </footer>
+        <div class="footer-section">
+            <h4>Our Platforms</h4>
+            <a href="https://ekfoundation.org" target="_blank"><i class="fas fa-external-link-alt"></i> EK FOUNDATION</a>
+            <a href="https://pfg-chapati.vercel.app" target="_blank"><i class="fas fa-external-link-alt"></i> PFG</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 BUDDU RURAL COFFEE GROWERS, TRADERS & PROCESSORS ASSOCIATION.
+        <p>All rights reserved.</p>
+    </div>
+</footer>
 
     <!-- MODALS for ToS, PP, FAQ -->
     <div id="modal" class="modal">
