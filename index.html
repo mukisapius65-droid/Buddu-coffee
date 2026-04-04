@@ -23,7 +23,7 @@
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <div class="dropdown">
-                <a href="index.html" class="dropbtn" id="about-main-btn"><span>HOME</span></a>
+                <a href="#" class="dropbtn" id="about-main-btn"><span>HOME</span></a>
                 </div>
                 <div class="dropdown">
 
@@ -89,9 +89,7 @@
                     </div>
                 </div>
             </div>
-
-
-
+        </section>
 <div>
            <section class="welcome-section" id="welcome-section"> <!--line 1378-->
             <div class="welcome">
@@ -111,150 +109,59 @@
     <!-- Glass Icons Section – Copy and paste this block -->
 <div class="glass-icons-wrapper">
   <div class="icon-btns">
-    <button class="icon-btn" data-color="blue">
+    <a class="icon-btn" data-color="blue" href="#market">
       <span class="icon-btn__back"></span>
       <span class="icon-btn__front">
-        <span class="icon-btn__icon">☕</span>
+        <span class="icon-btn__icon"><i class="fas fa-seedling"></i></span>
       </span>
       <span class="icon-btn__label">Coffee</span>
-    </button>
-    <button class="icon-btn" data-color="green">
+    </a>
+    <a class="icon-btn" data-color="green" href="role.html">
       <span class="icon-btn__back"></span>
       <span class="icon-btn__front">
         <span class="icon-btn__icon"><i class="fas fa-tractor"></i></span>
       </span>
       <span class="icon-btn__label">Farmers</span>
-    </button>
-    <button class="icon-btn" data-color="orange">
+    </a>
+    <a class="icon-btn" data-color="orange" href="#market
+    ">
       <span class="icon-btn__back"></span>
       <span class="icon-btn__front">
-        <span class="icon-btn__icon">📊</span>
+        <span class="icon-btn__icon"><i class="fa-solid fa-store"></i></span>
       </span>
       <span class="icon-btn__label">Market</span>
-    </button>
-    <button class="icon-btn" data-color="purple">
+    </a>
+    <a class="icon-btn" data-color="purple" href="about.html#partners">
       <span class="icon-btn__back"></span>
       <span class="icon-btn__front">
         <span class="icon-btn__icon"><i class="fas fa-handshake"></i></span>
       </span>
       <span class="icon-btn__label">Partners</span>
-    </button>
-    <button class="icon-btn" data-color="red">
+    </a>
+    <a class="icon-btn" data-color="red" href="impact-insights.html">
       <span class="icon-btn__back"></span>
       <span class="icon-btn__front">
-        <span class="icon-btn__icon">📈</span>
+        <span class="icon-btn__icon"><i class="fa-solid fa-chart-line"></i></span>
       </span>
       <span class="icon-btn__label">Impact</span>
-    </button>
-    <button class="icon-btn" data-color="indigo">
+    </a>
+    <a class="icon-btn" data-color="indigo" href="tel:+256751545436">
       <span class="icon-btn__back"></span>
       <span class="icon-btn__front">
-        <span class="icon-btn__icon">📞</span>
+        <span class="icon-btn__icon"><i class="fas fa-phone"></i></span>
       </span>
       <span class="icon-btn__label">Contact</span>
-    </button>
+    </a>
   </div>
 </div>
 
-<style>
-/* ---------- Glass Icons CSS ---------- */
-.icon-btns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 100px));
-  gap: 2rem;
-  justify-content: center;
-  margin: 2rem auto;
-  padding: 1rem;
-}
-
-.icon-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  width: 80px;
-  height: 80px;
-  perspective: 200px;
-  outline: none;
-  margin: 0 auto;
-}
-
-.icon-btn__back,
-.icon-btn__front {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  transition: transform 0.3s cubic-bezier(0.83, 0, 0.17, 1);
-}
-
-.icon-btn__back {
-  background: linear-gradient(135deg, #3b82f6, #1e3a8a);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-  transform: rotate(10deg);
-}
-
-.icon-btn__front {
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.2rem;
-  color: white;
-  border: 1px solid rgba(255,255,255,0.4);
-}
-
-.icon-btn__label {
-  position: absolute;
-  bottom: -1.8rem;
-  left: 0;
-  right: 0;
-  font-size: 0.75rem;
-  color: #4a3a28;
-  opacity: 0;
-  transition: opacity 0.2s, transform 0.2s;
-  text-align: center;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.icon-btn:hover .icon-btn__back {
-  transform: rotate(15deg) translate(3px, 3px);
-}
-
-.icon-btn:hover .icon-btn__front {
-  transform: translateZ(20px);
-}
-
-.icon-btn:hover .icon-btn__label {
-  opacity: 1;
-  transform: translateY(5px);
-}
-
-/* Gradient backgrounds for each color (customise as you like) */
-.icon-btn[data-color="blue"] .icon-btn__back { background: linear-gradient(135deg, #2563eb, #1e3a8a); }
-.icon-btn[data-color="green"] .icon-btn__back { background: linear-gradient(135deg, #16a34a, #14532d); }
-.icon-btn[data-color="orange"] .icon-btn__back { background: linear-gradient(135deg, #ea580c, #9a3412); }
-.icon-btn[data-color="purple"] .icon-btn__back { background: linear-gradient(135deg, #9333ea, #4c1d95); }
-.icon-btn[data-color="red"] .icon-btn__back { background: linear-gradient(135deg, #dc2626, #991b1b); }
-.icon-btn[data-color="indigo"] .icon-btn__back { background: linear-gradient(135deg, #4f46e5, #312e81); }
-
-@media (max-width: 640px) {
-  .icon-btn { width: 70px; height: 70px; }
-  .icon-btn__front { font-size: 1.8rem; }
-}
-</style>
-
     <div class="blog-grid">
     <!-- Featured blog (full height on left) -->
-    <a href="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" class="blog-featured">
+    <a href="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681238/IMG-20260316-WA0010_tcl1ct.jpg" class="blog-featured">
         <div class="blog-card">
-            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Featured blog">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681238/IMG-20260316-WA0010_tcl1ct.jpg" alt="Featured blog">
             <div class="blog-overlay">
-                <span class="blog-sticker">📷 PHOTO</span>
+                <span class="blog-sticker"><i class="fa-solid fa-photo-film"></i> PHOTO</span>
                 <h3>How Digital Tools Are Transforming Coffee Farming</h3>
                 <p>Discover how farmers are using our platform to increase yields...</p>
             </div>
@@ -264,40 +171,40 @@
     <!-- Right side: two columns, each with two stacked blogs -->
     <div class="blog-columns">
         <div class="blog-col">
-            <a href="https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="blog-item">
+            <a href="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681242/IMG-20260316-WA0023_cyvwb3.jpg" class="blog-item">
                 <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blog 1">
+                    <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681242/IMG-20260316-WA0023_cyvwb3.jpg" alt="Blog 1">
                     <div class="blog-overlay">
-                        <span class="blog-sticker">📷 PHOTO</span>
+                        <span class="blog-sticker"><i class="fa-solid fa-photo-film"></i> PHOTO</span>
                         <h4>Drying Coffee: Best Practices</h4>
                     </div>
                 </div>
             </a>
-            <a href="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="blog-item">
+            <a href="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" class="blog-item">
                 <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blog 2">
+                    <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Blog 2">
                     <div class="blog-overlay">
-                        <span class="blog-sticker">📷 PHOTO</span>
+                        <span class="blog-sticker"><i class="fa-solid fa-photo-film"></i> PHOTO</span>
                         <h4>Sustainable Coffee Farm Management</h4>
                     </div>
                 </div>
             </a>
         </div>
         <div class="blog-col">
-            <a href="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="blog-item">
+            <a href="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681243/IMG-20260316-WA0025_nshioo.jpg" class="blog-item">
                 <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blog 3">
+                    <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681243/IMG-20260316-WA0025_nshioo.jpg" alt="Blog 3">
                     <div class="blog-overlay">
-                        <span class="blog-sticker">📷 PHOTO</span>
+                        <span class="blog-sticker"><i class="fa-solid fa-photo-film"></i> PHOTO</span>
                         <h4>Processing Beans for Export Quality</h4>
                     </div>
                 </div>
             </a>
-            <a href="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" class="blog-item">
+            <a href="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681239/IMG-20260316-WA0019_ukqzxm.jpg" class="blog-item">
                 <div class="blog-card">
-                    <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Blog 4">
+                    <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681239/IMG-20260316-WA0019_ukqzxm.jpg" alt="Blog 4">
                     <div class="blog-overlay">
-                        <span class="blog-sticker">📷 PHOTO</span>
+                        <span class="blog-sticker"><i class="fa-solid fa-photo-film"></i> PHOTO</span>
                         <h4>Market Trends for Ugandan Coffee</h4>
                     </div>
                 </div>
@@ -307,7 +214,7 @@
     </div>
     
     <!-- CURRENT COFFEE PRICES (large cards, easy to read) -->
-            <div class="price-section">
+            <div class="price-section" id="market">
     <h2><i class="fas fa-chart-simple"></i> TODAY'S COFFEE PRICES (UGX/kg)</h2>
     <div class="price-cards">
         <!-- Card 1: Ripe Fresh -->
@@ -358,13 +265,13 @@
 </div>
     
 <section class="pulse-section" id="pulse-section">
-    <div class="pulse" id="pulse-bg" style="background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+    <div class="pulse" id="pulse-bg" style="background-image: url('https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681243/IMG-20260316-WA0024_pmgjte.jpg');">
         <div class="team-columns">
             <!-- Column 1 (Mission) – wider -->
-            <div class="team-column mission-column" data-bg="https://images.unsplash.com/photo-1559056199-5a47f60c5053?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80">
+            <div class="team-column mission-column" data-bg="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681238/IMG-20260316-WA0011_st6f0j.jpg">
                 <div class="column-overlay"></div>
                 <div class="column-content">
-                    <h3>DIGITAL EMPOREMENT</h3>
+                    <h3>DIGITAL EMPOWEREMENT</h3>
                     <p class="quote">
                         We equip coffee farmers, traders, and processors with timely insights and resources to make informed decisions.
                     </p>
@@ -372,18 +279,18 @@
                 </div>
             </div>
             <!-- Column 2 (Vision) -->
-            <div class="team-column vision-column" data-bg="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80">
+            <div class="team-column vision-column" data-bg="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773951770/our-team_kj07na.jpg">
                 <div class="column-overlay"></div>
                 <div class="column-content">
                     <h3>SKILLED,RESPECTFUL TOUCH</h3>
                     <p class="quote">
-                        We train frontline providers to ensure best advice for every member.
+                        Training cooperatives and extension agents in post‑harvest handling, quality, and climate‑smart farming..
                     </p>
-                    <a class="btn-secondary col-btn" href="mentors.html">Discover MENTORS →</a>
+                    <a class="btn-secondary col-btn" href="fields.html">Discover FIELDS →</a>
                 </div>
             </div>
             <!-- Column 3 (Values) -->
-            <div class="team-column values-column" data-bg="https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80">
+            <div class="team-column values-column" data-bg="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681238/IMG-20260316-WA0012_pb2olm.jpg">
                 <div class="column-overlay"></div>
                 <div class="column-content">
                     <h3>DATA-DRIVEN IMPROVEMENT</h3>
@@ -401,7 +308,7 @@
              <section class="about-section" id="mission-vision" style="justify-content: center; align-items: center; text-align: center;">
             <h2 style="font-size: 3.5rem; color: black; font-weight: 800;">Impact at a Glance</h2>
             <div class="mission-block">
-                    <p style="font-size: 1rem; margin-top: 4rem;">We drive impact by empowering coffee farmers, the cooperatives and extension agents who serve them, and the<br>governments that sustain the policies and systems that support them. We rely on real‑time data, human<br>insights, and a growing body of evidence to expand market access, improve productivity, and strengthen the resilience of coffee communities in different regions of Uganda.</p>
+                    <p style="font-size: 1rem;">We drive impact by empowering coffee farmers, the cooperatives and extension agents who serve them, and the<br>governments that sustain the policies and systems that support them. We rely on real‑time data, human<br>insights, and a growing body of evidence to expand market access, improve productivity, and strengthen the resilience of coffee communities in different regions of Uganda.</p>
                      
             </div>
 
@@ -464,12 +371,11 @@
                     <p class="animate-up"><span class="team">WHERE WE WORK</span><br>Our mission is to transform prosperity and resilience for all coffee farmers, traders, and processors across Uganda.</p>
                     <p style="font-size: 1.1rem; font-weight: 300;">We partner with government agencies, district local governments, and community‑based organizations to support coffee farmers, traders, and processors in accessing markets, finance, and sustainable production practices across diverse contexts and geographies. Our roots are in Uganda, where we have strengthened the coffee value chain in partnership with 22 district local governments and the national Ministry of Agriculture, Animal Industry and Fisheries. More recently, our impact has attracted interest from other coffee‑producing countries, including Rwanda and Ethiopia, paving the way for future scale‑up across Africa.</p>
                    <div class="hero-buttons animate-up delay-2">
-                         <a class="btn-secondary col-btn
-                        
-                         " href="our-work.html#where-we-work" style="margin-top: 2rem;">WHERE WE WORK →</a>
+                         <a class="btn-secondary col-btn " href="our-work.html#where-we-work" style="margin-top: 2rem;">WHERE WE WORK →</a>
                     </div>
                 </div>
             </div>
+        </section>
 
             <section class="about-section" id="mission-vision">
             <h2 style="font-size: 5rem; margin-top: 2.2rem; color: black;">News and <span class="green">Resources</span></h2>
@@ -481,11 +387,11 @@
 
             <div class="blog-grid">
     <!-- Featured blog (full height on left) -->
-    <a href="/blog/featured-post" class="blog-featured">
+    <a href="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681238/IMG-20260316-WA0010_tcl1ct.jpg" class="blog-featured">
         <div class="blog-card">
-            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Featured blog">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681238/IMG-20260316-WA0010_tcl1ct.jpg" alt="Featured blog">
             <div class="blog-overlay">
-                <span class="blog-sticker">📰 BLOG</span>
+                <span class="blog-sticker"><i class="fa-solid fa-blog"></i> BLOG</span>
                 <h3>How Digital Tools Are Transforming Coffee Farming</h3>
                 <p>Discover how farmers are using our platform to increase yields...</p>
             </div>
@@ -495,42 +401,41 @@
     <!-- Right side: two columns, each with two stacked blogs -->
     <div class="blog-columns">
         <div class="blog-col">
-            <a href="/blog/post-1" class="blog-item">
+            <a href="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681242/IMG-20260316-WA0023_cyvwb3.jpg" class="blog-item">
                 <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blog 1">
+                    <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681242/IMG-20260316-WA0023_cyvwb3.jpg" alt="Blog 1">
                     <div class="blog-overlay">
-                        <span class="blog-sticker">📰 BLOG</span>
+                        <span class="blog-sticker"><i class="fa-solid fa-blog"></i> BLOG</span>
                         <h4>Drying Coffee: Best Practices</h4>
                     </div>
                 </div>
             </a>
-            <a href="/blog/post-2" class="blog-item">
+            <a href="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" class="blog-item">
                 <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blog 2">
+                    <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Blog 2">
                     <div class="blog-overlay">
-                        <span class="blog-sticker">📰 BLOG</span>
+                        <span class="blog-sticker"><i class="fa-solid fa-blog"></i> BLOG</span>
                         <h4>Sustainable Coffee Farm Management</h4>
                     </div>
                 </div>
             </a>
         </div>
         <div class="blog-col">
-            
-            <a href="/blog/post-3" class="blog-item">
+            <a href="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681243/IMG-20260316-WA0025_nshioo.jpg" class="blog-item">
                 <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blog 3">
+                    <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681243/IMG-20260316-WA0025_nshioo.jpg" alt="Blog 3">
                     <div class="blog-overlay">
-                        <span class="blog-sticker">📰 BLOG</span>
+                       <span class="blog-sticker"><i class="fa-solid fa-blog"></i> BLOG</span>>
                         <h4>Processing Beans for Export Quality</h4>
                     </div>
                 </div>
             </a>
-            <a href="/blog/post-4" class="blog-item">
+            <a href="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681239/IMG-20260316-WA0019_ukqzxm.jpg" class="blog-item">
                 <div class="blog-card">
-                    <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Blog 4">
+                    <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773681239/IMG-20260316-WA0019_ukqzxm.jpg" alt="Blog 4">
                     <div class="blog-overlay">
-                        <span class="blog-sticker">📰 BLOG</span>
-                        <h4 id="newsletter">Market Trends for Ugandan Coffee</h4>
+                        <span class="blog-sticker"><i class="fa-solid fa-blog"></i> BLOG</span>
+                        <h4>Market Trends for Ugandan Coffee</h4><span id="newsletter"></span>
                     </div>
                 </div>
             </a>
@@ -541,7 +446,7 @@
          <section class="newsletter-section">
     <div class="newsletter-container">
         <div class="newsletter-header">
-            <h2><i class="fas fa-envelope-open-text"></i> Sign up to our Newsletter</h2>
+            <h2><i class="fas fa-envelope-open-text"></i> Sign up to our <span>Newsletter</span></h2>
             <p>Stay connected with the Buddu coffee community. Receive market prices, training invites, policy updates, and inspiring stories from coffee farmers across Uganda – straight to your inbox.</p>
         </div>
         <form id="newsletterForm" class="newsletter-form">
@@ -552,7 +457,7 @@
                 </div>
                 <div class="form-group">
                     <label for="lastname"><i class="fas fa-user"></i> Last Name *</label>
-                    <input type="text" id="lastname" name="lastname" placeholder="Doe" required>
+                    <input type="text" id="lastname" name="lastname" placeholder="Kintu" required>
                 </div>
             </div>
             <div class="form-group">
@@ -584,16 +489,16 @@
         <div class="marquee-track">
             <!-- First set -->
             <span class="media-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/NTV_Uganda_2024_logo.png/200px-NTV_Uganda_2024_logo.png" alt="NTV" loading="lazy">
+                <img src="ntv-img.jpg" alt="NTV" loading="lazy">
             </span>
             <span class="media-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/NBS_TV_Uganda_logo.png/200px-NBS_TV_Uganda_logo.png" alt="NBS" loading="lazy">
+                <img src="nbs-img.png" alt="NBS" loading="lazy">
             </span>
             <span class="media-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Bukedde_Newspaper_Logo.png/200px-Bukedde_Newspaper_Logo.png" alt="Bukedde" loading="lazy">
+                <img src="bukedde-img.png" alt="Bukedde" loading="lazy">
             </span>
             <span class="media-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Salt_Media_Logo.png/200px-Salt_Media_Logo.png" alt="Salt" loading="lazy">
+                <img src="salt-img.jpg" alt="Salt" loading="lazy">
             </span>
             <span class="media-item">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/200px-Google_2015_logo.svg.png" alt="Google" loading="lazy">
@@ -602,26 +507,26 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/200px-YouTube_Logo_2017.svg.png" alt="YouTube" loading="lazy">
             </span>
             <span class="media-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/UBC_Logo.png/200px-UBC_Logo.png" alt="UBC" loading="lazy">
+                <img src="ubc.png" alt="UBC" loading="lazy">
             </span>
             <span class="media-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Daily_Monitor_logo.svg/200px-Daily_Monitor_logo.svg.png" alt="Daily Monitor" loading="lazy">
+                <img src="daily-monitor-img.jpg" alt="Daily Monitor" loading="lazy">
             </span>
             <span class="media-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/BBC_Logo_2021.svg/200px-BBC_Logo_2021.svg.png" alt="BBC" loading="lazy">
+                <img src="bbc-image.png" alt="BBC" loading="lazy">
             </span>
             <!-- Duplicate set for seamless loop -->
             <span class="media-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/NTV_Uganda_2024_logo.png/200px-NTV_Uganda_2024_logo.png" alt="NTV" loading="lazy">
+                <img src="ntv-img.jpg" alt="NTV" loading="lazy">
             </span>
             <span class="media-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/NBS_TV_Uganda_logo.png/200px-NBS_TV_Uganda_logo.png" alt="NBS" loading="lazy">
+                <img src="nbs-img.png" alt="NBS" loading="lazy">
             </span>
             <span class="media-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Bukedde_Newspaper_Logo.png/200px-Bukedde_Newspaper_Logo.png" alt="Bukedde" loading="lazy">
+                <img src="bukedde-img.png" alt="Bukedde" loading="lazy">
             </span>
             <span class="media-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Salt_Media_Logo.png/200px-Salt_Media_Logo.png" alt="Salt" loading="lazy">
+                <img src="salt-img.jpg" alt="Salt" loading="lazy">
             </span>
             <span class="media-item">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/200px-Google_2015_logo.svg.png" alt="Google" loading="lazy">
@@ -630,13 +535,13 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/200px-YouTube_Logo_2017.svg.png" alt="YouTube" loading="lazy">
             </span>
             <span class="media-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/UBC_Logo.png/200px-UBC_Logo.png" alt="UBC" loading="lazy">
+                <img src="ubc.png" alt="UBC" loading="lazy">
             </span>
             <span class="media-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Daily_Monitor_logo.svg/200px-Daily_Monitor_logo.svg.png" alt="Daily Monitor" loading="lazy">
+                <img src="daily-monitor-img.jpg" alt="Daily Monitor" loading="lazy">
             </span>
             <span class="media-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/BBC_Logo_2021.svg/200px-BBC_Logo_2021.svg.png" alt="BBC" loading="lazy">
+                <img src="bbc-image.png" alt="BBC" loading="lazy">
             </span>
         </div>
     </div>
@@ -775,23 +680,23 @@
         <div class="footer-section">
             <h4>BUDDU COFFEE<BR><i class="fas fa-map-marker-alt"></i> Butega, Uganda</h4>
             <div class="social-links">
-                <a href="#" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://facebook.com/budducoffee" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/budducoffee" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@buddururalcoffee" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
                 <a href="tel:+256751545436" class="social-icon" target="_blank"><i class="fas fa-phone"></i></a>
-                <a href="https://wa.me/256700123456" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://wa.me/256751545436" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
         <div class="footer-section">
-            <h4>Info</h4>
+            <h4>GO To</h4>
+            <a href="our-work.html"><i class="fa-solid fa-briefcase"></i> Our Work</a>
+            <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
             <a href="#" onclick="openModal('tos')"><i class="fas fa-file-contract"></i> Terms of Service</a>
             <a href="#" onclick="openModal('pp')"><i class="fas fa-shield"></i> Privacy Policy</a>
-            <a href="#" onclick="openModal('faq')"><i class="fas fa-question-circle"></i> FAQs</a>
         </div>
         <div class="footer-section">
             <h4>Our Platforms</h4>
             <a href="https://ekfoundation.org" target="_blank"><i class="fas fa-external-link-alt"></i> EK FOUNDATION</a>
-            <a href="https://pfg-chapati.vercel.app" target="_blank"><i class="fas fa-external-link-alt"></i> PFG</a>
         </div>
     </div>
     <div class="footer-bottom">
