@@ -300,33 +300,33 @@ sidebarLinks.forEach(link => {
 // Reports data (image URLs, titles, descriptions, PDF links)
 const reportsData = [
     {
-        img: "https://res.cloudinary.com/dxd5hibh7/image/upload/v1743123456/report_q1_2023.jpg",
+        img: "report.jpg",
         title: "Q1 2023 Impact Report",
         desc: "Expanding a data-driven approach to improve respectful care, defining ‘exemplars for quality’ in hospitals, and making user-centered...",
         pdf: "/reports/q1-2023.pdf"
     },
     {
-        img: "https://res.cloudinary.com/dxd5hibh7/image/upload/v1743123457/report_2022_annual.jpg",
+        img: "mothers.jpg",
         title: "2022 Annual Report",
-        desc: "How we increased the scale and sustainability of our impact on mothers and babies in 2022…",
+        desc: "Expanding a data‑driven approach to improve farmer support and market transparency, defining ‘exemplars for quality’ in cooperatives and processing hubs, and making user‑centered…",
         pdf: "/reports/annual-2022.pdf"
     },
     {
-        img: "https://res.cloudinary.com/dxd5hibh7/image/upload/v1743123458/report_q4_2022.jpg",
+        img: "logic.jpg",
         title: "Q4 2022 Impact Report",
-        desc: "Testing PROMPTS content to increase relevance, building dashboards to generate systems-level insights, and supporting governments to use data…",
+        desc: "Testing GROW content to increase relevance for farmers, building dashboards to generate systems‑level insights for cooperatives and district governments, and supporting governments to use data…",
         pdf: "/reports/q4-2022.pdf"
     },
     {
-        img: "https://res.cloudinary.com/dxd5hibh7/image/upload/v1743123459/report_q3_2022.jpg",
+        img: "networks.jpg",
         title: "Q3 2022 Impact Report",
-        desc: "Strengthening referral networks, improving facility readiness, and training community health workers…",
+        desc: "Strengthening market linkages between farmers and buyers, improving cooperative and processing hub readiness, and training extension agents and farmer trainers…",
         pdf: "/reports/q3-2022.pdf"
     },
     {
-        img: "https://res.cloudinary.com/dxd5hibh7/image/upload/v1743123460/report_2021_annual.jpg",
+        img: "year.jpeg",
         title: "2021 Annual Report",
-        desc: "Our first full year of impact: reaching 50,000 mothers and establishing partnerships with 15 counties…",
+        desc: "Our first full year of impact: reaching 50,000 coffee farmers and establishing partnerships with 15 coffee‑growing districts…",
         pdf: "/reports/annual-2021.pdf"
     }
 ];
@@ -416,5 +416,282 @@ if (signupForm) {
     });
 }
 
+
 // Initial render
 renderReports();
+
+
+// Country selector data (coffee context)
+const countryData = {
+    uganda: {
+        name: 'Uganda',
+        description: 'BUDDU partners with district local governments and the Ministry of Agriculture, Animal Industry and Fisheries to improve productivity, quality, and market access for coffee farmers. We co‑design scalable solutions that integrate into public agricultural systems, with a focus on climate‑smart practices and post‑harvest infrastructure.',
+        link: 'our-work-uganda.html'
+    },
+    rwanda: {
+        name: 'Rwanda',
+        description: 'BUDDU is working with the Rwanda Agriculture Board and local cooperatives to test how our GROW platform can help smallholder coffee farmers access real‑time market intelligence, improve quality, and strengthen cooperative governance. We are adapting our model to Rwanda\'s high‑altitude coffee regions.',
+        link: 'our-work-rwanda.html'
+    },
+    ethiopia: {
+        name: 'Ethiopia',
+        description: 'In Ethiopia, we are collaborating with the Ethiopian Coffee and Tea Authority and regional governments to pilot our data‑driven PULSE system, helping farmers and traders connect to premium markets while promoting sustainable farming practices that preserve forest coffee ecosystems.',
+        link: 'our-work-ethiopia.html'
+    }
+};
+
+// Get elements
+const btns = document.querySelectorAll('.country-btn');
+const countryNameSpan = document.getElementById('countryName');
+const countryDescP = document.getElementById('countryDescription');
+const countryBtn = document.getElementById('countryButton');
+
+// Function to update content
+function setCountry(countryKey) {
+    const data = countryData[countryKey];
+    if (!data) return;
+
+    countryNameSpan.textContent = data.name;
+    countryDescP.textContent = data.description;
+    countryBtn.href = data.link;
+    countryBtn.textContent = `Our Work in ${data.name} →`;
+
+    // Update active button class
+    btns.forEach(btn => {
+        if (btn.dataset.country === countryKey) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+}
+
+// Add click event listeners
+btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const country = btn.dataset.country;
+        setCountry(country);
+    });
+});
+
+// Set default (Uganda)
+setCountry('uganda');
+
+
+(function() {
+    const overlay = document.getElementById('botsOverlay');
+    if (!overlay) return;
+
+    function removeTooltip() {
+        const existing = document.querySelector('.bot-tooltip');
+        if (existing) existing.remove();
+    }
+
+    function showTooltip(bot, question) {
+        removeTooltip();
+
+        const botRect = bot.getBoundingClientRect();
+        const overlayRect = overlay.getBoundingClientRect();
+
+        const tooltip = document.createElement('div');
+        tooltip.className = 'bot-tooltip';
+        tooltip.innerHTML = `<span class="close-bot-tooltip">&times;</span> ${question}`;
+        overlay.appendChild(tooltip);
+
+        const tooltipRect = tooltip.getBoundingClientRect();
+
+        const spaceRight = overlayRect.right - botRect.right;
+        const spaceLeft = botRect.left - overlayRect.left;
+        const spaceTop = botRect.top - overlayRect.top;
+        const spaceBottom = overlayRect.bottom - botRect.bottom;
+
+        let leftPos = 0, topPos = 0, placement = '';
+
+        if (spaceRight >= tooltipRect.width + 10) {
+            leftPos = botRect.left - overlayRect.left + botRect.width + 8;
+            topPos = botRect.top - overlayRect.top + (botRect.height / 2) - (tooltipRect.height / 2);
+            placement = 'right';
+        } else if (spaceLeft >= tooltipRect.width + 10) {
+            leftPos = botRect.left - overlayRect.left - tooltipRect.width - 8;
+            topPos = botRect.top - overlayRect.top + (botRect.height / 2) - (tooltipRect.height / 2);
+            placement = 'left';
+        } else if (spaceBottom >= tooltipRect.height + 10) {
+            topPos = botRect.top - overlayRect.top + botRect.height + 8;
+            leftPos = botRect.left - overlayRect.left + (botRect.width / 2) - (tooltipRect.width / 2);
+            placement = 'bottom';
+        } else {
+            topPos = botRect.top - overlayRect.top - tooltipRect.height - 8;
+            leftPos = botRect.left - overlayRect.left + (botRect.width / 2) - (tooltipRect.width / 2);
+            placement = 'top';
+        }
+
+        tooltip.style.left = `${leftPos}px`;
+        tooltip.style.top = `${topPos}px`;
+        tooltip.classList.add(placement);
+
+        const closeBtn = tooltip.querySelector('.close-bot-tooltip');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                removeTooltip();
+            });
+        }
+
+        function closeOnClickOutside(e) {
+            if (!tooltip.contains(e.target) && !bot.contains(e.target)) {
+                removeTooltip();
+                document.removeEventListener('click', closeOnClickOutside);
+            }
+        }
+        setTimeout(() => document.addEventListener('click', closeOnClickOutside), 0);
+    }
+
+    const bots = document.querySelectorAll('.bot');
+    bots.forEach(bot => {
+        bot.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const question = this.getAttribute('data-question');
+            if (question) showTooltip(this, question);
+        });
+    });
+})();
+(function() {
+    const overlay = document.getElementById('botsOverlay');
+    if (!overlay) return;
+
+    let currentTooltip = null;
+
+    function removeTooltip() {
+        if (currentTooltip) {
+            currentTooltip.remove();
+            currentTooltip = null;
+        }
+    }
+
+    // Show a simple tooltip on hover (using data-label)
+    function showHoverTooltip(bot, label) {
+        removeTooltip();
+        const tooltip = document.createElement('div');
+        tooltip.className = 'bot-tooltip hover-tooltip';
+        tooltip.innerHTML = `<span class="close-bot-tooltip" style="display:none;">&times;</span> ${label}`;
+        overlay.appendChild(tooltip);
+        currentTooltip = tooltip;
+
+        // Position the tooltip (same logic as before)
+        const botRect = bot.getBoundingClientRect();
+        const overlayRect = overlay.getBoundingClientRect();
+        const tooltipRect = tooltip.getBoundingClientRect();
+
+        const spaceRight = overlayRect.right - botRect.right;
+        const spaceLeft = botRect.left - overlayRect.left;
+        const spaceTop = botRect.top - overlayRect.top;
+        const spaceBottom = overlayRect.bottom - botRect.bottom;
+
+        let leftPos = 0, topPos = 0, placement = '';
+
+        if (spaceRight >= tooltipRect.width + 10) {
+            leftPos = botRect.left - overlayRect.left + botRect.width + 8;
+            topPos = botRect.top - overlayRect.top + (botRect.height / 2) - (tooltipRect.height / 2);
+            placement = 'right';
+        } else if (spaceLeft >= tooltipRect.width + 10) {
+            leftPos = botRect.left - overlayRect.left - tooltipRect.width - 8;
+            topPos = botRect.top - overlayRect.top + (botRect.height / 2) - (tooltipRect.height / 2);
+            placement = 'left';
+        } else if (spaceBottom >= tooltipRect.height + 10) {
+            topPos = botRect.top - overlayRect.top + botRect.height + 8;
+            leftPos = botRect.left - overlayRect.left + (botRect.width / 2) - (tooltipRect.width / 2);
+            placement = 'bottom';
+        } else {
+            topPos = botRect.top - overlayRect.top - tooltipRect.height - 8;
+            leftPos = botRect.left - overlayRect.left + (botRect.width / 2) - (tooltipRect.width / 2);
+            placement = 'top';
+        }
+
+        tooltip.style.left = `${leftPos}px`;
+        tooltip.style.top = `${topPos}px`;
+        tooltip.classList.add(placement);
+    }
+
+    // Show detailed question tooltip on click
+    function showClickTooltip(bot, question) {
+        removeTooltip();
+        const tooltip = document.createElement('div');
+        tooltip.className = 'bot-tooltip';
+        tooltip.innerHTML = `<span class="close-bot-tooltip">&times;</span> ${question}`;
+        overlay.appendChild(tooltip);
+        currentTooltip = tooltip;
+
+        // Position using the same logic (reuse positioning)
+        const botRect = bot.getBoundingClientRect();
+        const overlayRect = overlay.getBoundingClientRect();
+        const tooltipRect = tooltip.getBoundingClientRect();
+
+        const spaceRight = overlayRect.right - botRect.right;
+        const spaceLeft = botRect.left - overlayRect.left;
+        const spaceTop = botRect.top - overlayRect.top;
+        const spaceBottom = overlayRect.bottom - botRect.bottom;
+
+        let leftPos = 0, topPos = 0, placement = '';
+
+        if (spaceRight >= tooltipRect.width + 10) {
+            leftPos = botRect.left - overlayRect.left + botRect.width + 8;
+            topPos = botRect.top - overlayRect.top + (botRect.height / 2) - (tooltipRect.height / 2);
+            placement = 'right';
+        } else if (spaceLeft >= tooltipRect.width + 10) {
+            leftPos = botRect.left - overlayRect.left - tooltipRect.width - 8;
+            topPos = botRect.top - overlayRect.top + (botRect.height / 2) - (tooltipRect.height / 2);
+            placement = 'left';
+        } else if (spaceBottom >= tooltipRect.height + 10) {
+            topPos = botRect.top - overlayRect.top + botRect.height + 8;
+            leftPos = botRect.left - overlayRect.left + (botRect.width / 2) - (tooltipRect.width / 2);
+            placement = 'bottom';
+        } else {
+            topPos = botRect.top - overlayRect.top - tooltipRect.height - 8;
+            leftPos = botRect.left - overlayRect.left + (botRect.width / 2) - (tooltipRect.width / 2);
+            placement = 'top';
+        }
+
+        tooltip.style.left = `${leftPos}px`;
+        tooltip.style.top = `${topPos}px`;
+        tooltip.classList.add(placement);
+
+        // Close button inside detailed tooltip
+        const closeBtn = tooltip.querySelector('.close-bot-tooltip');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                removeTooltip();
+            });
+        }
+
+        // Click outside to close (only for detailed tooltip)
+        function closeOnClickOutside(e) {
+            if (!tooltip.contains(e.target) && !bot.contains(e.target)) {
+                removeTooltip();
+                document.removeEventListener('click', closeOnClickOutside);
+            }
+        }
+        setTimeout(() => document.addEventListener('click', closeOnClickOutside), 0);
+    }
+
+    const bots = document.querySelectorAll('.bot');
+    bots.forEach(bot => {
+        // Hover event – show simple label
+        bot.addEventListener('mouseenter', function(e) {
+            const label = this.getAttribute('data-label');
+            if (label) showHoverTooltip(this, label);
+        });
+        bot.addEventListener('mouseleave', function(e) {
+            // Only remove if it's a hover tooltip (no close button)
+            if (currentTooltip && !currentTooltip.querySelector('.close-bot-tooltip')) {
+                removeTooltip();
+            }
+        });
+        // Click event – show detailed question
+        bot.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const question = this.getAttribute('data-question');
+            if (question) showClickTooltip(this, question);
+        });
+    });
+})();

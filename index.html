@@ -55,20 +55,9 @@
                 </div>
             </div>
 
-                <li data-page="home" class="active" style= "display:none"><i class="fas fa-home"></i> <span>Home</span></li>
-                <li data-page="dashboard" title= "Preview Your Networth" style= "display:none"><i class="fas fa-chart-line"></i> <span>Dashboard</span></li>
-                <li data-page="signup" title= "Join Our Cooperative" style= "display:none"><i class="fas fa-user-plus"></i> <span>Signup</span></li>
-                <li data-page="settings" title= "Configure Notifications And Font-size" style= "display:none"><i class="fas fa-cog"></i> <span>Settings</span></li>
-                <li data-page="profile" title= "View And Edit Profile" style= "display:none"><i class="fas fa-id-card"></i> <span>Profile</span></li>
                 <a class="btn-secondary" href="role.html">ROLES</a>
                 <a class="btn-primary" href="#newsletter">NEWSLETTER</a>
             </ul>
-            <!-- Role tabs (Farmer/Trader/Processor) integrated in nav for quick access -->
-            <div class="role-tabs" style= "display:none">
-                <button class="role-btn active" data-role="farmer"><i class="fas fa-tractor"></i> Farmer</button>
-                <button class="role-btn" data-role="trader"><i class="fas fa-handshake"></i> Trader</button>
-                <button class="role-btn" data-role="processor"><i class="fas fa-industry"></i> Processor</button>
-            </div>
             <div class="hamburger"><i class="fas fa-bars"></i></div>
         </div>
     </nav>
@@ -82,7 +71,7 @@
             <div class="hero" style="background-image: url('https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png');">
                 <div class="hero-overlay"></div>
                 <div class="hero-content">
-                    <h1 class="animate-up"><span class="yellow">Welcome to</span><br>BUDDU RURAL COFFEE GROWERS, TRADERS, AND PROCESSORS</h1>
+                    <h1 class="animate-up"><span class="yellow">Welcome to</span><br><span style="color: #8B4513;">BUDDU</span> RURAL <span style="color: #76ec16;">COFFEE</span> GROWERS, TRADERS, AND PROCESSORS</h1>
                     <p>FOR DEVELOPMENT, PROSPERITY, AND WEALTH CREATION</p>
                    <div class="hero-buttons animate-up delay-2">
                         <a class="btn-secondary" href="about.html">WHO WE'RE →</a>
@@ -378,7 +367,7 @@
         </section>
 
             <section class="about-section" id="mission-vision">
-            <h2 style="font-size: 5rem; margin-top: 2.2rem; color: black;">News and <span class="green">Resources</span></h2>
+            <h2 style="font-size: 2rem; margin-top: 1rem; color: black;">News and <span class="green">Resources</span></h2>
             <div class="mission-block">
                 <p style="font-size: 1.5rem;">
                     Our latest research, toolkits, stories from the field, and other updates from across the organization.
@@ -655,7 +644,7 @@
         <li><a href="impact-insights.html">Impact & Insights ▿</a></li>
         <li><a href="about.html">About Us ▿</a></li>
         <li><a href="role.html">Roles</a></li>
-        <li><a href="news-resources.html">Newsletter</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
     </ul>
     <div class="sidebar-footer">
         <p>📞 <a href="tel:+256751545436">Call Now</a></p>
@@ -704,6 +693,11 @@
         <p>All rights reserved.</p>
     </div>
 </footer>
+
+<!-- Fixed Glassy Button to navigate to News & Resources page -->
+<a href="news-resources.html" class="fixed-glass-btn" title="News & Resources" style="display: none;">
+    <i class="fas fa-newspaper"></i>
+</a>
 
     <!-- MODALS for ToS, PP, FAQ -->
     <div id="modal" class="modal">

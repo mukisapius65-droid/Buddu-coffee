@@ -293,62 +293,6 @@ sidebarLinks.forEach(link => {
     link.addEventListener('click', closeSidebarFunc);
 });
 
-// Country selector data (coffee context)
-const countryData = {
-    uganda: {
-        name: 'Uganda',
-        description: 'BUDDU partners with district local governments and the Ministry of Agriculture, Animal Industry and Fisheries to improve productivity, quality, and market access for coffee farmers. We co‑design scalable solutions that integrate into public agricultural systems, with a focus on climate‑smart practices and post‑harvest infrastructure.',
-        link: 'our-work-uganda.html'
-    },
-    rwanda: {
-        name: 'Rwanda',
-        description: 'BUDDU is working with the Rwanda Agriculture Board and local cooperatives to test how our GROW platform can help smallholder coffee farmers access real‑time market intelligence, improve quality, and strengthen cooperative governance. We are adapting our model to Rwanda\'s high‑altitude coffee regions.',
-        link: 'our-work-rwanda.html'
-    },
-    ethiopia: {
-        name: 'Ethiopia',
-        description: 'In Ethiopia, we are collaborating with the Ethiopian Coffee and Tea Authority and regional governments to pilot our data‑driven PULSE system, helping farmers and traders connect to premium markets while promoting sustainable farming practices that preserve forest coffee ecosystems.',
-        link: 'our-work-ethiopia.html'
-    }
-};
-
-// Get elements
-const btns = document.querySelectorAll('.country-btn');
-const countryNameSpan = document.getElementById('countryName');
-const countryDescP = document.getElementById('countryDescription');
-const countryBtn = document.getElementById('countryButton');
-
-// Function to update content
-function setCountry(countryKey) {
-    const data = countryData[countryKey];
-    if (!data) return;
-
-    countryNameSpan.textContent = data.name;
-    countryDescP.textContent = data.description;
-    countryBtn.href = data.link;
-    countryBtn.textContent = `Our Work in ${data.name} →`;
-
-    // Update active button class
-    btns.forEach(btn => {
-        if (btn.dataset.country === countryKey) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
-    });
-}
-
-// Add click event listeners
-btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const country = btn.dataset.country;
-        setCountry(country);
-    });
-});
-
-// Set default (Uganda)
-setCountry('uganda');
-
 // ========== SPLIT SECTION TAB SWITCHER ==========
 function showSplitPanel(panelId, activeButton) {
     // Hide all panels
