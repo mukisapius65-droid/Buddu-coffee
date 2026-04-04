@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+    <title>BUDDU RURAL COFFEE GROWERS, TRADERS AND PROCESSORS ASSOCIATION</title>
+    <!-- Font Awesome 6 (icons) & Google Font for readability -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION BAR (Red & Green theme) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="i-container" style= "background-image: url(https://res.cloudinary.com/dxd5hibh7/image/upload/v1773772410/BUDDU-RURAL_COFFEE_GROWERS_TRADERS_PROCESSORS_ASSOCIATION_LTD_bmiiyi.png);"></i>
+                <div class= "logo-container">
+                <p><span>BUDDU</span></p>
+                <p><span class="highlight">COFFEE</span></p>
+                </div>    
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <div class="dropdown">
+                <a href="index.html" class="dropbtn" id="about-main-btn"><span>HOME</span></a>
+                </div>
+                <div class="dropdown">
+                <a href="our-work.html" class="dropbtn" id="about-main-btn"><span>OUR WORK ▿</span></a>
+                <div class="dropdown-content">
+                    <a href="our-work.html#our-model">OUR MODEL</a>
+                    <a href="our-work.html#sustainability">SUSTAINABILITY</a>
+                    <a href="our-work.html#where-we-work">WHERE WE WORK</a>
+
+                </div>
+            </div>
+                <div class="dropdown">
+                <a href="impact-insights.html" class="dropbtn" id="about-main-btn"><span>IMPACT & INSIGHTS ▿</span></a>
+                <div class="dropdown-content">
+                    <a href="impact-insights.html#impact-at-a-glance">IMPACT AT A GLANCE</a>
+                    <a href="impact-insights.html#impact-by-area">IMPACT BY AREA</a>
+                    <a href="impact-insights.html#data-driven-impact">DATA-DRIVEN IMPACT</a>
+                    <a href="impact-insights.html#impact-reports">IMPACT REPORTS</a>
+                </div>
+            </div>
+                <div class="dropdown">
+                <a href="about.html" class="dropbtn" id="about-main-btn"><span>ABOUT US ▿</span></a>
+                <div class="dropdown-content">
+                    <a href="about.html#mission-vision-01">MISSION & VISION</a>
+                    <a href="about.html#our-team-01">OUR TEAM</a>
+                    <a href="about.html#leadership-team">LEADERSHIP TEAM</a>
+                    <a href="about.html#board-of-directors">BOARD OF DIRECTORS</a>
+                    <a href="about.html#partners">PARTNERS</a>
+                </div>
+            </div>
+                <li data-page="home" class="active" style= "display:none"><i class="fas fa-home"></i> <span>Home</span></li>
+                <li data-page="dashboard" title= "Preview Your Networth" style= "display:none"><i class="fas fa-chart-line"></i> <span>Dashboard</span></li>
+                <li data-page="signup" title= "Join Our Cooperative" style= "display:none"><i class="fas fa-user-plus"></i> <span>Signup</span></li>
+                <li data-page="settings" title= "Configure Notifications And Font-size" style= "display:none"><i class="fas fa-cog"></i> <span>Settings</span></li>
+                <li data-page="profile" title= "View And Edit Profile" style= "display:none"><i class="fas fa-id-card"></i> <span>Profile</span></li>
+                <a class="btn-secondary" href="role.html">ROLES</a>
+                <a class="btn-primary" href="#newsletter">NEWSLETTER</a>
+            </ul>
+            <!-- Role tabs (Farmer/Trader/Processor) integrated in nav for quick access -->
+            <div class="role-tabs" style= "display:none">
+                <button class="role-btn active" data-role="farmer"><i class="fas fa-tractor"></i> Farmer</button>
+                <button class="role-btn" data-role="trader"><i class="fas fa-handshake"></i> Trader</button>
+                <button class="role-btn" data-role="processor"><i class="fas fa-industry"></i> Processor</button>
+            </div>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT – all "pages" are sections hidden/shown via JS -->
+    <main>
+        <!-- HERO SECTION (part of Home, but visible on all pages? We'll place it inside home) -->
+
+        <section class="hero-section" id="hero">
+            <div class="hero" style="background-image: url('https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="animate-up"><span class="yellow">Welcome to</span><br>BUDDU RURAL COFFEE GROWERS, TRADERS, AND PROCESSORS</h1>
+                    <p>FOR DEVELOPMENT, PROSPERITY, AND WEALTH CREATION</p>
+                   <div class="hero-buttons animate-up delay-2">
+                        <a class="btn-secondary" href="about.html">WHO WE'RE →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- HOME PAGE -->
+
+        <!-- Sidebar (off-canvas menu) -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-logo">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773772410/BUDDU-RURAL_COFFEE_GROWERS_TRADERS_PROCESSORS_ASSOCIATION_LTD_bmiiyi.png" alt="Buddu Coffee Logo">
+            <span>Buddu Coffee</span>
+        </div>
+        <button class="close-sidebar" id="closeSidebar">&times;</button>
+    </div>
+    <ul class="sidebar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-work.html">Our Work ▿</a></li>
+        <li><a href="impact-insights.html">Impact & Insights ▿</a></li>
+        <li><a href="about.html">About Us ▿</a></li>
+        <li><a href="role.html">Roles</a></li>
+        <li><a href="news-resources.html">Newsletter</a></li>
+    </ul>
+    <div class="sidebar-footer">
+        <p>📞 <a href="tel:+256751545436">Call Now</a></p>
+        <p>💬 <a href="https://wa.me/256701715505" target="_blank">WhatsApp</a></p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@buddururalcoffee"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- Overlay for when sidebar is open -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div>
+           <section class="welcome-section" id="welcome-section"> <!--line 1378-->
+            <div class="welcome">
+                <div class="welcome-overlay"></div>
+                <div class="welcome-content">
+                    <p class="animate-up"><span class="come"></span>All coffee farmers deserve a <span>prosperous harvest,</span> and<br>every coffee enterprise deserves<br>a <span>sustainable path to growth.</span></p>
+                    <p style="font-size: 1.1rem; font-weight: 300;">We partner with farmers, cooperatives, and government agencies across Uganda<br> to deploy affordable, scalable solutions that sustainably improve<br>productivity, quality, and market access—ensuring that the majority of smallholder<br>coffee growers and their families thrive.</p>
+                </div>
+            </div>
+</div>
+        </section>
+    </div>
+    
+<section class="partnership-glassy">
+    <div class="partnership-bg">
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1600&auto=format" alt="Coffee farmers at work">
+    </div>
+    <div class="partnership-overlay"></div>
+    <div class="partnership-content">
+        <h2>Our Partnerships</h2>
+        <p>Since 2020, BUDDU Coffee has partnered with district local governments, farmer cooperatives, extension agents, and coffee communities to improve productivity, market access, and quality of life for smallholder farmers, where the majority of Uganda’s coffee is grown and processed.</p>
+        <p>We partner with the Ministry of Agriculture, Animal Industry and Fisheries and district governments in 22 of Uganda’s busiest coffee‑growing districts, who co‑own our interventions, and work with us to design what and how we measure impact for effective decision‑making. These partnerships have helped us reach over 50,000 farmers with our solutions across 500+ cooperatives and processing hubs, and will continue to be the cornerstone of how we approach the path to national scale in Uganda.</p>
+    </div>
+</section>
+
+<section class="fullwidth-carousel">
+<div class="carousel-header">
+        <h2>Influencing Decision-making through Research</h2>
+        <strong style="font-size: 1.1rem; margin-top: 3rem;">Research is the backbone of how we design solutions, and our findings are guiding how district governments, cooperatives, and extension services improve productivity, quality, and market access across Uganda’s coffee value chain.</strong>
+        <p style="font-size: 1rem;">We rely on a mixture of participatory research approaches to understand the contextual challenges facing coffee farmers, traders, and processors: Human‑Centered Design, in‑depth interviews, and implementation research.
+                </p>
+    </div>
+</section>
+
+ <section class="split-section">
+    <div class="split-container">
+        <div class="split-text">
+            <h2><i class="fas fa-chart-line"></i></h2>
+            <p class="lead">Partnered with county governments</p>
+            <p>We partner with 5 Ugandan county governments to deploy solutions</p>
+
+            
+            <h2><i class="fas fa-chart-line"></i></h2>
+            <p class="lead">Endorsed governments</p>
+            <p>Endorsed for scale by MAAIF</p>
+            
+            
+            <h2><i class="fas fa-chart-line"></i></h2>
+            <p class="lead">Supported by government Budgets</p>
+            <p>County governments are sharing 60% of the running costs of MENTORS</p>
+        </div>
+        <div class="split-image">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Farmer using mobile phone in coffee garden" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<div class="price-section"> <!--LINE 1457-->
+    <h2><i class="fas fa-chart-simple"></i>BUDDU FARMERS, TRADERS AND PROCESSORS</h2>
+    <div class="price-cards">
+        <!-- Card 1: Ripe Fresh -->
+        <div class="price-card">
+            <i class="fas fa-tractor fa-3x" style="color: #C62828;"></i>
+            <h3>OUR FARMERS</h3>
+            <div class="price-meter" data-target="20000">
+                <div class="price-value">
+                    <span class="price-number">0</span><span>+</span>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Dried -->
+        <div class="price-card">
+            <i class="fas fa-handshake fa-3x" style="color: #8B4513;"></i>
+            <h3>OUR TRADERS</h3>
+            <div class="price-meter" data-target="5500">
+                <div class="price-value">
+                    <span class="price-number">0</span><span>+</span>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Pre‑processed -->
+        <div class="price-card">
+            <i class="fas fa-industry fa-3x" style="color: #2E7D32;"></i>
+            <h3>OUR PROCESSORS</h3>
+            <div class="price-meter" data-target="3550">
+                <div class="price-value">
+                    <span class="price-number">0</span><span>+</span>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </section>
+
+                <section class="hero-section" id="hero">
+            <div class="hero" style="background-image: url('https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png');">
+            </div>
+                </section>
+
+                <section class="split-section">
+    <div class="split-container">
+        <div class="split-text">
+            <h2>WHERE WE WORK</h2>
+            <p class="lead">We have Ugandan roots and global ambitions</p>
+            <p><strong>GROW</strong>Since 2020, BUDDU has worked with district local governments and the Ministry of Agriculture, Animal Industry and Fisheries to improve productivity, quality, and market access for coffee farmers in Uganda’s coffee‑growing regions. Guided by a mission to reach every coffee farmer, trader, and processor, our focus is on scaling further within Uganda while adapting our model and capitalizing on our learnings to serve coffee communities in new geographies. We currently partner with district governments in Rwenzori and Elgon regions to test and adapt our solutions to support national coffee priorities, with ambitious plans to grow our footprint across East Africa in the coming years.</p>
+        </div>
+        <div class="split-image">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Farmer using mobile phone in coffee garden" loading="lazy">
+        </div>
+    </div>
+</section> 
+
+<section class="reports-section">
+    <div class="reports-header">
+        <h2><i class="fas fa-chart-simple"></i> Impact Reports</h2>
+        <p>You can find our quarterly and annual impact reports below, or sign up to receive these straight into your inbox.</p>
+        <form class="reports-signup" id="reportsSignup">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+        </form>
+    </div>
+
+    <div class="reports-carousel-container">
+        <div class="reports-track" id="reportsTrack">
+            <!-- Report cards will be injected by JS -->
+        </div>
+        <div class="reports-nav">
+            <button class="reports-prev" id="reportsPrev"><i class="fas fa-chevron-left"></i></button>
+            <div class="reports-pagination" id="reportsPagination"></div>
+            <button class="reports-next" id="reportsNext"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+
+    <!-- FOOTER with TOS/PP/FAQ modals, contacts, WhatsApp, other platform -->
+  <footer>
+    <div class="logo">
+        <i class="i-container" style="background-image: url(https://res.cloudinary.com/dxd5hibh7/image/upload/v1773772410/BUDDU-RURAL_COFFEE_GROWERS_TRADERS_PROCESSORS_ASSOCIATION_LTD_bmiiyi.png);"></i>
+    </div>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>BUDDU COFFEE<BR><i class="fas fa-map-marker-alt"></i> Butega, Uganda</h4>
+            <div class="social-links">
+                <a href="facebook.com/budducoffee" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="instagram.com/budducoffee" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="tiktok.com/budducoffe" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="tel:+256751545436" class="social-icon" target="_blank"><i class="fas fa-phone"></i></a>
+                <a href="https://wa.me/256751545436" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4>GO To</h4>
+            <a href="our-work.html"><i class="fa-solid fa-briefcase"></i> Our Work</a>
+            <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
+            <a href="#" onclick="openModal('tos')"><i class="fas fa-file-contract"></i> Terms of Service</a>
+            <a href="#" onclick="openModal('pp')"><i class="fas fa-shield"></i> Privacy Policy</a>
+        </div>
+        <div class="footer-section">
+            <h4>Our Platforms</h4>
+            <a href="https://ekfoundation.org" target="_blank"><i class="fas fa-external-link-alt"></i> EK FOUNDATION</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 BUDDU RURAL COFFEE GROWERS, TRADERS & PROCESSORS ASSOCIATION.
+        <p>All rights reserved.</p>
+    </div>
+</footer>
+
+
+    <!-- MODALS for ToS, PP, FAQ -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    <script src="our-work.js"></script>
+</body>
+    </html>

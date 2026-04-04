@@ -80,12 +80,11 @@
                 <div class="our-team-overlay"></div>
                 <div class="our-team-content">
                     <p class="animate-up"><span class="team"></span>Scalable solutions to improve coffee value chain</p>
-                        
-                 <span  id="our-model"></span>
-
+                        <div class="hero-buttons animate-up delay-2" style= "display:none">
+                        <a class="btn-secondary" href="about.html">WHO WE'RE →</a>
+                    </div>
                 </div>
             </div>
-        </section>
         <!-- HOME PAGE -->
 
         <!-- Sidebar (off-canvas menu) -->
@@ -122,11 +121,11 @@
 
 <div>
            <!-- Mission & Vision (with anchor id) -->
-        <section class="about-section" id="mission-vision-011" style="text-align: center;"> <!-- our mission id changed intentionally -->
-            <h2 style="font-size: 3rem;">Our Model</h2>
+        <section class="about-section" id="mission-vision-011"> <!-- our mission id changed intentionally -->
+            <h2 style="font-size: 2.5rem;" id="our-model">Our Model</h2>
             <div class="mission-block">
-                    <strong style="font-size: 2rem;">Our package of solutions is designed to support and empower coffee farmers, traders, and processors across their<br><span style="color: #C62828;">journey—from seedling to sustainable market access.</span></strong>
-                <p style="font-size: 1.2rem;">
+                    <strong style="font-size: 1.3rem; margin-top: 3rem;">Our package of solutions is designed to support and empower coffee farmers, traders, and processors across their<br><span style="color: #C62828;">journey—from seedling to sustainable market access.</span></strong>
+                <p style="font-size: 0.8rem;">
                     We developed our package of solutions to address a twin challenge impacting outcomes for coffee farmers, traders, and processors within Uganda’s agricultural systems: delays in accessing markets and adopting sustainable practices, and gaps in the quality of post‑harvest handling and value addition.
 
 Our model is built around a simple Theory of Change: that coffee growers adopt climate‑smart practices and reach markets at the right time with high‑quality produce – which in turn drives better incomes, stronger cooperatives, and more resilient, sustainable coffee value chains. We co‑design these solutions with farmers, local cooperatives, and our government partners so that they are responsive, context‑appropriate, and comprehensively tackle the barriers that have long kept smallholder communities from thriving.
@@ -180,92 +179,62 @@ Our model is built around a simple Theory of Change: that coffee growers adopt c
         </div>
     </div>
     <div class="our-work-btn" style="margin-top: 2rem; display: absolute;">
-    <a class="btn-primary" id="tab-grow" href="#">GROW→</a>
-<a class="btn-secondary" id="tab-fields" href="#">FIELDS→</a>
-<a class="btn-secondary" id="tab-pulse" href="#">PULSE→</a>
-</div>
+                <a class="btn-primary" href="#newsletter">GROW→</a>
+                <a class="btn-secondary" href="role.html">FIELDS→</a>
+                <a class="btn-secondary" href="role.html">PULSE→</a>
+    </div>
 </section>
     
           <section class="split-section">
     <div class="split-container">
-        <!-- GROW Panel (active by default) -->
-        <div class="split-content active" id="panel-grow">
-            <div class="split-text">
-                <p class="lead" style="border-bottom: solid 3px #76ec17;">Farmers access markets at the right time and place, and receive targeted support if quality or yield risks are identified.</p>
-                <p><strong>GROW</strong> empowers farmers with real‑time market intelligence via SMS and mobile alerts to make informed choices about when to sell, how to improve quality, and what sustainable practices to adopt. Through two‑way communication, farmers can ask questions, report issues, and receive targeted support or referral to extension services and buyers when a risk is detected during the growing or post‑harvest phase.</p>
-                <div class="split-cta">
-                    <a class="btn-newsletter" href="grow.html">Join our GROW network →</a>
-                </div>
-            </div>
-            <div class="split-image">
-                <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Farmer using mobile phone in coffee garden" loading="lazy">
+        <div class="split-text">
+            <h2><i class="fas fa-chart-line"></i> GROW</h2>
+            <p class="lead">Farmers access markets at the right time and place, and receive targeted support if quality or yield risks are identified.</p>
+            <p><strong>GROW</strong> empowers farmers with real‑time market intelligence via SMS and mobile alerts to make informed choices about when to sell, how to improve quality, and what sustainable practices to adopt. Through two‑way communication, farmers can ask questions, report issues, and receive targeted support or referral to extension services and buyers when a risk is detected during the growing or post‑harvest phase.</p>
+            <div class="split-cta">
+                <button class="btn-newsletter" onclick="switchPage('signup')">Join our GROW network →</button>
             </div>
         </div>
-           <span id="sustainability"></span>
-        <!-- FIELDS Panel (hidden initially) -->
-        <div class="split-content" id="panel-fields">
-            <div class="split-text">
-                <h2><i class="fas fa-leaf"></i> FIELDS</h2>
-                <p class="lead">Training and quality assurance for cooperatives and extension agents to improve post‑harvest handling and sustainable farming.</p>
-                <p><strong>FIELDS</strong> provides structured training programs for coffee cooperatives and extension agents, focusing on post‑harvest handling, pest management, certification standards, and climate‑smart agriculture. Our platform tracks skill gaps and certifies trainers, ensuring consistent quality and sustainability across the coffee value chain.</p>
-                <div class="split-cta">
-                    <<a class="btn-newsletter" href="fields.html">Explore FIELDS training →</a>
-                </div>
-            </div>
-            <div class="split-image">
-                <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coffee training session" loading="lazy">
-            </div>
+        <div class="split-image">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Farmer using mobile phone in coffee garden" loading="lazy">
         </div>
-
-        <!-- PULSE Panel (hidden initially) -->
-        <div class="split-content" id="panel-pulse">
-            <div class="split-text">
-                <h2><i class="fas fa-waveform"></i> PULSE</h2>
-                <p class="lead">Data‑driven insights for government and industry to improve market infrastructure, financing, and policy.</p>
-                <p><strong>PULSE</strong> aggregates anonymised data from farmer interactions, market transactions, and extension services to provide real‑time dashboards for government partners and industry stakeholders. These insights help optimise resource allocation, design better policies, and target investments where they are needed most – creating a more resilient and transparent coffee ecosystem.</p>
-                <div class="split-cta">
-                    <a class="btn-newsletter" href="pulse.html">View PULSE dashboards →</a>
-                </div>
-            </div>
-            <div class="split-image">
-                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Data analytics dashboard" loading="lazy">
-            </div>
-        </div>
+        <span id="sustainability"></span>
     </div>
 </section>
 
        <!-- Mission & Vision (with anchor id) -->
         <section class="about-section" id="mission-vision-011"> <!-- our mission id changed intentionally -->
             <h2 style="font-size: 1rem;">SUSTAINABILITY</h2>
-            <div class="sustainability-block">
-                    <strong style="font-size: 1rem;">Our government partners—along with district local governments and farmer cooperatives <span style="color: #76ec17;">co‑own, co‑design, and co‑finance</span> our solutions, creating a strong foundation for scale and sustainability across Uganda’s coffee value chain.</strong>
-                <p style="font-size: 1px;" >
-                    Our vision of an “end game” at scale is our government partners—along with district local governments and farmer cooperatives—leading and sustainably financing cost‑effective innovations within Uganda’s coffee value chain and agricultural systems. Over time, BUDDU has earned trust and buy‑in from a network of farmer groups, district governments, and national ministry partners by involving them in the design process, demonstrating measurable impact, and building affordable solutions that sustainably integrate into resource‑constrained government budgets and the broader coffee sector.Our model is built around a simple Theory of Change: that coffee growers adopt climate‑smart practices and reach markets at the right time with high‑quality produce – which in turn drives better incomes, stronger cooperatives, and more resilient, sustainable coffee value chains. We co‑design these solutions with farmers, local cooperatives, and our government partners so that they are responsive, context‑appropriate, and comprehensively tackle the barriers that have long kept smallholder communities from thriving.
-                </p>
+            <div class="mission-block">
+                    <strong style="font-size: 1.3rem; margin-top: 3rem;">Our government partners—along with district local governments and farmer cooperatives <span style="color: #C62828;">co‑own, co‑design, and co‑finance</span> our solutions, creating a strong foundation for scale and sustainability across Uganda’s coffee value chain.</strong>
+                <p style="font-size: 0.8rem;">
+                    Our vision of an “end game” at scale is our government partners—along with district local governments and farmer cooperatives—leading and sustainably financing cost‑effective innovations within Uganda’s coffee value chain and agricultural systems. Over time, BUDDU has earned trust and buy‑in from a network of farmer groups, district governments, and national ministry partners by involving them in the design process, demonstrating measurable impact, and building affordable solutions that sustainably integrate into resource‑constrained government budgets and the broader coffee sector.
+
+Our model is built around a simple Theory of Change: that coffee growers adopt climate‑smart practices and reach markets at the right time with high‑quality produce – which in turn drives better incomes, stronger cooperatives, and more resilient, sustainable coffee value chains. We co‑design these solutions with farmers, local cooperatives, and our government partners so that they are responsive, context‑appropriate, and comprehensively tackle the barriers that have long kept smallholder communities from thriving.
+                </p><span id="our-team-01"></span>
             </div>
         </section>
 
         <section class="split-section">
     <div class="split-container">
         <div class="split-text">
-            <h2><i class="fa-solid fa-handshake"></i></h2>
+            <h2><i class="fas fa-chart-line"></i></h2>
             <p class="lead">Partnered with county governments</p>
             <p>We partner with 5 Ugandan county governments to deploy solutions</p>
 
             
-            <h2><i class="fa-solid fa-certificate"></i></h2>
+            <h2><i class="fas fa-chart-line"></i></h2>
             <p class="lead">Endorsed governments</p>
             <p>Endorsed for scale by MAAIF</p>
             
             
-            <h2><i class="fa-solid fa-dollar-sign"></i></h2>
+            <h2><i class="fas fa-chart-line"></i></h2>
             <p class="lead">Supported by government Budgets</p>
             <p>County governments are sharing 60% of the running costs of MENTORS</p>
 
             <div class="split-cta">
                 <!--❌❌❌-->
-                <a  id="where-we-work" class="btn-newsletter" href="pulse.html">SUSTAINABILITY OF SERVICES →</a>
-  
+                <button  id="where-we-work" class="btn-newsletter" onclick="switchPage('signup')">SUSTAINABILITY OF SERVICES →</button>
             </div>
         </div>
         <div class="split-image">
@@ -282,7 +251,7 @@ Our model is built around a simple Theory of Change: that coffee growers adopt c
             <p><strong>GROW</strong>Since 2020, BUDDU has worked with district local governments and the Ministry of Agriculture, Animal Industry and Fisheries to improve productivity, quality, and market access for coffee farmers in Uganda’s coffee‑growing regions. Guided by a mission to reach every coffee farmer, trader, and processor, our focus is on scaling further within Uganda while adapting our model and capitalizing on our learnings to serve coffee communities in new geographies. We currently partner with district governments in Rwenzori and Elgon regions to test and adapt our solutions to support national coffee priorities, with ambitious plans to grow our footprint across East Africa in the coming years.</p>
         </div>
         <div class="split-image">
-            <img src="Africa-img.png" alt="Farmer using mobile phone in coffee garden" loading="lazy">
+            <img src="https://res.cloudinary.com/dxd5hibh7/image/upload/v1773411792/coffeeCherriesHero_luwmcz.png" alt="Farmer using mobile phone in coffee garden" loading="lazy">
         </div>
     </div>
 </section> 
@@ -411,39 +380,31 @@ Our model is built around a simple Theory of Change: that coffee growers adopt c
 </section>
     
     <!-- FOOTER with TOS/PP/FAQ modals, contacts, WhatsApp, other platform -->
-  <footer>
-    <div class="logo">
-        <i class="i-container" style="background-image: url(https://res.cloudinary.com/dxd5hibh7/image/upload/v1773772410/BUDDU-RURAL_COFFEE_GROWERS_TRADERS_PROCESSORS_ASSOCIATION_LTD_bmiiyi.png);"></i>
-    </div>
-    <div class="footer-content">
-        <div class="footer-section">
-            <h4>BUDDU COFFEE<BR><i class="fas fa-map-marker-alt"></i> Butega, Uganda</h4>
-            <div class="social-links">
-                <a href="facebook.com/budducoffee" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="instagram.com/budducoffee" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="tiktok.com/budducoffe" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="tel:+256751545436" class="social-icon" target="_blank"><i class="fas fa-phone"></i></a>
-                <a href="https://wa.me/256751545436" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>BUDDU COFFEE</h4>
+                <p><i class="fas fa-map-marker-alt"></i>  Butega, Uganda</p>
+                <p><a href="tel:+256751545436"><i class="fas fa-phone"></i>  Call Now</a></p>
+                <p><a href="https://wa.me/256700123456" target="_blank"><i class="fab fa-whatsapp"></i>  WhatsApp</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Info</h4>
+                <a href="#" onclick="openModal('tos')"><i class="fas fa-file-contract"></i> Terms of Service</a>
+                <a href="#" onclick="openModal('pp')"><i class="fas fa-shield"></i> Privacy Policy</a>
+                <a href="#" onclick="openModal('faq')"><i class="fas fa-question-circle"></i> FAQs</a>
+            </div>
+            <div class="footer-section">
+                <h4>Our other platform</h4>
+                                <a href="https://ekfoundation.org" target="_blank"><i class="fas fa-external-link-alt"></i> EK FOUNDATION</a>
+                <a href="https://pfg-chapati.vercel.app" target="_blank"><i class="fas fa-external-link-alt"></i> PFG</a>
             </div>
         </div>
-        <div class="footer-section">
-            <h4>GO To</h4>
-            <a href="our-work.html"><i class="fa-solid fa-briefcase"></i> Our Work</a>
-            <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
-            <a href="#" onclick="openModal('tos')"><i class="fas fa-file-contract"></i> Terms of Service</a>
-            <a href="#" onclick="openModal('pp')"><i class="fas fa-shield"></i> Privacy Policy</a>
+        <div class="footer-bottom">
+            &copy; 2026 BUDDU RURAL COFFEE GROWERS, TRADERS & PROCESSORS ASSOCIATION.
+            <p>All rights reserved.</p>
         </div>
-        <div class="footer-section">
-            <h4>Our Platforms</h4>
-            <a href="https://ekfoundation.org" target="_blank"><i class="fas fa-external-link-alt"></i> EK FOUNDATION</a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        &copy; 2026 BUDDU RURAL COFFEE GROWERS, TRADERS & PROCESSORS ASSOCIATION.
-        <p>All rights reserved.</p>
-    </div>
-</footer>
-
+    </footer>
 
     <!-- MODALS for ToS, PP, FAQ -->
     <div id="modal" class="modal">
