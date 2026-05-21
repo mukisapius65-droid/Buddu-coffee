@@ -7,7 +7,7 @@
     font-family: 'Inter', sans-serif;
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -47,7 +47,6 @@ body::after {
   height: 100%;
   z-index: -1;
   background: linear-gradient(135deg, rgba(46, 125, 32, 0.6), rgba(27, 94, 32, 0.7));
-  backdrop-filter: blur(2px); /* extra glassy feel */
 }
 .body-container {
     width: 100%;
@@ -69,8 +68,6 @@ body::after {
 /* ========== GLASSY NAVBAR ========== */
 .navbar {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -131,7 +128,6 @@ body::after {
   font-weight: 600;
   transition: all 0.2s;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -158,7 +154,6 @@ body::after {
 
 .dropbtn {
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 40px;
   padding: 0.5rem 1.2rem;
@@ -183,7 +178,6 @@ body::after {
   left: 0;
   min-width: 220px;
   background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(16px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
@@ -239,8 +233,6 @@ body::after {
     width: 60px;
     height: 60px;
     background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -295,8 +287,6 @@ body::after {
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, rgba(118, 236, 23, 0.4), rgba(46, 125, 50, 0.5));
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
   z-index: 0;
 }
 
@@ -308,8 +298,6 @@ body::after {
   margin: 0 auto;
   padding: 2.5rem;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
@@ -417,7 +405,6 @@ body::after {
 
 .icon-btn__front {
   background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -472,8 +459,6 @@ body::after {
   padding: 2rem;
   font-family: 'Inter', 'Segoe UI', sans-serif;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border-radius: 2rem;
   margin: 2rem auto;
   max-width: 1400px;
@@ -536,8 +521,6 @@ body::after {
 /* ========== GLASSY MISSION BLOCK ========== */
 .mission-block {
   background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   padding: 2.5rem;
   border-radius: 2rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -578,7 +561,6 @@ body::after {
 
 .team-member, .board-member {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
   border-radius: 1.5rem;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -639,7 +621,6 @@ body::after {
 /* ========== PARTNERS SECTION (Glassy) ========== */
 .partner-group {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
   padding: 1.8rem;
   border-radius: 1.5rem;
   margin-bottom: 1.5rem;
@@ -690,7 +671,6 @@ body::after {
 .cta a {
   display: inline-block;
   background: rgba(118, 236, 23, 0.2);
-  backdrop-filter: blur(4px);
   color: #2c2c2c;
   padding: 0.8rem 2rem;
   border-radius: 50px;
@@ -746,8 +726,6 @@ body::after {
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, rgba(118, 236, 23, 0.4), rgba(46, 125, 50, 0.5));
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
   z-index: 0;
 }
 
@@ -759,8 +737,6 @@ body::after {
   margin: 0 auto;
   padding: 2.5rem;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
@@ -838,7 +814,6 @@ body::after {
   display: flex;
   gap: 0.5rem;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
   padding: 0.5rem;
   border-radius: 60px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -849,7 +824,6 @@ body::after {
 .role-btn {
   border: none;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(4px);
   padding: 0.6rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
@@ -902,7 +876,6 @@ body::after {
   max-width: 1400px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
@@ -938,7 +911,6 @@ body::after {
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(8px);
   color: #76ec17;
   padding: 8px 14px;
   border-radius: 12px;
@@ -1032,8 +1004,6 @@ body::after {
   max-width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   color: white;
   box-shadow: -8px 0 32px rgba(0, 0, 0, 0.2);
   z-index: 1100;
@@ -1140,7 +1110,6 @@ body::after {
   background: rgba(118, 236, 23, 0.3);
   padding-left: 2rem;
   color: #76ec17;
-  backdrop-filter: blur(4px);
 }
 
 /* Sidebar Footer */
@@ -1170,7 +1139,6 @@ body::after {
 
 .sidebar-footer .social-links a {
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(4px);
   width: 36px;
   height: 36px;
   display: inline-flex;
@@ -1198,7 +1166,6 @@ body::after {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
   z-index: 1050;
   opacity: 0;
   visibility: hidden;
@@ -1256,8 +1223,6 @@ body.sidebar-open {
   text-decoration: none;
   display: inline-block;
   text-align: center;
-  backdrop-filter: blur(17px);
-  -webkit-backdrop-filter: blur(17px);
   border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1);
   letter-spacing: 0.5px;
@@ -1431,7 +1396,6 @@ body.sidebar-open {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  backdrop-filter: blur(2px);
   background: rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
   overflow: hidden;
@@ -1448,13 +1412,11 @@ body.sidebar-open {
   padding: 3rem 2rem;
   border-right: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
   transition: all 0.3s ease;
 }
 
 .team-column:hover {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
 }
 
 /* Remove border from last column */
@@ -1518,7 +1480,6 @@ body.sidebar-open {
 /* Glassy button inside columns */
 .col-btn {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.5);
   color: white;
   padding: 0.7rem 1.5rem;
@@ -1604,8 +1565,6 @@ body.sidebar-open {
 
 .price-card {
   background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border-radius: 2rem;
   padding: 2rem 1.5rem;
   text-align: center;
@@ -1670,7 +1629,6 @@ body.sidebar-open {
 .meter-bar {
   width: 100%;
   background: rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(4px);
   border-radius: 30px;
   overflow: hidden;
   height: 14px;
@@ -1757,8 +1715,7 @@ small {
   position: relative;
   border-radius: 1.5rem;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.2); /* fallback */
-  backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.2);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -1796,7 +1753,6 @@ small {
   border-radius: 1.5rem;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(2px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -1822,7 +1778,6 @@ small {
 /* Common card styles with borders */
 .blog-card {
   background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(2px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s, box-shadow 0.3s, border 0.2s;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1845,8 +1800,6 @@ small {
   left: 0;
   right: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
   padding: 1.5rem;
   text-align: left;
   color: white;
@@ -1995,7 +1948,6 @@ small {
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 40px;
   background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
   transition: 0.2s;
   font-family: inherit;
   color: #2c2c2c;
@@ -2015,7 +1967,6 @@ small {
 /* Glassy button (keeps some style) */
 .btn-newsletter {
   background: rgba(118, 236, 23, 0.8);
-  backdrop-filter: blur(4px);
   color: #1e3a1e;
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 0.8rem 2rem;
@@ -2048,7 +1999,6 @@ small {
 /* Success message – also transparent */
 .form-success {
   background: rgba(118, 236, 23, 0.15);
-  backdrop-filter: blur(4px);
   color: #1e3a1e;
   padding: 1rem;
   border-radius: 40px;
@@ -2148,8 +2098,6 @@ small {
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   padding: 0.6rem 1.2rem;
   border-radius: 50px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -2376,8 +2324,6 @@ small {
 /* ========== GLASSY FOOTER ========== */
 footer {
   background: rgba(46, 125, 32, 0.3);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   color: white;
   padding: 3rem 5% 1rem;
   margin-top: 4rem;
@@ -2418,7 +2364,6 @@ footer .logo .i-container:hover {
 /* Glassy footer section cards */
 .footer-section {
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
   border-radius: 1.5rem;
   padding: 1.5rem;
   transition: all 0.3s ease;
@@ -2477,7 +2422,6 @@ footer .logo .i-container:hover {
   width: 45px;
   height: 45px;
   background: rgba(107, 98, 231, 0.36);
-  backdrop-filter: blur(8px);
   border-radius: 50%;
   color: white;
   text-align: center;
@@ -2527,12 +2471,10 @@ footer .logo .i-container:hover {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(8px);
 }
 
 .modal-content {
     background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(16px);
     margin: 10% auto;
     padding: 2rem;
     width: 90%;
@@ -2740,7 +2682,6 @@ footer .logo .i-container:hover {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.5);
-    backdrop-filter: blur(2px);
     z-index: 1050;
     opacity: 0;
     visibility: hidden;
@@ -2799,8 +2740,6 @@ body.sidebar-open {
 /* Glassy step card */
 .step-card {
   background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   border-radius: 1.5rem;
   padding: 1.5rem 1rem;
   width: 220px;
@@ -2863,7 +2802,6 @@ body.sidebar-open {
 .step-tag {
   display: inline-block;
   background: rgba(118, 236, 23, 0.2);
-  backdrop-filter: blur(4px);
   padding: 0.3rem 0.8rem;
   border-radius: 50px;
   font-size: 0.8rem;
@@ -2918,8 +2856,6 @@ body.sidebar-open {
 .split-section {
   margin: 4rem 0;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border-radius: 2rem;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -2988,7 +2924,6 @@ body.sidebar-open {
 /* Glassy button (overrides previous .btn-newsletter) */
 .btn-newsletter {
   background: rgba(118, 236, 23, 0.2);
-  backdrop-filter: blur(4px);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 0.8rem 2rem;
@@ -3086,8 +3021,6 @@ body.sidebar-open {
 .country-section {
   margin: 4rem 0;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border-radius: 2rem;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -3143,7 +3076,6 @@ body.sidebar-open {
   flex: 1;
   padding: 2.5rem;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
   display: flex;
   flex-direction: column;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
@@ -3161,7 +3093,6 @@ body.sidebar-open {
 
 .country-btn {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 1.1rem;
   font-weight: 600;
@@ -3214,7 +3145,6 @@ body.sidebar-open {
 .btn-country {
   display: inline-block;
   background: rgba(118, 236, 23, 0.2);
-  backdrop-filter: blur(4px);
   color: #2c2c2c;
   padding: 0.7rem 1.5rem;
   border-radius: 50px;
@@ -3346,8 +3276,6 @@ body.sidebar-open {
 .impact-area-section {
     margin: 4rem 0;
     background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border-radius: 2rem;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -3382,7 +3310,6 @@ body.sidebar-open {
     border-radius: 1.5rem;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(4px);
     padding: 0.5rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: transform 0.3s;
@@ -3414,7 +3341,6 @@ body.sidebar-open {
     flex: 1;
     min-width: 280px;
     background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
     border-radius: 1.5rem;
     padding: 1.8rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -3630,8 +3556,6 @@ body.sidebar-open {
 .insights-section {
   margin: 5rem 0;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border-radius: 2rem;
   padding: 3rem 2rem;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -3723,7 +3647,6 @@ body.sidebar-open {
 .dot-tooltip {
   position: absolute;
   background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(4px);
   color: #2c2c2c;
   border-left: 5px solid #76ec17;
   border-radius: 12px;
@@ -3790,7 +3713,6 @@ body.sidebar-open {
 /* Glassy note area */
 .insights-note {
   background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(8px);
   border-left: 6px solid #76ec17;
   padding: 1rem 1.5rem;
   border-radius: 1rem;
@@ -3857,7 +3779,6 @@ body.sidebar-open {
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
   border-radius: 2rem;
   padding: 1rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -3892,7 +3813,6 @@ body.sidebar-open {
 
 .card-overlay {
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
   width: 100%;
   height: 100%;
   display: flex;
@@ -3905,7 +3825,6 @@ body.sidebar-open {
 .card-content {
   max-width: 700px;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
   padding: 2rem;
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -3936,7 +3855,6 @@ body.sidebar-open {
 
 .card-btn {
   background: rgba(118, 236, 23, 0.2);
-  backdrop-filter: blur(4px);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 0.8rem 1.8rem;
@@ -3956,7 +3874,6 @@ body.sidebar-open {
 
 .carousel-nav {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.4);
   width: 48px;
@@ -4002,7 +3919,6 @@ body.sidebar-open {
 .reports-section {
   margin: 4rem 0;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
   border-radius: 2rem;
   padding: 3rem 2rem;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -4045,7 +3961,6 @@ body.sidebar-open {
   width: 260px;
   font-family: inherit;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
   color: #2c2c2c;
 }
 
@@ -4057,7 +3972,6 @@ body.sidebar-open {
 
 .reports-signup button {
   background: rgba(118, 236, 23, 0.2);
-  backdrop-filter: blur(4px);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 0.8rem 1.5rem;
@@ -4092,7 +4006,6 @@ body.sidebar-open {
 .report-card {
   flex: 0 0 calc(33.333% - 1.333rem);
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
   border-radius: 1.5rem;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -4140,7 +4053,6 @@ body.sidebar-open {
   align-items: center;
   gap: 0.5rem;
   background: rgba(118, 236, 23, 0.2);
-  backdrop-filter: blur(4px);
   color: #2c2c2c;
   padding: 0.5rem 1rem;
   border-radius: 40px;
@@ -4169,7 +4081,6 @@ body.sidebar-open {
 
 .reports-prev, .reports-next {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.4);
   width: 44px;
@@ -4239,7 +4150,6 @@ body.sidebar-open {
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
   border-radius: 2rem;
   padding: 1rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -4274,7 +4184,6 @@ body.sidebar-open {
 
 .card-overlay {
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
   width: 100%;
   height: 100%;
   display: flex;
@@ -4287,7 +4196,6 @@ body.sidebar-open {
 .card-content {
   max-width: 700px;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
   padding: 2rem;
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -4318,7 +4226,6 @@ body.sidebar-open {
 
 .card-btn {
   background: rgba(118, 236, 23, 0.2);
-  backdrop-filter: blur(4px);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 0.8rem 1.8rem;
@@ -4338,7 +4245,6 @@ body.sidebar-open {
 
 .carousel-nav {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.4);
   width: 48px;
@@ -4384,7 +4290,6 @@ body.sidebar-open {
 .reports-section {
   margin: 4rem 0;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
   border-radius: 2rem;
   padding: 3rem 2rem;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -4427,7 +4332,6 @@ body.sidebar-open {
   width: 260px;
   font-family: inherit;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
   color: #2c2c2c;
 }
 
@@ -4439,7 +4343,6 @@ body.sidebar-open {
 
 .reports-signup button {
   background: rgba(118, 236, 23, 0.2);
-  backdrop-filter: blur(4px);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 0.8rem 1.5rem;
@@ -4474,7 +4377,6 @@ body.sidebar-open {
 .report-card {
   flex: 0 0 calc(33.333% - 1.333rem);
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
   border-radius: 1.5rem;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -4522,7 +4424,6 @@ body.sidebar-open {
   align-items: center;
   gap: 0.5rem;
   background: rgba(118, 236, 23, 0.2);
-  backdrop-filter: blur(4px);
   color: #2c2c2c;
   padding: 0.5rem 1rem;
   border-radius: 40px;
@@ -4551,7 +4452,6 @@ body.sidebar-open {
 
 .reports-prev, .reports-next {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.4);
   width: 44px;
@@ -4623,7 +4523,6 @@ body.sidebar-open {
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
   border-radius: 2rem;
   padding: 1rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -4658,7 +4557,6 @@ body.sidebar-open {
 
 .card-overlay {
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
   width: 100%;
   height: 100%;
   display: flex;
@@ -4671,7 +4569,6 @@ body.sidebar-open {
 .card-content {
   max-width: 700px;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
   padding: 2rem;
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -4702,7 +4599,6 @@ body.sidebar-open {
 
 .card-btn {
   background: rgba(118, 236, 23, 0.2);
-  backdrop-filter: blur(4px);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 0.8rem 1.8rem;
@@ -4722,7 +4618,6 @@ body.sidebar-open {
 
 .carousel-nav {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.4);
   width: 48px;
@@ -4768,7 +4663,6 @@ body.sidebar-open {
 .reports-section {
   margin: 4rem 0;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
   border-radius: 2rem;
   padding: 3rem 2rem;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -4811,7 +4705,6 @@ body.sidebar-open {
   width: 260px;
   font-family: inherit;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
   color: #2c2c2c;
 }
 
@@ -4823,7 +4716,6 @@ body.sidebar-open {
 
 .reports-signup button {
   background: rgba(118, 236, 23, 0.2);
-  backdrop-filter: blur(4px);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 0.8rem 1.5rem;
@@ -4858,7 +4750,6 @@ body.sidebar-open {
 .report-card {
   flex: 0 0 calc(33.333% - 1.333rem);
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
   border-radius: 1.5rem;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -4906,7 +4797,6 @@ body.sidebar-open {
   align-items: center;
   gap: 0.5rem;
   background: rgba(118, 236, 23, 0.2);
-  backdrop-filter: blur(4px);
   color: #2c2c2c;
   padding: 0.5rem 1rem;
   border-radius: 40px;
@@ -4935,7 +4825,6 @@ body.sidebar-open {
 
 .reports-prev, .reports-next {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.4);
   width: 44px;
